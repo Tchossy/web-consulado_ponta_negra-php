@@ -49,7 +49,7 @@ website:    http://www.tchossy.com
 
 .icomoon-icoStop:before {
 	content: "\e935";
-	color: #ff3514;
+	color: #ff0000;
 }
 
 .icomoon-ico40:before {
@@ -4113,7 +4113,7 @@ a.ui-button:active,
 
 .btnCustomLightOutline:before {
 	border-color: #e0e0e0;
-	color: #06163a;
+	color: #020711;
 	background-color: #e0e0e0;
 }
 
@@ -4226,8 +4226,8 @@ a.ui-button:active,
 
 .btn-dark:before {
 	background-color: #fff;
-	border-color: #06163a;
-	color: #06163a;
+	border-color: #020711;
+	color: #020711;
 }
 
 .btn-dark.btnSwitchDark {
@@ -4237,8 +4237,8 @@ a.ui-button:active,
 }
 
 .btn-dark.btnSwitchDark:before {
-	background-color: #06163a;
-	border-color: #06163a;
+	background-color: #020711;
+	border-color: #020711;
 	color: #fff;
 }
 
@@ -4564,7 +4564,7 @@ input[type=number] {
 .hdTopBariii .hdScheduleList a:hover,
 .hdTopBariii
     .hdAlterLinksList a:hover {
-	color: #06163a;
+	color: #020711;
 }
 
 .hdTopBariii .hdScheduleList .icn,
@@ -4603,7 +4603,7 @@ input[type=number] {
 }
 
 .hdAlterLinksList.hdAlterLinksListii a:hover {
-	color: #06163a;
+	color: #020711;
 }
 
 .hdAlterLinksList li + li {
@@ -5603,7 +5603,7 @@ input[type=number] {
 
 .exploreResourceBlock:before {
 	z-index: -1;
-	background-color: #06163a;
+	background-color: #020711;
 }
 
 /* ---------------------------------------------------------
@@ -6187,7 +6187,7 @@ input[type=number] {
 }
 
 .hdSocialNetworks a:hover {
-	background-color: #06163a;
+	background-color: #020711;
 }
 
 /* ---------------------------------------------------------
@@ -9030,7 +9030,7 @@ input[type=number] {
 }
 
 .cartTable .remove-item:hover {
-	color: #ff3514;
+	color: #ff0000;
 }
 
 .cartTable .quantity {
@@ -10081,7 +10081,7 @@ input[type=number] {
 	-ms-flex-align: center;
 	align-items: center;
 	color: #fff;
-	background-color: #ff3514;
+	background-color: #ff0000;
 }
 
 /* ---------------------------------------------------------
@@ -10281,7 +10281,7 @@ input[type=number] {
 
 .ftAreaWrapvii {
 	color: #7b859d;
-	background-color: #06163a;
+	background-color: #020711;
 }
 
 .ftAreaWrapvii .ftConnectAside {
