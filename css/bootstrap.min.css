@@ -10,7 +10,7 @@
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
-  --red: #ff0000;
+  --red: #CC092F;
   --orange: #fd7e14;
   --yellow: #ffc107;
   --green: #77a464;
@@ -25,7 +25,7 @@
   --success: #77a464;
   --info: #17a2b8;
   --warning: #ffc107;
-  --danger: #ff0000;
+  --danger: #CC092F;
   --light: #f8f5f4;
   --lDark: #202b5d;
   --gDark: #132244;
@@ -3624,8 +3624,8 @@ fieldset:disabled a.btn {
 }
 .btn-danger {
   color: #fff;
-  background-color: #ff0000;
-  border-color: #ff0000;
+  background-color: #CC092F;
+  border-color: #CC092F;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0);
 }
 .btn-danger:hover {
@@ -3643,8 +3643,8 @@ fieldset:disabled a.btn {
 .btn-danger.disabled,
 .btn-danger:disabled {
   color: #fff;
-  background-color: #ff0000;
-  border-color: #ff0000;
+  background-color: #CC092F;
+  border-color: #CC092F;
 }
 .btn-danger:not(:disabled):not(.disabled):active,
 .btn-danger:not(:disabled):not(.disabled).active,
@@ -3953,13 +3953,13 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0), 0 0 0 0 rgba(255, 193, 7, 0.5);
 }
 .btn-outline-danger {
-  color: #ff0000;
-  border-color: #ff0000;
+  color: #CC092F;
+  border-color: #CC092F;
 }
 .btn-outline-danger:hover {
   color: #fff;
-  background-color: #ff0000;
-  border-color: #ff0000;
+  background-color: #CC092F;
+  border-color: #CC092F;
 }
 .btn-outline-danger:focus,
 .btn-outline-danger.focus {
@@ -3967,15 +3967,15 @@ fieldset:disabled a.btn {
 }
 .btn-outline-danger.disabled,
 .btn-outline-danger:disabled {
-  color: #ff0000;
+  color: #CC092F;
   background-color: transparent;
 }
 .btn-outline-danger:not(:disabled):not(.disabled):active,
 .btn-outline-danger:not(:disabled):not(.disabled).active,
 .show > .btn-outline-danger.dropdown-toggle {
   color: #fff;
-  background-color: #ff0000;
-  border-color: #ff0000;
+  background-color: #CC092F;
+  border-color: #CC092F;
 }
 .btn-outline-danger:not(:disabled):not(.disabled):active:focus,
 .btn-outline-danger:not(:disabled):not(.disabled).active:focus,
@@ -6283,7 +6283,7 @@ a.badge-warning.focus {
 }
 .badge-danger {
   color: #fff;
-  background-color: #ff0000;
+  background-color: #CC092F;
 }
 a.badge-danger:hover,
 a.badge-danger:focus {
@@ -7909,7 +7909,7 @@ button.bg-warning:focus {
   background-color: #d39e00 !important;
 }
 .bg-danger {
-  background-color: #ff0000 !important;
+  background-color: #CC092F !important;
 }
 a.bg-danger:hover,
 a.bg-danger:focus,
@@ -8005,7 +8005,7 @@ button.bg-dark:focus {
   border-color: #ffc107 !important;
 }
 .border-danger {
-  border-color: #ff0000 !important;
+  border-color: #CC092F !important;
 }
 .border-light {
   border-color: #f8f5f4 !important;
@@ -37930,7 +37930,7 @@ a.text-warning:focus {
   color: #ba8b00 !important;
 }
 .text-danger {
-  color: #ff0000 !important;
+  color: #CC092F !important;
 }
 a.text-danger:hover,
 a.text-danger:focus {
