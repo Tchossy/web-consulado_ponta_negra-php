@@ -49,7 +49,7 @@ website:    http://www.tchossy.com
 
 .icomoon-icoStop:before {
 	content: "\e935";
-	color: #CC092F;
+	color: #ff0000;
 }
 
 .icomoon-ico40:before {
@@ -9030,7 +9030,7 @@ input[type=number] {
 }
 
 .cartTable .remove-item:hover {
-	color: #CC092F;
+	color: #ff0000;
 }
 
 .cartTable .quantity {
@@ -10081,7 +10081,7 @@ input[type=number] {
 	-ms-flex-align: center;
 	align-items: center;
 	color: #fff;
-	background-color: #CC092F;
+	background-color: #ff0000;
 }
 
 /* ---------------------------------------------------------
@@ -10284,7 +10284,7 @@ input[type=number] {
 
 }
 .footerCopy-bg{
-	background-color: #CC092F;
+	background-color: #ff0000;
 
 }
 .footerCopy-bg .text-color{

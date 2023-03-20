@@ -58,7 +58,7 @@ website:    http://www.tchossy.com
 .ui-widget.ui-slider.ui-slider-horizontal .ui-widget-header,
 .vssDropdownList li,
 .newsSingleWrap .dropCap {
-  background-color: #CC092F;
+  background-color: #ff0000;
 }
 
 .btnTheme.btnNoOver:hover,
@@ -121,7 +121,7 @@ website:    http://www.tchossy.com
 .newsSingleWrap .tagList a.active,
 .widget h3,
 .widget .h3 {
-  color: #CC092F;
+  color: #ff0000;
 }
 
 .btnTheme.btnNoOver,
@@ -143,5 +143,5 @@ website:    http://www.tchossy.com
 .btnLinkShare:hover,
 .arddColumnSlider .slick-arrow:hover,
 .nwssHolder .vssOpener.hover {
-  border-color: #CC092F;
+  border-color: #ff0000;
 }
