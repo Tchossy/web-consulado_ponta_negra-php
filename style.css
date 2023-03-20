@@ -10279,6 +10279,19 @@ input[type=number] {
 225. ftAreaWrapvii / .ftAreaWrapvii
 --------------------------------------------------------*/
 
+.footer-bg{
+	background-color: #040c13;
+
+}
+.footerCopy-bg{
+	background-color: #ff0000;
+
+}
+.footerCopy-bg .text-color{
+	color: #fff;
+
+}
+
 .ftAreaWrapvii {
 	color: #7b859d;
 	background-color: #020711;
@@ -10290,7 +10303,7 @@ input[type=number] {
 }
 
 .ftAreaWrapvii .footerAside {
-	border-bottom: 1px solid rgba(255, 255, 255, .1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.986);
 }
 
 .ftAreaWrapvii .ftSubscribeForm .form-control {
