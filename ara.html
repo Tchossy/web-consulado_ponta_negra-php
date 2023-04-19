@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedido de Visto</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        visibility: hidden;
+        position: absolute;
+      "
+    >
+      <div
+        id="folhaDownload"
+        style="
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        "
+      >
+        <!-- Container do Papel -->
+        <section
+          class="folha"
+          style="
+            width: 700px;
+            height: auto;
+            margin: auto;
+            position: relative;
+            padding: 1rem;
+          "
+        >
+          <!-- IMG da insignia -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Emblem_of_Angola.svg/906px-Emblem_of_Angola.svg.png"
+            alt=""
+            style="width: 5.6rem; padding: 0.6rem; display: block; margin: auto"
+          />
+
+          <h3
+            style="
+              font-weight: bold;
+              text-transform: uppercase;
+              text-align: center;
+              margin-bottom: 0.6rem;
+            "
+          >
+            república de angola
+            <br />
+            consultado geral em ponta negra
+          </h3>
+          <hr />
+          <p
+            style="
+              text-align: center;
+              text-transform: uppercase;
+              font-weight: bold;
+              margin-top: 1.4rem;
+            "
+          >
+            Pedido de <br />
+            visto <br />
+            (demande de visa)
+          </p>
+
+          <div style="display: flex; justify-content: space-between">
+            <div style="display: flex; justify-content: space-between">
+              <div style="display: flex; align-items: center; gap: 0.5rem">
+                <div
+                  style="width: 30px; height: 30px; border: 1px solid black"
+                ></div>
+                <p style="text-transform: uppercase">Estudantes</p>
+              </div>
+            </div>
+            <div
+              style="
+                width: 120px;
+                height: 120px;
+                border: 2px solid black;
+                text-transform: uppercase;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 0.4rem;
+
+                font-size: 0.8rem;
+                font-weight: 700;
+              "
+            >
+              <p>Fotografia</p>
+              <p>Foto</p>
+            </div>
+          </div>
+
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+              margin-top: 2rem;
+              border: 1px solid black;
+              padding: 1rem;
+              font-size: 13px;
+            "
+          >
+            <p>Nome(nom, prénom): <ins>Tonilson António Casimiro</ins></p>
+            <div style="display: flex; gap: 1rem">
+              <p>Estado civíl (état civil): <ins>Solteiro</ins></p>
+              <p>Sexo (sexe): <ins>Masculino</ins></p>
+            </div>
+            <div style="display: flex; gap: 1rem">
+              <p>
+                Data de Nascimento (date de naissance):
+                <ins>12</ins>/<ins>04</ins>/<ins>2023</ins>
+              </p>
+              <p>Local de Nascimento (lieu de naissance): <ins>Cazenca</ins></p>
+            </div>
+            <div style="display: flex; gap: 1rem">
+              <p>País de Nascimento (pays de naissance): <ins>Angola</ins></p>
+              <p>
+                Nacionalidade de origem (Nationalité d` origine):
+                <ins>Bakongo</ins>
+              </p>
+            </div>
+            <div style="display: flex; gap: 1rem">
+              <p>
+                Nacionalidade actual (Nationalité actuelle): <ins>Angolana</ins>
+              </p>
+              <p>Passaporte (passeporte) N: <ins>123566200</ins></p>
+            </div>
+            <div style="display: flex; gap: 1rem">
+              <p>
+                Emitido em (délivre à):
+                <ins>São Paulo - Luanda</ins> aos(le)<ins>12/</ins><ins>04</ins
+                ><ins>/2023</ins>
+              </p>
+              <p>
+                Válido até (expire le): <ins>12/</ins><ins>04</ins
+                ><ins>/2023</ins>
+              </p>
+            </div>
+            <div style="display: flex; gap: 1rem">
+              <p>Profissão (Profession): <ins>Programador</ins></p>
+              <p>
+                Cargo que ocupa (Fonction): <ins>Chefe da aréa tecnica</ins>
+              </p>
+            </div>
+            <p>
+              Local de Trabalho (Lieu de travail):
+              <ins>1 de Maio - Vila Lice </ins>
+            </p>
+            <div style="display: flex; gap: 1rem">
+              <p>Morada (adresse): <ins>Benfica-Angomart</ins></p>
+              <p>Cidade (ville): <ins>Luanda</ins></p>
+            </div>
+            <div style="display: flex; gap: 1rem">
+              <p>Rua (rue): <ins>Cabolombo</ins></p>
+              <p>Codigo Postal (code postal): <ins>7442</ins></p>
+            </div>
+            <div style="display: flex; gap: 1rem">
+              <p>N de téléfone (telephone): <ins>924182273</ins></p>
+              <p>Email: <ins>casimirotonilson1@gmail.com</ins></p>
+            </div>
+            <div style="display: flex; gap: 1rem">
+              <p>
+                Nome do pai (nom du père):
+                <ins>Casimiro Policarpo Gabriela</ins>
+              </p>
+              <p>
+                Nacionalidade do pai (Nationalité du père): <ins>Angolano</ins>
+              </p>
+            </div>
+            <div style="display: flex; gap: 1rem">
+              <p>
+                Nome da mãe (nom de la mère): <ins>Sónia Cristina Delfina</ins>
+              </p>
+              <p>
+                Nacionalidade da mãe (Nationalité de la mère):
+                <ins>Angolano</ins>
+              </p>
+            </div>
+            <p>
+              Motivo de origem (motif de voyage):
+              <ins>Faculdade no exterior</ins>
+            </p>
+            <p>
+              Local de Hospedagem (lieu de résidence): <ins>Hotel Fleuma</ins>
+            </p>
+            <div style="display: flex; gap: 1rem">
+              <p>Cidade(ville): <ins>Luanda</ins></p>
+              <p>Rua(rue): <ins>Cabolombo</ins></p>
+              <p>Case(case) N: <ins>2563</ins></p>
+            </div>
+            <p>
+              Nome da pessoa ou organismo que resposibiliará pela sua estadia
+              (nom de la personne ou de l`organisme qui prendra la charge de
+              votre séjour):
+              <ins>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
+                quis ipsam suscipit, nesciunt tempore excepturi repellat maxime
+                perferendis itaque consectetur sunt nihil consequatur officiis
+                iure provident. Eos pariatur officiis dolore? Lorem ipsum dolor
+                sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit,
+                amet consectetur adipisicing elit.
+              </ins>
+            </p>
+          </div>
+        </section>
+
+        <!-- Container do Papel -->
+        <section
+          class="folha"
+          style="
+            width: 700px;
+            height: auto;
+            margin: auto;
+            position: relative;
+            padding: 1rem;
+            margin-top: 3rem;
+          "
+        >
+          <p
+            style="
+              text-transform: uppercase;
+              border: 1px solid black;
+              text-align: center;
+              padding: 1rem 0.5rem;
+              margin: 1.2rem 0;
+            "
+          >
+            a preencher pelo solicitante de visto <br />
+            <span style="text-transform: capitalize"
+              >À remplir par le demandeur de visa</span
+            >
+          </p>
+
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+              margin-top: 2rem;
+              font-size: 13px;
+              margin: 1.2rem 0;
+            "
+          >
+            <p>
+              Nome da pessoa ou organismo a contactar em Angola (nom de la
+              personne ou de l`organisme à contacter em Angola):
+              <ins
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                harum cumque illum iusto dignissimos impedit repudiandae aliquam
+                neque similique officiis autem soluta magnam quod minus ex
+                doloremque esse</ins
+              >
+            </p>
+            <p>
+              Endereço completo em Angola (adresse complète en Angola):
+              <ins>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                optio, ipsam assumenda doloribus vel eaque fuga maiores, animi
+                autem
+              </ins>
+            </p>
+            <p>
+              Data de entrada em Angola(date d` entrée en Angola):
+              <ins>23</ins>/<ins>03</ins>/<ins>2023</ins> &nbsp; Posto de
+              fronteira a utilizar(poste de frontière d` entrée):
+              <ins
+                >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Veniam, corrupti maiores. Doloremque reprehenderit modi delectus
+                laboriosam minus expedita repudiand</ins
+              >
+            </p>
+            <p>
+              Data de saída de Angola(date de sortie en Angola):
+              <ins>30</ins>/<ins>03</ins>/<ins>2023</ins>
+            </p>
+            <p>
+              Assinatura do requerente (signature du demandeur):
+              <ins>Tonilson António Casimiro</ins> &nbsp; Data(date):
+              <ins>23</ins>/<ins>03</ins>/<ins>2023</ins>
+            </p>
+          </div>
+
+          <div
+            style="
+              border: 1px solid black;
+              padding: 1.5rem;
+              margin: 1.2rem 0;
+              font-size: 13px;
+            "
+          >
+            <p
+              style="
+                text-align: center;
+                font-size: 16px;
+                text-transform: uppercase;
+              "
+            >
+              Insformações Complementares
+              <span style="font-size: 16px; text-transform: capitalize"
+                >(informations complémentaires)</span
+              >
+            </p>
+            <ul>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  gap: 4rem;
+                  margin-bottom: 0.6rem;
+                "
+              >
+                <li>
+                  Já realizou viagens para Angola <br />
+                  (Etes-vous déjà allé en Angola)
+                </li>
+                <div>
+                  Sim &nbsp;
+                  <div
+                    style="width: 30px; height: 20px; border: 1px solid black"
+                  ></div>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  gap: 4rem;
+                  margin-bottom: 0.6rem;
+                "
+              >
+                <li>
+                  Já obteve Cartão de Residência <br />
+                  (Avez-vous déjà été détenteur d`un tire de sójour)
+                </li>
+                <div>
+                  Sim &nbsp;
+                  <div
+                    style="width: 30px; height: 20px; border: 1px solid black"
+                  ></div>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  gap: 4rem;
+                  margin-bottom: 0.6rem;
+                "
+              >
+                <li>
+                  Já obteve visto de trabalho <br />
+                  (Avez-vous déjà obtenu un visa de travail)
+                </li>
+                <div>
+                  Sim &nbsp;
+                  <div
+                    style="width: 30px; height: 20px; border: 1px solid black"
+                  ></div>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  gap: 4rem;
+                  margin-bottom: 0.6rem;
+                "
+              >
+                <li>
+                  Já lhe foi recusada a entrada em Angola <br />
+                  (Avez-vous déjà eu un refus d` entrée en Angola)
+                </li>
+                <div>
+                  Sim &nbsp;
+                  <div
+                    style="width: 30px; height: 20px; border: 1px solid black"
+                  ></div>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  gap: 4rem;
+                  margin-bottom: 0.6rem;
+                "
+              >
+                <li>
+                  Já foi expulso de Angola <br />
+                  (Avez-vous déjà été expulsé(e) de l` Angola)
+                </li>
+                <div>
+                  Sim &nbsp;
+                  <div
+                    style="width: 30px; height: 20px; border: 1px solid black"
+                  ></div>
+                </div>
+              </div>
+            </ul>
+          </div>
+
+          <p
+            style="
+              font-size: 16px;
+              text-transform: uppercase;
+              border: 1px solid black;
+              text-align: center;
+              padding: 1rem 0.5rem;
+              margin: 2.2rem 0;
+            "
+          >
+            a preencher pelo sector consular <br />
+            <span style="text-transform: capitalize"
+              >À remplir par le secteur Consulaire</span
+            >
+          </p>
+
+          <div
+            style="
+              border: 1px solid black;
+              text-align: center;
+              padding: 1rem 0.5rem;
+            "
+          >
+            <p style="text-align: center; margin-bottom: 5rem">
+              Do Responsável do Sector Consular (Décision du responsable du
+              secteur Consulaire)
+            </p>
+
+            <br />
+
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <p>
+                Date <br />
+                (date) <br />
+                <br />
+                <ins>23</ins>/<ins>03</ins>/<ins>2023</ins>
+              </p>
+              <p>
+                O(A) Responsável <br />
+                Le (la) Responsable <br />
+                <br /><ins>Raimundo Gaspar Kilende</ins>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Container do Papel -->
+    <section
+      class="folha"
+      style="
+        width: 700px;
+        height: auto;
+        border: 1px solid black;
+        margin: auto;
+        margin-top: 2rem;
+        position: relative;
+        padding: 2rem;
+        padding-bottom: 4rem;
+      "
+    >
+      <!-- IMG da insignia -->
+      <img
+        src="../img/insignia-removebg-preview.png"
+        alt=""
+        style="width: 9rem; display: block; margin: auto"
+      />
+      <h3
+        style="font-weight: bold; text-transform: uppercase; text-align: center"
+      >
+        república de angola
+        <br />
+        consultado geral em ponta negra
+      </h3>
+
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 1rem;
+          margin: auto;
+        "
+      >
+        <h3 style="text-transform: uppercase; font-weight: bold">
+          Formulário para emissão de salvo-conduto
+        </h3>
+        <div style="width: 140px; height: 140px; border: 3px solid black"></div>
+      </div>
+      <h3 style="text-transform: uppercase; margin-bottom: 0.5rem">
+        n do processo <ins>23422</ins>/cgra/pn/ <ins>222</ins>
+      </h3>
+      <p>Nome <ins>Tonilson António Casimiro</ins></p>
+      <p>Apelido <ins>Casimiro</ins></p>
+      <p>Filho de <ins>Casimiro Policarpo Gabriela</ins></p>
+      <p>E de <ins>Sónia Cristina Delfina</ins></p>
+      <div style="display: flex; gap: 0.5rem">
+        <p>Data de Nascimento <ins>15</ins>/<ins>08</ins>/<ins>2002</ins></p>
+        <p>Local de Nascimento <ins>Samba-Luanda</ins></p>
+      </div>
+      <p>Local de Trabalho <ins>Morro-bento - Shoprite</ins></p>
+      <p>Local de Residência <ins>Benfica - Angomart</ins></p>
+      <p>
+        N do Documento Pessoal, (B.I., Cédula pessoal, Assento de Nascimento ou
+        cartão de inscrição consular)
+        <ins>126573 66790 667533 334009</ins>
+      </p>
+      <div style="display: flex; gap: 0.5rem">
+        <p>Data de emissão <ins>15</ins>/<ins>08</ins>/<ins>2002</ins></p>
+        <p>Local de emissão <ins>São Paulo</ins></p>
+      </div>
+      <p>Motivo do Pedido de Salvo-Conduto <ins>Estudar fora do país</ins></p>
+
+      <div style="display: flex; gap: 3rem; align-items: center">
+        <div style="width: 500px; border: 2px solid black; padding: 0 0.5rem">
+          <p style="text-transform: uppercase; text-align: center">
+            recepção <br />
+            termo de entrega
+          </p>
+          <p>
+            Este processo deu entrada na Missão Consular de <br />
+            <ins>Emissão Salvo-Conduto</ins> <br />
+            Aos <ins>empty informacion</ins> e foi lhe atribuido o n do Registro
+            <ins>122376488</ins>
+          </p>
+          <p>Data <ins>23</ins>/<ins>03</ins>/<ins>2023</ins></p>
+          <p>
+            Assinatura do funcionário de Serviço Consular
+            <br />
+            <ins>Josipaiva Albano</ins>
+          </p>
+        </div>
+        <div style="width: 500px; text-align: justify">
+          <ins>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
+            corrupti laudantium, ullam doloribus soluta deleniti nulla,
+            cupiditate ut optio enim suscipit impedit ducimus dicta blanditiis?
+            Laboriosam eos tenetur repudiandae neque? Lorem ipsum dolor sit,
+            amet consectetur adipisicing elit. Repellat totam beatae iusto
+            commodi excepturi, veritatis quo aliquam delectus veniam quam? Non
+            cumque fugiat facilis temporibus odio vel dolores nostrum soluta!
+          </ins>
+        </div>
+      </div>
+    </section>
+
+    <!-- Container do Papel -->
+    <section
+      class="folha"
+      style="
+        width: 700px;
+        height: auto;
+        border: 1px solid black;
+        margin: auto;
+        margin-top: 2rem;
+        position: relative;
+        padding: 2rem;
+        padding-bottom: 4rem;
+      "
+    >
+      <p
+        style="
+          text-transform: uppercase;
+          font-weight: bold;
+          padding: 1rem 0rem;
+          border: 1px solid black;
+          width: 300px;
+          text-align: center;
+          margin: auto;
+        "
+      >
+        Pedido de salvo - conduto
+        <br />
+        demande de laisse-passer
+      </p>
+
+      <p
+        style="
+          text-align: justify;
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-top: 4rem;
+          margin-left: 18rem;
+          margin-bottom: 3rem;
+        "
+      >
+        à <br />
+        sua excelência geral sr consul geral <br />
+        da república de angola em ponta negra <br />
+        república do kongo
+      </p>
+
+      <div style="display: flex; gap: 1rem">
+        <p>
+          Eu <ins>Tonilson António Casimiro</ins> <br />
+          Moi
+        </p>
+        <p>
+          Estado Civil <ins>Solteiro</ins> <br />
+          Etat civil
+        </p>
+      </div>
+      <p>
+        Filho(a) de <ins>Casimiro Policarpo Gabriela</ins> <br />
+        Fils/file de
+      </p>
+      <p>
+        E de <ins>Sónia Cristina Delfina</ins> <br />
+        Et de
+      </p>
+      <div style="display: flex; gap: 1rem">
+        <p>
+          Natural de <ins>Luanda,</ins> <br />
+          Né (e) à
+        </p>
+        <p>
+          aos <ins>23</ins>/<ins>03</ins>/<ins>2023</ins> <br />
+          le
+        </p>
+      </div>
+      <div style="display: flex; gap: 1rem">
+        <p>
+          Portador do cartão de identidade Consular n <ins>897979</ins> <br />
+          Porteur (se) de la carte consulaire
+        </p>
+        <p>
+          Emitido <ins>Cazenca</ins> <br />
+          Emise à
+        </p>
+      </div>
+      <div style="display: flex; gap: 1rem">
+        <p>
+          Aos <ins>23</ins>/<ins>03</ins>/<ins>2023</ins> <br />
+          Le
+        </p>
+        <p>
+          Residência actual: <ins>Benfica-Angomart</ins> <br />
+          Residence actuelle
+        </p>
+      </div>
+      <div style="display: flex; gap: 1rem">
+        <p>
+          Rua <ins>Rua dos Baianos</ins> <br />
+          Rue
+        </p>
+        <p>n: <ins>3444655</ins></p>
+      </div>
+      <p>
+        Vem muito respeitosamente, solicitar à S.Excelência Sr Cônsul Geral, se
+        digne autorizar e emissão de Salvo-conduto.
+      </p>
+      <p>
+        (Je viens à travers la présente, soliciter auprès de votre Excellence
+        Monsieur le Consul, Général,<br />
+        l`obtention de Laissez-passer pour le Retour Définitif au Pays )
+      </p>
+      <p style="text-align: center; margin-top: 2rem; margin-bottom: 4rem">
+        Pelo que espero deferimento <br />
+        (dans l'attente de votre autorisation)
+      </p>
+
+      <p>
+        Ponta Negra aos <ins>23</ins>/<ins>03</ins>/<ins>2023</ins> <br />
+        Pointe-Noire, le
+      </p>
+
+      <p style="text-transform: uppercase; margin-top: 3rem; text-align: right">
+        <ins>Rafael pilartes</ins> <br />
+        assinatura / signature
+      </p>
+    </section>
+
+    <!-- Container do Papel -->
+    <section
+      class="folha"
+      style="
+        width: 700px;
+        height: auto;
+        border: 1px solid black;
+        margin: auto;
+        margin-top: 2rem;
+        position: relative;
+        padding: 2rem;
+        padding-bottom: 4rem;
+      "
+    >
+      <p
+        style="
+          text-transform: uppercase;
+          font-weight: bold;
+          text-align: center;
+          margin-bottom: 6rem;
+        "
+      >
+        declaração
+      </p>
+      <p>
+        Eu <ins>Tonilson António Casimiro</ins> Estado Civil <ins>Soteiro</ins>
+        <br />
+      </p>
+      <p>
+        Portador(a) do cartão consular n <ins>255477</ins> passado no dia
+        <ins>23</ins>/<ins>03</ins>/<ins>2023</ins>
+      </p>
+      <p>Declaro tomar conhecimento que o salvo-conduto em minha posse;</p>
+      <p>
+        Destina-se para uma única viagem de ida simples ao País e que, salvo
+        motive <br />
+        comprovadamente excecional, não me será passado outro salvo-conduto.
+      </p>
+
+      <p style="text-transform: uppercase; margin-bottom: 6rem">
+        ponta negra aos <ins>23</ins>/<ins>03</ins>/<ins>2023</ins>
+      </p>
+
+      <p style="text-transform: uppercase; text-align: center">
+        o(a) declarante <br />
+        <ins>Raimundo Gaspar Kilende</ins>
+      </p>
+    </section>
+
+    <script src="js/form.js"></script>
+    <script src="js/html2pdf.js"></script>
+  </body>
+</html>

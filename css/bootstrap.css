@@ -39472,6 +39472,9 @@ a.text-primary:focus {
 .text-secondary {
 	color: #0067da !important;
 }
+.text-red {
+	color: #ff5268 !important;
+}
 
 a.text-secondary:hover,
 a.text-secondary:focus {

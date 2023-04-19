@@ -66,6 +66,12 @@
 
     <!-- include the site responsive stylesheet -->
     <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
   </head>
   <body>
     <!-- pageWrapper -->
@@ -90,7 +96,7 @@
                       </a>
                     </li>
                     <li>
-                      <time datetime="2011-01-12">
+                      <time datetime="2023-01-12">
                         <i class="icomoon-clock align-middle icn"
                           ><span class="sr-only">icon</span></i
                         >
@@ -115,6 +121,7 @@
           <div class="hdFixerWrap py-2 py-md-3 py-xl-5 sSticky bg-white">
             <div class="container">
               <nav class="navbar navbar-expand-md navbar-light p-0">
+                <!-- LOGO -->
                 <div class="logo flex-shrink-0 mr-3 mr-xl-8 mr-xlwd-16">
                   <a href="index.html">
                     <img
@@ -124,6 +131,8 @@
                     />
                   </a>
                 </div>
+
+                <!-- LINK -->
                 <div
                   class="hdNavWrap flex-grow-1 d-flex align-items-center justify-content-end justify-content-lg-start"
                 >
@@ -163,41 +172,24 @@
                         </div>
                       </li>
 
-                      <li class="nav-item dropdown ddohOpener">
-                        <a
-                          class="nav-link dropdown-toggle dropIcn"
-                          href="javascript:void(0);"
-                          role="button"
-                          data-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                          >Serviços</a
-                        >
-                        <div
-                          class="dropdown-menu hdMainDropdown desktopDropOnHover"
-                        >
-                          <ul class="list-unstyled mb-0 hdDropdownList">
-                            <li>
-                              <a class="dropdown-item" href="national.html"
-                                >Nacionais</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="foreigner.html"
-                                >Estrangeiros</a
-                              >
-                            </li>
-                            <li></li>
-                          </ul>
-                        </div>
-                      </li>
-
                       <li class="nav-item">
                         <a class="nav-link" href="eventsList.html">Eventos</a>
                       </li>
 
                       <li class="nav-item">
                         <a class="nav-link" href="news.html">Notícias</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link" href="scheduling.html"
+                          >Agendamento</a
+                        >
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link" href="myDocs.html"
+                          >Meus documentos</a
+                        >
                       </li>
 
                       <li class="nav-item">
@@ -290,6 +282,12 @@
                   </form>
                  -->
                 </div>
+
+                <!-- LOGIN -->
+                <a href="login.html" class="ml-6" style="color: red">
+                  <i class="fa-solid fa-user"></i>
+                  Login
+                </a>
               </nav>
             </div>
           </div>
@@ -340,49 +338,7 @@
               >
                 <li>
                   <a
-                    href="servicesSingle.html"
-                    class="fflColumn d-block w-100 text-center px-2 pt-4 pb-10"
-                  >
-                    <span
-                      class="icnWrap d-flex align-items-center justify-content-center mx-auto mb-4 rounded-circle"
-                      ><i class="fa-solid fa-check-double"
-                        ><span class="sr-only">icon</span></i
-                      >
-                    </span>
-                    <h2 class="mb-0">Vistos</h2>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="servicesSingle.html"
-                    class="fflColumn d-block w-100 text-center px-2 pt-4 pb-10"
-                  >
-                    <span
-                      class="icnWrap d-flex align-items-center justify-content-center mx-auto mb-4 rounded-circle"
-                      ><i class="fa-solid fa-id-card"
-                        ><span class="sr-only">icon</span></i
-                      >
-                    </span>
-                    <h2 class="mb-0">Identificação</h2>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="servicesSingle.html"
-                    class="fflColumn d-block w-100 text-center px-2 pt-4 pb-10"
-                  >
-                    <span
-                      class="icnWrap d-flex align-items-center justify-content-center mx-auto mb-4 rounded-circle"
-                      ><i class="fa-solid fa-file"
-                        ><span class="sr-only">icon</span></i
-                      >
-                    </span>
-                    <h2 class="mb-0">Assentos</h2>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="servicesSingle.html"
+                    href="servicesSingleNotorio.html"
                     class="fflColumn d-block w-100 text-center px-2 pt-4 pb-10"
                   >
                     <span
@@ -391,7 +347,63 @@
                         ><span class="sr-only">icon</span></i
                       >
                     </span>
-                    <h2 class="mb-0">Notarial</h2>
+                    <h2 class="mb-0">Sector Notarial</h2>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="servicesSingleMigratorio.html"
+                    class="fflColumn d-block w-100 text-center px-2 pt-4 pb-10"
+                  >
+                    <span
+                      class="icnWrap d-flex align-items-center justify-content-center mx-auto mb-4 rounded-circle"
+                      ><i class="fa-solid fa-check-double"
+                        ><span class="sr-only">icon</span></i
+                      >
+                    </span>
+                    <h2 class="mb-0">Sector Migratorio</h2>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="servicesSingleIdentificacao.html"
+                    class="fflColumn d-block w-100 text-center px-2 pt-4 pb-10"
+                  >
+                    <span
+                      class="icnWrap d-flex align-items-center justify-content-center mx-auto mb-4 rounded-circle"
+                      ><i class="fa-solid fa-id-card"
+                        ><span class="sr-only">icon</span></i
+                      >
+                    </span>
+                    <h2 class="mb-0">Sector Identificação</h2>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="servicesSingleApoioAComunidade.html"
+                    class="fflColumn d-block w-100 text-center px-2 pt-4 pb-10"
+                  >
+                    <span
+                      class="icnWrap d-flex align-items-center justify-content-center mx-auto mb-4 rounded-circle"
+                      ><i class="fa-solid fa-id-card"
+                        ><span class="sr-only">icon</span></i
+                      >
+                    </span>
+                    <h2 class="mb-0">Sector de Apoio à Comunidade</h2>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="servicesSingleComercial.html"
+                    class="fflColumn d-block w-100 text-center px-2 pt-4 pb-10"
+                  >
+                    <span
+                      class="icnWrap d-flex align-items-center justify-content-center mx-auto mb-4 rounded-circle"
+                      ><i class="fa-solid fa-id-card"
+                        ><span class="sr-only">icon</span></i
+                      >
+                    </span>
+                    <h2 class="mb-0">Sector Comercial</h2>
                   </a>
                 </li>
               </ul>
@@ -511,6 +523,7 @@
             </div>
           </div>
         </section>
+
         <!-- Modal Visto de Turismo -->
         <div
           class="modal fade bd-example-modal-lg"
@@ -1313,16 +1326,16 @@
                   style="cursor: pointer"
                   class="esColumn position-relative text-center mb-13"
                   data-toggle="modal"
-                  data-target="#transicaoAssentosModal"
+                  data-target="#sectorIdentificacao"
                 >
                   <span
                     class="imgHolder d-block w-100 bgCover"
-                    style="background-image: url(images/img05.jpg)"
+                    style="background-image: url(images/img06.jpg)"
                   ></span>
                   <div
                     class="escCaption bg-white shadow position-absolute pt-4 px-2 pb-5"
                   >
-                    <h3 class="fwMedium mb-0">Transcrição de assentos</h3>
+                    <h3 class="fwMedium mb-0">Sector de Identificação</h3>
                     <a href="javascript:void(0);" class="btnLink fontAlter"
                       >Saber mais
                       <i class="fas fa-chevron-right blIcn"
@@ -1336,18 +1349,70 @@
               <div class="col-12 col-md-6 col-lg-4">
                 <article
                   style="cursor: pointer"
-                  class="esColumn position-relative text-center mb-13"
                   data-toggle="modal"
-                  data-target="#sectorIdentificacao"
+                  data-target="#sectorMigratorioModal"
+                  class="esColumn position-relative text-center mb-13"
                 >
                   <span
                     class="imgHolder d-block w-100 bgCover"
-                    style="background-image: url(images/img06.jpg)"
+                    style="background-image: url(images/img04.jpg)"
                   ></span>
                   <div
                     class="escCaption bg-white shadow position-absolute pt-4 px-2 pb-5"
                   >
-                    <h3 class="fwMedium mb-0">Sector de identificação</h3>
+                    <h3 class="fwMedium mb-0">Sector Migratorio</h3>
+                    <a href="javascript:void(0);" class="btnLink fontAlter"
+                      >Saber mais
+                      <i class="fas fa-chevron-right blIcn"
+                        ><span class="sr-only">icon</span></i
+                      ></a
+                    >
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-6 col-lg-4">
+                <article
+                  style="cursor: pointer"
+                  data-toggle="modal"
+                  data-target="#sectorComercialModal"
+                  class="esColumn position-relative text-center mb-13"
+                >
+                  <span
+                    class="imgHolder d-block w-100 bgCover"
+                    style="background-image: url(images/img04.jpg)"
+                  ></span>
+                  <div
+                    class="escCaption bg-white shadow position-absolute pt-4 px-2 pb-5"
+                  >
+                    <h3 class="fwMedium mb-0">Sector Comercial</h3>
+                    <a href="javascript:void(0);" class="btnLink fontAlter"
+                      >Saber mais
+                      <i class="fas fa-chevron-right blIcn"
+                        ><span class="sr-only">icon</span></i
+                      ></a
+                    >
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-4">
+                <article
+                  style="cursor: pointer"
+                  data-toggle="modal"
+                  data-target="#sectorMigratorioModal"
+                  class="esColumn position-relative text-center mb-13"
+                >
+                  <span
+                    class="imgHolder d-block w-100 bgCover"
+                    style="background-image: url(images/img04.jpg)"
+                  ></span>
+                  <div
+                    class="escCaption bg-white shadow position-absolute pt-4 px-2 pb-5"
+                  >
+                    <h3 class="fwMedium mb-0">Sector de Apoio à Comunidade</h3>
                     <a href="javascript:void(0);" class="btnLink fontAlter"
                       >Saber mais
                       <i class="fas fa-chevron-right blIcn"
@@ -1392,53 +1457,10 @@
                     <li class="list-group-item">- Registo de nascimento</li>
                     <li class="list-group-item">- Registo de casamento</li>
                     <li class="list-group-item">- Registo de óbito</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button
-                  class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4"
-                  data-hover="Entendido"
-                  data-dismiss="modal"
-                >
-                  <span class="d-block btnText fwMedium">Entendido</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal Transcrição de assentos  -->
-        <div
-          class="modal fade bd-example-modal-lg"
-          id="transicaoAssentosModal"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="transicaoAssentosModal"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="transicaoAssentosModal">
-                  Transcrição de assentos
-                </h5>
-                <button
-                  type="button"
-                  class="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="modal-body">
-                  <h6>Temos disponível para si os seguintes serviços:</h6>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">- Nascimento</li>
-                    <li class="list-group-item">- Casamento</li>
-                    <li class="list-group-item">- Óbito</li>
+                    <li class="list-group-item">- Transcrição de assentos</li>
+                    <li class="list-group-item">
+                      - Autenticação de documentos
+                    </li>
                     <li class="list-group-item">
                       - Reconhecimento de assinaturas.
                     </li>
@@ -1458,7 +1480,7 @@
           </div>
         </div>
 
-        <!-- Modal Sector Notarial   -->
+        <!-- Modal Sector de identificação   -->
         <div
           class="modal fade bd-example-modal-lg"
           id="sectorIdentificacao"
@@ -1496,6 +1518,186 @@
                       - 2 Via do Bilhete de Identidade
                     </li>
                     <li class="list-group-item">- Averbamento</li>
+                    <li class="list-group-item">
+                      - Emissão do certificado do resgistro criminal
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4"
+                  data-hover="Entendido"
+                  data-dismiss="modal"
+                >
+                  <span class="d-block btnText fwMedium">Entendido</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Sector Migratorio   -->
+        <div
+          class="modal fade bd-example-modal-lg"
+          id="sectorMigratorioModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="sectorMigratorioModal"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="sectorMigratorioModal">
+                  Sector Migratorio
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal-body">
+                  <h6>Temos disponível para si os seguintes serviços:</h6>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">- Emissão de passaporte</li>
+                    <li class="list-group-item">- Emissão de salvo conduto</li>
+                    <li class="list-group-item">
+                      - Emissão de visto de turismo
+                    </li>
+                    <li class="list-group-item">
+                      - Emissão de visto de Curta Duração
+                    </li>
+                    <li class="list-group-item">
+                      - Emissão de visto de Trânsito
+                    </li>
+                    <li class="list-group-item">
+                      - Emissão de visto de Trabalho
+                    </li>
+                    <li class="list-group-item">
+                      - Emissão de visto de Estudo
+                    </li>
+                    <li class="list-group-item">
+                      - Emissão de visto de Permanência temporária
+                    </li>
+                    <li class="list-group-item">
+                      - Emissão de visto de Fixação de Residência
+                    </li>
+                    <li class="list-group-item">
+                      - Emissão de visto de Tratamento Médio
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4"
+                  data-hover="Entendido"
+                  data-dismiss="modal"
+                >
+                  <span class="d-block btnText fwMedium">Entendido</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Sector Comercial   -->
+        <div
+          class="modal fade bd-example-modal-lg"
+          id="sectorComercialModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="sectorComercialModal"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="sectorComercialModal">
+                  Sector Comercial
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal-body">
+                  <h6>Temos disponível para si os seguintes serviços:</h6>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      - Promover o investimento em Angola
+                    </li>
+                    <li class="list-group-item">
+                      - Promover a economia Angolana
+                    </li>
+                    <li class="list-group-item">
+                      - Promover a oportunidade de negocio nos seguintes sector:
+                      <p>Agricultura</p>
+                      <p>Turismo</p>
+                      <p>Industria estrativa</p>
+                      <p>Industria ligeira</p>
+                      <p>Transporte terrestre, maritimo e aerioa</p>
+                      <p>Pesca</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4"
+                  data-hover="Entendido"
+                  data-dismiss="modal"
+                >
+                  <span class="d-block btnText fwMedium">Entendido</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Sector Migratorio   -->
+        <div
+          class="modal fade bd-example-modal-lg"
+          id="sectorMigratorioModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="sectorMigratorioModal"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="sectorMigratorioModal">
+                  Sector Migratorio
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal-body">
+                  <h6>Temos disponível para si os seguintes serviços:</h6>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">- Registo de nascimento</li>
+                    <li class="list-group-item">- Registo de casamento</li>
+                    <li class="list-group-item">- Registo de óbito</li>
+                    <li class="list-group-item">- Transcrição de assentos</li>
                   </ul>
                 </div>
               </div>
@@ -1519,7 +1721,7 @@
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-6 pt-4">
-                <h2 class="lh44 mb-6">O líder do Consulado</h2>
+                <h2 class="lh44 mb-6">Mensagem do Cônsul Geral</h2>
                 <p>
                   O Cônsul Geral Sr Samuel Andrade Da Cunha está empenhada em
                   resolver os problemas das pessoas da cidade em todo o estado
@@ -2044,7 +2246,7 @@
         >
           <div class="container">
             <header class="headingHead text-center mb-12">
-              <h2 class="fwSemiBold">Explore os destaques da cidade</h2>
+              <h2 class="fwSemiBold">Explore os Destaques de Angola</h2>
             </header>
           </div>
           <div class="row">
@@ -2250,10 +2452,10 @@
         >
           <div class="container">
             <header class="headingHead text-center cdTitle mb-7 mb-md-13">
-              <h2 class="fwSemiBold mb-4">Conheça o consulado</h2>
+              <h2 class="fwSemiBold mb-4">Conheça a Equipe Consular</h2>
               <p>
-                O conselho da cidade tem super poderes reais como administrador
-                para liderar o país.
+                A equipe consular do consulado tem super poderes reais como
+                administrador para liderar o mesmo.
               </p>
             </header>
             <div class="row justify-content-center">
