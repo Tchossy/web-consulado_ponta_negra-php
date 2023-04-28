@@ -181,33 +181,4 @@ function changeTextPdf() {
   name_person_responsible_stay_user_pdf_field.innerText =
     name_person_responsible_stay_user_input.value
 }
-function download() {
-  const element = document.querySelector('#folhaDownload')
-
-  changeTextPdf()
-
-  const pagebreak = {
-    mode: '',
-    before: '#before',
-    after: '#after',
-    avoid: '#avoid'
-  }
-
-  const opt = {
-    //- cima - esquerda - baixo - direita
-    margin: [0, 3, 8, 3],
-    filename: 'myfile.pdf',
-    html2canvas: { scale: 3, useCORS: true },
-    image: { type: 'jpg', quality: 1 },
-    pagebreak: pagebreak,
-    jsPDF: {
-      unit: 'mm',
-      format: 'a4',
-      orientation: 'portrait',
-      compressPDF: true
-    }
-  }
-
-  // New Promise-based usage:
-  html2pdf().set(opt).from(element).save()
-}
+function download() {}

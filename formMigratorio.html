@@ -339,1170 +339,680 @@
         </div>
       </header>
 
-      <div class="container">
-        <button
-          type="button"
-          onclick="download()"
-          class="btn btnTheme d-flex col-lg-3 mb-6 font-weight-bold text-capitalize position-relative border-0 p-0 mt-2 btnWidthSmall"
-          data-hover="Enviar formulario"
-        >
-          <span class="d-block btnText">Enviar formulario</span>
-        </button>
-      </div>
-
-      <!-- Container do Papel -->
       <div
-        style="
-          width: 100%;
-          height: auto;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-        "
-        hidden
+        class="contactSectionWrap pt-7 pb-2 pt-md-10 pb-md-1 pt-lg-16 pb-lg-10 pt-xl-21 pb-xl-16"
       >
-        <div
-          id="folhaDownload"
-          style="
-            width: 100%;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            font-family: 'Times New Roman', Times, serif;
-            color: black;
-          "
-        >
-          <!-- Container do Papel -->
-          <section
-            id="before"
-            class="folha"
-            style="
-              width: 700px;
-              height: auto;
-              margin: auto;
-              position: relative;
-              padding: 1rem;
-            "
-          >
-            <!-- IMG da insignia -->
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Emblem_of_Angola.svg/906px-Emblem_of_Angola.svg.png"
-              alt=""
-              style="
-                width: 5.6rem;
-                padding: 0.6rem;
-                display: block;
-                margin: auto;
-              "
-            />
-
-            <h3
-              style="
-                font-weight: bold;
-                text-transform: uppercase;
-                text-align: center;
-                margin-bottom: 0.6rem;
-                font-size: 1.1rem;
-                font-family: 'Times New Roman', Times, serif;
-                color: black;
-              "
-            >
-              república de angola
-              <br />
-              consultado geral em ponta negra
-            </h3>
-            <hr />
-            <p
-              style="
-                text-align: center;
-                text-transform: uppercase;
-                font-weight: bold;
-                margin-top: 1.4rem;
-                font-size: 1rem;
-              "
-            >
-              Pedido de <br />
-              visto <br />
-              (demande de visa)
-            </p>
-
-            <div style="display: flex; justify-content: space-between">
-              <div style="display: flex; justify-content: space-between">
-                <div style="display: flex; align-items: center; gap: 0.5rem">
-                  <div
-                    style="width: 30px; height: 30px; border: 1px solid black"
-                  ></div>
-                  <p id="visa_type_pdf" style="text-transform: uppercase">
-                    Estudantes
-                  </p>
-                </div>
-              </div>
-              <div
-                style="
-                  width: 120px;
-                  height: 120px;
-                  border: 2px solid black;
-                  text-transform: uppercase;
-                  position: relative;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  justify-content: center;
-                  gap: 0.4rem;
-
-                  font-size: 0.8rem;
-                  font-weight: 700;
-                "
-              >
-                <p>Fotografia</p>
-                <p>Foto</p>
-              </div>
-            </div>
-
-            <div
-              style="
-                display: flex;
-                flex-direction: column;
-                gap: 0.7rem;
-                margin-top: 2rem;
-                border: 1px solid black;
-                padding: 1rem;
-                font-size: 13px;
-              "
-            >
-              <p>
-                Nome(nom, prénom):
-                <ins id="name_user_pdf"> </ins>
-              </p>
-              <div style="display: flex; gap: 1rem">
-                <p>
-                  Estado civíl (état civil):
-                  <ins id="marital_status_user_pdf"> </ins>
-                </p>
-                <p>Sexo (sexe): <ins id="sex_user_pdf"> </ins></p>
-              </div>
-              <div style="display: flex; gap: 1rem">
-                <p>
-                  Data de Nascimento (date de naissance):
-                  <ins id="date_birth_user_pdf"> </ins>
-                </p>
-                <p>
-                  Local de Nascimento (lieu de naissance):
-                  <ins id="birthplace_user_pdf"> </ins>
-                </p>
-              </div>
-              <div style="display: flex; gap: 1rem">
-                <p>
-                  País de Nascimento (pays de naissance):
-                  <ins id="country_birth_user_pdf"> </ins>
-                </p>
-                <p>
-                  Nacionalidade de origem (Nationalité d` origine):
-                  <ins id="nationality_origin_user_pdf"> </ins>
-                </p>
-              </div>
-              <div style="display: flex; gap: 1rem">
-                <p>
-                  Nacionalidade actual (Nationalité actuelle):
-                  <ins id="current_nationality_user_pdf"> </ins>
-                </p>
-                <p>
-                  Passaporte (passeporte) N:
-                  <ins id="passaport_user_pdf"> </ins>
-                </p>
-              </div>
-              <div style="display: flex; gap: 1rem">
-                <p>
-                  Emitido em (délivre à):
-                  <ins id="place_issue_user_pdf"> </ins>
-                  aos(le)<ins id="date_issue_user_pdf"> </ins>
-                </p>
-                <p>
-                  Válido até (expire le):
-                  <ins id="valid_until_user_pdf"> </ins>
-                </p>
-              </div>
-              <div style="display: flex; gap: 1rem">
-                <p>
-                  Profissão (Profession):
-                  <ins id="profession_user_pdf"> </ins>
-                </p>
-                <p>
-                  Cargo que ocupa (Fonction):
-                  <ins id="position_held_user_pdf"> </ins>
-                </p>
-              </div>
-              <p>
-                Local de Trabalho (Lieu de travail):
-                <ins id="workplace_user_pdf"> </ins>
-              </p>
-              <div style="display: flex; gap: 1rem">
-                <p>
-                  Morada (adresse):
-                  <ins id="household_user_pdf"> </ins>
-                </p>
-                <p>Cidade (ville): <ins id="city_user_pdf"> </ins></p>
-              </div>
-              <div style="display: flex; gap: 1rem">
-                <p>Rua (rue): <ins id="road_user_pdf"> </ins></p>
-                <p>
-                  Codigo Postal (code postal):
-                  <ins id="postal_Code_user_pdf"> </ins>
-                </p>
-              </div>
-              <div style="display: flex; gap: 1rem">
-                <p>
-                  N de téléfone (telephone):
-                  <ins id="phone_number_user_pdf"> </ins>
-                </p>
-                <p>
-                  Email:
-                  <ins id="email_user_pdf"> </ins>
-                </p>
-              </div>
-              <div style="display: flex; gap: 1rem">
-                <p>
-                  Nome do pai (nom du père):
-                  <ins id="father_name_pdf"> </ins>
-                </p>
-                <p>
-                  Nacionalidade do pai (Nationalité du père):
-                  <ins id="father_nationality_user_pdf"> </ins>
-                </p>
-              </div>
-              <div style="display: flex; gap: 1rem">
-                <p>
-                  Nome da mãe (nom de la mère):
-                  <ins id="mother_name_pdf"> </ins>
-                </p>
-                <p>
-                  Nacionalidade da mãe (Nationalité de la mère):
-                  <ins id="mother_nationality_user_pdf"> </ins>
-                </p>
-              </div>
-              <p>
-                Motivo de origem (motif de voyage):
-                <ins id="reason_travel_user_pdf"> </ins>
-              </p>
-              <p>
-                Local de Hospedagem (lieu de résidence):
-                <ins id="hosting_place_user_pdf"> </ins>
-              </p>
-              <div style="display: flex; gap: 1rem">
-                <p>Cidade(ville): <ins id="city_hosting_user_pdf"> </ins></p>
-                <p>Rua(rue): <ins id="road_hosting_user_pdf"> </ins></p>
-                <p>Case(case) N: <ins id="house_number_user_pdf"> </ins></p>
-              </div>
-              <p>
-                Nome da pessoa ou organismo que resposibiliará pela sua estadia
-                (nom de la personne ou de l`organisme qui prendra la charge de
-                votre séjour):
-                <ins id="name_person_responsible_stay_user_pdf"> </ins>
-              </p>
-            </div>
-          </section>
-
-          <!-- Container do Papel -->
-          <section
-            id="before"
-            class="folha"
-            style="
-              width: 700px;
-              height: auto;
-              margin: auto;
-              position: relative;
-              padding: 1rem;
-              margin-top: -6rem;
-            "
-          >
-            <p
-              style="
-                text-transform: uppercase;
-                border: 1px solid black;
-                text-align: center;
-                padding: 1rem 0.5rem;
-                margin: 1.1rem 0;
-                font-family: 'Times New Roman', Times, serif;
-              "
-            >
-              a preencher pelo solicitante de visto <br />
-              <span style="text-transform: capitalize"
-                >À remplir par le demandeur de visa</span
-              >
-            </p>
-
-            <div
-              style="
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-                margin-top: 2rem;
-                font-size: 13px;
-                margin: 1.2rem 0;
-              "
-            >
-              <p>
-                Nome da pessoa ou organismo a contactar em Angola (nom de la
-                personne ou de l`organisme à contacter em Angola):
-                <ins
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-                  harum cumque illum iusto dignissimos impedit repudiandae
-                  aliquam neque similique officiis autem soluta magnam quod
-                  minus ex doloremque esse</ins
-                >
-              </p>
-              <p>
-                Endereço completo em Angola (adresse complète en Angola):
-                <ins>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-                  optio, ipsam assumenda doloribus vel eaque fuga maiores, animi
-                  autem
-                </ins>
-              </p>
-              <p>
-                Data de entrada em Angola(date d` entrée en Angola):
-                <ins>23</ins>/<ins>03</ins>/<ins>2023</ins> &nbsp; Posto de
-                fronteira a utilizar(poste de frontière d` entrée):
-                <ins
-                  >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Veniam, corrupti maiores. Doloremque reprehenderit modi
-                  delectus laboriosam minus expedita repudiand</ins
-                >
-              </p>
-              <p>
-                Data de saída de Angola(date de sortie en Angola):
-                <ins>30</ins>/<ins>03</ins>/<ins>2023</ins>
-              </p>
-              <p>
-                Assinatura do requerente (signature du demandeur):
-                <ins>Tonilson António Casimiro</ins> &nbsp; Data(date):
-                <ins>23</ins>/<ins>03</ins>/<ins>2023</ins>
-              </p>
-            </div>
-
-            <div
-              style="
-                border: 1px solid black;
-                padding: 1.5rem;
-                margin: 1rem 0;
-                font-size: 13px;
-              "
-            >
-              <p
-                style="
-                  text-align: center;
-                  font-size: 1rem;
-                  text-transform: uppercase;
-                  font-family: 'Times New Roman', Times, serif;
-                "
-              >
-                Insformações Complementares
-                <span style="font-size: 16px; text-transform: capitalize"
-                  >(informations complémentaires)</span
-                >
-              </p>
-              <ul>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    gap: 4rem;
-                    margin-bottom: 0.6rem;
-                  "
-                >
-                  <li>
-                    Já realizou viagens para Angola <br />
-                    (Etes-vous déjà allé en Angola)
-                  </li>
-                  <div>
-                    Sim &nbsp;
-                    <div
-                      style="width: 30px; height: 20px; border: 1px solid black"
-                    ></div>
-                  </div>
-                </div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    gap: 4rem;
-                    margin-bottom: 0.6rem;
-                  "
-                >
-                  <li>
-                    Já obteve Cartão de Residência <br />
-                    (Avez-vous déjà été détenteur d`un tire de sójour)
-                  </li>
-                  <div>
-                    Sim &nbsp;
-                    <div
-                      style="width: 30px; height: 20px; border: 1px solid black"
-                    ></div>
-                  </div>
-                </div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    gap: 4rem;
-                    margin-bottom: 0.6rem;
-                  "
-                >
-                  <li>
-                    Já obteve visto de trabalho <br />
-                    (Avez-vous déjà obtenu un visa de travail)
-                  </li>
-                  <div>
-                    Sim &nbsp;
-                    <div
-                      style="width: 30px; height: 20px; border: 1px solid black"
-                    ></div>
-                  </div>
-                </div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    gap: 4rem;
-                    margin-bottom: 0.6rem;
-                  "
-                >
-                  <li>
-                    Já lhe foi recusada a entrada em Angola <br />
-                    (Avez-vous déjà eu un refus d` entrée en Angola)
-                  </li>
-                  <div>
-                    Sim &nbsp;
-                    <div
-                      style="width: 30px; height: 20px; border: 1px solid black"
-                    ></div>
-                  </div>
-                </div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    gap: 4rem;
-                    margin-bottom: 0.6rem;
-                  "
-                >
-                  <li>
-                    Já foi expulso de Angola <br />
-                    (Avez-vous déjà été expulsé(e) de l` Angola)
-                  </li>
-                  <div>
-                    Sim &nbsp;
-                    <div
-                      style="width: 30px; height: 20px; border: 1px solid black"
-                    ></div>
-                  </div>
-                </div>
-              </ul>
-            </div>
-
-            <p
-              style="
-                font-size: 1rem;
-                text-transform: uppercase;
-                border: 1px solid black;
-                text-align: center;
-                padding: 1rem 0.5rem;
-                margin: 1rem 0;
-                font-family: 'Times New Roman', Times, serif;
-              "
-            >
-              a preencher pelo sector consular <br />
-              <span style="text-transform: capitalize"
-                >À remplir par le secteur Consulaire</span
-              >
-            </p>
-
-            <div
-              style="
-                border: 1px solid black;
-                text-align: center;
-                padding: 1rem 0.5rem;
-              "
-            >
-              <p
-                style="
-                  text-align: center;
-                  margin-bottom: 3rem;
-                  font-size: 0.9rem;
-                "
-              >
-                Do Responsável do Sector Consular (Décision du responsable du
-                secteur Consulaire)
-              </p>
-
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                  font-family: 'Times New Roman', Times, serif;
-                  font-size: 14px;
-                "
-              >
-                <p>
-                  Date <br />
-                  (date) <br />
-                  <br />
-                  <ins>23</ins>/<ins>03</ins>/<ins>2023</ins>
-                </p>
-                <p>
-                  O(A) Responsável <br />
-                  Le (la) Responsable <br />
-                  <br /><ins>Raimundo Gaspar Kilende</ins>
-                </p>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-
-      <div class="container">
-        <div
-          class="widget bg-white shadow contactFormWidget row w-100 pt-8 pb-10 px-4 px-md-6 px-xl-8"
-        >
-          <h2 class="fwSemiBold h3Medium w-100 mb-4">
-            Formulario para:
-            <select
-              id="visa_type"
-              name="visa_type"
-              id=""
-              class="form-control d-block w-100 px-2 col-lg-4"
-            >
-              <!-- <option value="issue_passport">
+        <div class="container">
+          <div class="row">
+            <div class="widget bg-white shadow contactFormWidget w-100">
+              <div class="pt-8 pb-10 px-4 px-md-6 px-xl-8">
+                <h2 class="fwSemiBold h3Medium w-100 mb-4">
+                  Formulario para:
+                  <select
+                    id="visa_type"
+                    name="visa_type"
+                    id=""
+                    class="form-control d-block w-100 px-2 col-lg-4"
+                  >
+                    <!-- <option value="issue_passport">
                         Emissão de passaporte
                       </option>
                       <option value="issuance_safe_conduct">
                         Emissão de salvo conduto
                       </option> -->
-              <option value="Emissão de visto de turismo">
-                Emissão de visto de turismo
-              </option>
-              <option value="Emissão de visto de Curta Duração">
-                Emissão de visto de Curta Duração
-              </option>
-              <option value="Emissão de visto de Trânsito">
-                Emissão de visto de Trânsito
-              </option>
-              <option value="Emissão de visto de Trabalho">
-                Emissão de visto de Trabalho
-              </option>
-              <option value="Emissão de visto de Estudo">
-                Emissão de visto de Estudo
-              </option>
-              <option value="Emissão de visto de Permanência temporária">
-                Emissão de visto de Permanência temporária
-              </option>
-              <option value="Emissão de visto de Fixação de Residência">
-                Emissão de visto de Fixação de Residência
-              </option>
-              <option value="Emissão de visto de Tratamento Médio">
-                Emissão de visto de Tratamento Médio
-              </option>
-            </select>
-          </h2>
-          <form class="commentForm">
-            <div class="row mx-n2">
-              <div
-                class="ueEveColumn__list position-relative px-4 py-3 px-lg-8 py-lg-6 ml-2 mb-4"
-              >
-                <div class="d-md-flex align-items-md-center flex-grow-1">
-                  <div
-                    class="imgHolder rounded-circle overflow-hidden flex-shrink-0 mr-4 mr-lg-10 mb-1 mb-md-0"
-                  >
-                    <img
-                      src="https://digimedia.web.ua.pt/wp-content/uploads/2017/05/default-user-image.png"
-                      class="img-fluid rounded-circle"
-                      id="photoUser"
-                      alt="image description"
-                    />
+                    <option value="Emissão de visto de turismo">
+                      Emissão de visto de turismo
+                    </option>
+                    <option value="Emissão de visto de Curta Duração">
+                      Emissão de visto de Curta Duração
+                    </option>
+                    <option value="Emissão de visto de Trânsito">
+                      Emissão de visto de Trânsito
+                    </option>
+                    <option value="Emissão de visto de Trabalho">
+                      Emissão de visto de Trabalho
+                    </option>
+                    <option value="Emissão de visto de Estudo">
+                      Emissão de visto de Estudo
+                    </option>
+                    <option value="Emissão de visto de Permanência temporária">
+                      Emissão de visto de Permanência temporária
+                    </option>
+                    <option value="Emissão de visto de Fixação de Residência">
+                      Emissão de visto de Fixação de Residência
+                    </option>
+                    <option value="Emissão de visto de Tratamento Médio">
+                      Emissão de visto de Tratamento Médio
+                    </option>
+                  </select>
+                </h2>
+                <form class="commentForm">
+                  <div class="row mx-n2">
+                    <div
+                      class="ueEveColumn__list position-relative px-4 py-3 px-lg-8 py-lg-6 ml-2 mb-4"
+                    >
+                      <div class="d-md-flex align-items-md-center flex-grow-1">
+                        <div
+                          class="imgHolder rounded-circle overflow-hidden flex-shrink-0 mr-4 mr-lg-10 mb-1 mb-md-0"
+                        >
+                          <img
+                            src="https://digimedia.web.ua.pt/wp-content/uploads/2017/05/default-user-image.png"
+                            class="img-fluid rounded-circle"
+                            id="photoUser"
+                            alt="image description"
+                          />
+                        </div>
+
+                        <label
+                          htmlFor="inputPhotoUser"
+                          class="btn btnCustomLightOutline bdrWidthAlter btn-sm text-capitalize position-relative border-0 p-0 flex-shrink-0 ml-md-4"
+                          data-hover="Selecione a sua fotografia"
+                        >
+                          <span class="d-block btnText"
+                            >Selecione a sua fotografia</span
+                          >
+
+                          <input
+                            hidden
+                            type="file"
+                            id="inputPhotoUser"
+                            accept="image"
+                            required
+                          />
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="col-12 px-2">
+                      <div class="form-group">
+                        <label for="">Nome completo</label>
+                        <input
+                          type="text"
+                          id="name_user"
+                          name="name_user"
+                          class="form-control d-block w-100"
+                          placeholder="Nome completo"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Estado civil</label>
+                        <select
+                          id="marital_status_user"
+                          name="marital_status_user"
+                          id=""
+                          class="form-control d-block w-100"
+                        >
+                          <option value="Solteiro">Solteiro</option>
+                          <option value="Casado">Casado</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Sexo</label>
+                        <select
+                          id="sex_user"
+                          name="sex_user"
+                          id=""
+                          class="form-control d-block w-100"
+                        >
+                          <option value="Masculino">Masculino</option>
+                          <option value="Feminino">Feminino</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Data de nascimento</label>
+                        <input
+                          type="date"
+                          id="date_birth_user"
+                          name="date_birth_user"
+                          class="form-control d-block w-100"
+                          placeholder="Nome"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Local de nascimento</label>
+                        <input
+                          type="text"
+                          id="birthplace_user"
+                          name="birthplace_user"
+                          class="form-control d-block w-100"
+                          placeholder="Local de nascimento"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">País de nascimento</label>
+                        <input
+                          type="text"
+                          id="country_birth_user"
+                          name="country_birth_user"
+                          class="form-control d-block w-100"
+                          placeholder="País de nascimento"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Nacionalidade de origem</label>
+                        <input
+                          type="text"
+                          id="nationality_origin_user"
+                          name="nationality_origin_user"
+                          class="form-control d-block w-100"
+                          placeholder="Nacionalidade de origem"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Nacionalidade actual</label>
+                        <input
+                          type="text"
+                          id="current_nationality_user"
+                          name="current_nationality_user"
+                          class="form-control d-block w-100"
+                          placeholder="Nacionalidade actual"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Passaporte nº</label>
+                        <input
+                          type="text"
+                          id="passaport_user"
+                          name="passaport_user"
+                          class="form-control d-block w-100"
+                          placeholder="Passaporte nº"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
+                      <div class="form-group">
+                        <label for="">Local de emissão</label>
+                        <input
+                          type="text"
+                          id="place_issue_user"
+                          name="place_issue_user"
+                          class="form-control d-block w-100"
+                          placeholder="Local de emissão"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Data de emissão</label>
+                        <input
+                          type="date"
+                          id="date_issue_user"
+                          name="date_issue_user"
+                          class="form-control d-block w-100"
+                          placeholder="Nome"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Valido até</label>
+                        <input
+                          type="date"
+                          id="valid_until_user"
+                          name="valid_until_user"
+                          class="form-control d-block w-100"
+                          placeholder="Valido até"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Profissão</label>
+                        <input
+                          type="text"
+                          id="profession_user"
+                          name="profession_user"
+                          class="form-control d-block w-100"
+                          placeholder="Profissão"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Cargo que ocupa</label>
+                        <input
+                          type="text"
+                          id="position_held_user"
+                          name="position_held_user"
+                          class="form-control d-block w-100"
+                          placeholder="Cargo que ocupa"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
+                      <div class="form-group">
+                        <label for="">Local de trabalho</label>
+                        <input
+                          type="text"
+                          id="workplace_user"
+                          name="workplace_user"
+                          class="form-control d-block w-100"
+                          placeholder="Local de trabalho"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Morada</label>
+                        <input
+                          type="text"
+                          id="household_user"
+                          name="household_user"
+                          class="form-control d-block w-100"
+                          placeholder="Morada"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Cidade</label>
+                        <input
+                          type="text"
+                          id="city_user"
+                          name="city_user"
+                          class="form-control d-block w-100"
+                          placeholder="Cidade"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Rua</label>
+                        <input
+                          type="text"
+                          id="road_user"
+                          name="road_user"
+                          class="form-control d-block w-100"
+                          placeholder="Rua"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Codigo postal</label>
+                        <input
+                          type="text"
+                          id="postal_Code_user"
+                          name="postal_Code_user"
+                          class="form-control d-block w-100"
+                          placeholder="Codigo postal"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Teléfax</label>
+                        <input
+                          type="text"
+                          id="fax_user"
+                          name="fax_user"
+                          class="form-control d-block w-100"
+                          placeholder="Teléfax"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
+                      <div class="form-group">
+                        <label for="">E-mail</label>
+                        <input
+                          type="text"
+                          id="email_user"
+                          name="email_user"
+                          class="form-control d-block w-100"
+                          placeholder="E-mail"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Nº de telefone</label>
+                        <input
+                          type="text"
+                          id="phone_number_user"
+                          name="phone_number_user"
+                          class="form-control d-block w-100"
+                          placeholder="Nº de telefone"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
+                      <div class="form-group">
+                        <label for="">Nome do pai:</label>
+                        <input
+                          type="email"
+                          id="father_name_user"
+                          name="father_name_user"
+                          class="form-control d-block w-100"
+                          placeholder="Nome do pai:"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
+                      <div class="form-group">
+                        <label for="">Nacionalidade do pai</label>
+                        <input
+                          type="email"
+                          id="father_nationality_user"
+                          name="father_nationality_user"
+                          class="form-control d-block w-100"
+                          placeholder="Nacionalidade do pai"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
+                      <div class="form-group">
+                        <label for="">Nome do mãe:</label>
+                        <input
+                          type="email"
+                          id="mother_name_user"
+                          name="mother_name_user"
+                          class="form-control d-block w-100"
+                          placeholder="Nome do mãe:"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
+                      <div class="form-group">
+                        <label for="">Nacionalidade da mãe</label>
+                        <input
+                          type="email"
+                          id="mother_nationality_user"
+                          name="mother_nationality_user"
+                          class="form-control d-block w-100"
+                          placeholder="Nacionalidade da mãe"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-12 px-2">
+                      <div class="form-group">
+                        <label for="">Motivo de viagem</label>
+                        <input
+                          type="email"
+                          id="reason_travel_user"
+                          name="reason_travel_user"
+                          class="form-control d-block w-100"
+                          placeholder="Motivo de viagem"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-12 px-2">
+                      <div class="form-group">
+                        <label for="">Local de hospedagem</label>
+                        <input
+                          type="email"
+                          id="hosting_place_user"
+                          name="hosting_place_user"
+                          class="form-control d-block w-100"
+                          placeholder="Local de hospedagem"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-5 px-2">
+                      <div class="form-group">
+                        <label for="">Cidade de hospedagem</label>
+                        <input
+                          type="text"
+                          id="city_hosting_user"
+                          name="city_hosting_user"
+                          class="form-control d-block w-100"
+                          placeholder="Cidade"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-5 px-2">
+                      <div class="form-group">
+                        <label for="">Rua de hospedagem</label>
+                        <input
+                          type="text"
+                          id="road_hosting_user"
+                          name="road_hosting_user"
+                          class="form-control d-block w-100"
+                          placeholder="Rua"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-2 px-2">
+                      <div class="form-group">
+                        <label for="">Casa nº</label>
+                        <input
+                          type="text"
+                          id="house_number_user"
+                          name="house_number_user"
+                          class="form-control d-block w-100"
+                          placeholder="Casa nº"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 px-2">
+                      <div class="form-group">
+                        <label for=""
+                          >Nome da pessoa ou organismo que responsabilizará pela
+                          sua estadia</label
+                        >
+                        <textarea
+                          id="name_person_responsible_stay_user"
+                          name="name_person_responsible_stay_user"
+                          class="form-control w-100 d-block"
+                          placeholder="Escreva aqui&hellip;"
+                        ></textarea>
+                      </div>
+                    </div>
+
+                    <h4 class="fwSemiBold mb-4 ml-2">
+                      A preencher pelo solicitante de visto
+                    </h4>
+
+                    <div class="col-12 px-2">
+                      <div class="form-group">
+                        <label for=""
+                          >Nome de pessoa ou organismo a contactar em
+                          Angola</label
+                        >
+                        <input
+                          type="text"
+                          id="person_contact_angola_user"
+                          name="person_contact_angola_user"
+                          class="form-control d-block w-100"
+                          placeholder="Nome completo"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 px-2">
+                      <div class="form-group">
+                        <label for="">Endereço completo em Angola</label>
+                        <input
+                          type="text"
+                          id="full_addres_angola_user"
+                          name="full_addres_angola_user"
+                          class="form-control d-block w-100"
+                          placeholder="Endereço completo"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Data de entrada em Angola</label>
+                        <input
+                          type="date"
+                          id="entrance_date_angola_user"
+                          name="entrance_date_angola_user"
+                          class="form-control d-block w-100"
+                          placeholder="Nome"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-9 px-2">
+                      <div class="form-group">
+                        <label for="">Posto de frenteira a utilizar </label>
+                        <input
+                          type="text"
+                          id="border_post_be_used_user"
+                          name="border_post_be_used_user"
+                          class="form-control d-block w-100"
+                          placeholder="Posto de frenteira"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Data de saída em Angola</label>
+                        <input
+                          type="date"
+                          id="exit_date_angola_user"
+                          name="exit_date_angola_user"
+                          class="form-control d-block w-100"
+                          placeholder="Nome"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-9 px-2">
+                      <div class="form-group"></div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-9 px-2">
+                      <div class="form-group">
+                        <label for="">Assinatura do requerente</label>
+                        <input
+                          type="text"
+                          id="signature_user"
+                          name="signature_user"
+                          class="form-control d-block w-100"
+                          placeholder="Assinatura"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="form-group">
+                        <label for="">Data da assinatura</label>
+                        <input
+                          type="date"
+                          id="date_signature_user"
+                          name="date_signature_user"
+                          class="form-control d-block w-100"
+                          placeholder="Nome"
+                        />
+                      </div>
+                    </div>
+
+                    <h4 class="fwSemiBold mb-4 ml-2">
+                      Informações complenenteres
+                    </h4>
+                    <div class="col-12 px-2"></div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-4 px-2">
+                      <div class="form-group">
+                        <label for="">Já realizou viagens para Angola?</label>
+                        <select
+                          name=""
+                          id=""
+                          class="form-control d-block w-100"
+                        >
+                          <option value="Sim">Sim</option>
+                          <option value="Não">Não</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-4 px-2">
+                      <div class="form-group">
+                        <label for="">Já obteve cartão de residencia?</label>
+                        <select
+                          name=""
+                          id=""
+                          class="form-control d-block w-100"
+                        >
+                          <option value="Sim">Sim</option>
+                          <option value="Não">Não</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-4 px-2">
+                      <div class="form-group">
+                        <label for="">Já obteve visto de trabalho?</label>
+                        <select
+                          name=""
+                          id=""
+                          class="form-control d-block w-100"
+                        >
+                          <option value="Sim">Sim</option>
+                          <option value="Não">Não</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
+                      <div class="form-group">
+                        <label for=""
+                          >Já lhe foi recusado a entrada em Angola?</label
+                        >
+                        <select
+                          name=""
+                          id=""
+                          class="form-control d-block w-100"
+                        >
+                          <option value="Sim">Sim</option>
+                          <option value="Não">Não</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
+                      <div class="form-group">
+                        <label for="">Já foi expulso de Angola?</label>
+                        <select
+                          name=""
+                          id=""
+                          class="form-control d-block w-100"
+                        >
+                          <option value="Sim">Sim</option>
+                          <option value="Não">Não</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
 
-                  <label
-                    htmlFor="inputPhotoUser"
-                    class="btn btnCustomLightOutline bdrWidthAlter btn-sm text-capitalize position-relative border-0 p-0 flex-shrink-0 ml-md-4"
-                    data-hover="Selecione a sua fotografia"
+                  <button
+                    type="button"
+                    onclick="download()"
+                    class="btn btnTheme d-flex col-lg-3 mb-6 font-weight-bold text-capitalize position-relative border-0 p-0 mt-2 btnWidthSmall"
+                    data-hover="Enviar formulario"
                   >
-                    <span class="d-block btnText"
-                      >Selecione a sua fotografia</span
-                    >
-
-                    <input
-                      hidden
-                      type="file"
-                      id="inputPhotoUser"
-                      accept="image"
-                      required
-                    />
-                  </label>
-                </div>
-              </div>
-
-              <div class="col-12 px-2">
-                <div class="form-group">
-                  <label for="">Nome completo</label>
-                  <input
-                    type="text"
-                    id="name_user"
-                    name="name_user"
-                    class="form-control d-block w-100"
-                    placeholder="Nome completo"
-                  />
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Estado civil</label>
-                  <select
-                    id="marital_status_user"
-                    name="marital_status_user"
-                    id=""
-                    class="form-control d-block w-100"
-                  >
-                    <option value="Solteiro">Solteiro</option>
-                    <option value="Casado">Casado</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Sexo</label>
-                  <select
-                    id="sex_user"
-                    name="sex_user"
-                    id=""
-                    class="form-control d-block w-100"
-                  >
-                    <option value="Masculino">Masculino</option>
-                    <option value="Feminino">Feminino</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Data de nascimento</label>
-                  <input
-                    type="date"
-                    id="date_birth_user"
-                    name="date_birth_user"
-                    class="form-control d-block w-100"
-                    placeholder="Nome"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Local de nascimento</label>
-                  <input
-                    type="text"
-                    id="birthplace_user"
-                    name="birthplace_user"
-                    class="form-control d-block w-100"
-                    placeholder="Local de nascimento"
-                  />
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">País de nascimento</label>
-                  <input
-                    type="text"
-                    id="country_birth_user"
-                    name="country_birth_user"
-                    class="form-control d-block w-100"
-                    placeholder="País de nascimento"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Nacionalidade de origem</label>
-                  <input
-                    type="text"
-                    id="nationality_origin_user"
-                    name="nationality_origin_user"
-                    class="form-control d-block w-100"
-                    placeholder="Nacionalidade de origem"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Nacionalidade actual</label>
-                  <input
-                    type="text"
-                    id="current_nationality_user"
-                    name="current_nationality_user"
-                    class="form-control d-block w-100"
-                    placeholder="Nacionalidade actual"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Passaporte nº</label>
-                  <input
-                    type="text"
-                    id="passaport_user"
-                    name="passaport_user"
-                    class="form-control d-block w-100"
-                    placeholder="Passaporte nº"
-                  />
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
-                <div class="form-group">
-                  <label for="">Local de emissão</label>
-                  <input
-                    type="text"
-                    id="place_issue_user"
-                    name="place_issue_user"
-                    class="form-control d-block w-100"
-                    placeholder="Local de emissão"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Data de emissão</label>
-                  <input
-                    type="date"
-                    id="date_issue_user"
-                    name="date_issue_user"
-                    class="form-control d-block w-100"
-                    placeholder="Nome"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Valido até</label>
-                  <input
-                    type="date"
-                    id="valid_until_user"
-                    name="valid_until_user"
-                    class="form-control d-block w-100"
-                    placeholder="Valido até"
-                  />
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Profissão</label>
-                  <input
-                    type="text"
-                    id="profession_user"
-                    name="profession_user"
-                    class="form-control d-block w-100"
-                    placeholder="Profissão"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Cargo que ocupa</label>
-                  <input
-                    type="text"
-                    id="position_held_user"
-                    name="position_held_user"
-                    class="form-control d-block w-100"
-                    placeholder="Cargo que ocupa"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
-                <div class="form-group">
-                  <label for="">Local de trabalho</label>
-                  <input
-                    type="text"
-                    id="workplace_user"
-                    name="workplace_user"
-                    class="form-control d-block w-100"
-                    placeholder="Local de trabalho"
-                  />
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Morada</label>
-                  <input
-                    type="text"
-                    id="household_user"
-                    name="household_user"
-                    class="form-control d-block w-100"
-                    placeholder="Morada"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Cidade</label>
-                  <input
-                    type="text"
-                    id="city_user"
-                    name="city_user"
-                    class="form-control d-block w-100"
-                    placeholder="Cidade"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Rua</label>
-                  <input
-                    type="text"
-                    id="road_user"
-                    name="road_user"
-                    class="form-control d-block w-100"
-                    placeholder="Rua"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Codigo postal</label>
-                  <input
-                    type="text"
-                    id="postal_Code_user"
-                    name="postal_Code_user"
-                    class="form-control d-block w-100"
-                    placeholder="Codigo postal"
-                  />
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Teléfax</label>
-                  <input
-                    type="text"
-                    id="fax_user"
-                    name="fax_user"
-                    class="form-control d-block w-100"
-                    placeholder="Teléfax"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
-                <div class="form-group">
-                  <label for="">E-mail</label>
-                  <input
-                    type="text"
-                    id="email_user"
-                    name="email_user"
-                    class="form-control d-block w-100"
-                    placeholder="E-mail"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Nº de telefone</label>
-                  <input
-                    type="text"
-                    id="phone_number_user"
-                    name="phone_number_user"
-                    class="form-control d-block w-100"
-                    placeholder="Nº de telefone"
-                  />
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
-                <div class="form-group">
-                  <label for="">Nome do pai:</label>
-                  <input
-                    type="email"
-                    id="father_name_user"
-                    name="father_name_user"
-                    class="form-control d-block w-100"
-                    placeholder="Nome do pai:"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
-                <div class="form-group">
-                  <label for="">Nacionalidade do pai</label>
-                  <input
-                    type="email"
-                    id="father_nationality_user"
-                    name="father_nationality_user"
-                    class="form-control d-block w-100"
-                    placeholder="Nacionalidade do pai"
-                  />
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
-                <div class="form-group">
-                  <label for="">Nome do mãe:</label>
-                  <input
-                    type="email"
-                    id="mother_name_user"
-                    name="mother_name_user"
-                    class="form-control d-block w-100"
-                    placeholder="Nome do mãe:"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
-                <div class="form-group">
-                  <label for="">Nacionalidade da mãe</label>
-                  <input
-                    type="email"
-                    id="mother_nationality_user"
-                    name="mother_nationality_user"
-                    class="form-control d-block w-100"
-                    placeholder="Nacionalidade da mãe"
-                  />
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-12 col-lg-12 px-2">
-                <div class="form-group">
-                  <label for="">Motivo de viagem</label>
-                  <input
-                    type="email"
-                    id="reason_travel_user"
-                    name="reason_travel_user"
-                    class="form-control d-block w-100"
-                    placeholder="Motivo de viagem"
-                  />
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-12 col-lg-12 px-2">
-                <div class="form-group">
-                  <label for="">Local de hospedagem</label>
-                  <input
-                    type="email"
-                    id="hosting_place_user"
-                    name="hosting_place_user"
-                    class="form-control d-block w-100"
-                    placeholder="Local de hospedagem"
-                  />
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-12 col-lg-5 px-2">
-                <div class="form-group">
-                  <label for="">Cidade de hospedagem</label>
-                  <input
-                    type="text"
-                    id="city_hosting_user"
-                    name="city_hosting_user"
-                    class="form-control d-block w-100"
-                    placeholder="Cidade"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-5 px-2">
-                <div class="form-group">
-                  <label for="">Rua de hospedagem</label>
-                  <input
-                    type="text"
-                    id="road_hosting_user"
-                    name="road_hosting_user"
-                    class="form-control d-block w-100"
-                    placeholder="Rua"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-2 px-2">
-                <div class="form-group">
-                  <label for="">Casa nº</label>
-                  <input
-                    type="text"
-                    id="house_number_user"
-                    name="house_number_user"
-                    class="form-control d-block w-100"
-                    placeholder="Casa nº"
-                  />
-                </div>
-              </div>
-
-              <div class="col-12 px-2">
-                <div class="form-group">
-                  <label for=""
-                    >Nome da pessoa ou organismo que responsabilizará pela sua
-                    estadia</label
-                  >
-                  <textarea
-                    id="name_person_responsible_stay_user"
-                    name="name_person_responsible_stay_user"
-                    class="form-control w-100 d-block"
-                    placeholder="Escreva aqui&hellip;"
-                  ></textarea>
-                </div>
-              </div>
-
-              <h4 class="fwSemiBold mb-4 ml-2">
-                A preencher pelo solicitante de visto
-              </h4>
-
-              <div class="col-12 px-2">
-                <div class="form-group">
-                  <label for=""
-                    >Nome de pessoa ou organismo a contactar em Angola</label
-                  >
-                  <input
-                    type="text"
-                    id="person_contact_angola_user"
-                    name="person_contact_angola_user"
-                    class="form-control d-block w-100"
-                    placeholder="Nome completo"
-                  />
-                </div>
-              </div>
-
-              <div class="col-12 px-2">
-                <div class="form-group">
-                  <label for="">Endereço completo em Angola</label>
-                  <input
-                    type="text"
-                    id="full_addres_angola_user"
-                    name="full_addres_angola_user"
-                    class="form-control d-block w-100"
-                    placeholder="Endereço completo"
-                  />
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Data de entrada em Angola</label>
-                  <input
-                    type="date"
-                    id="entrance_date_angola_user"
-                    name="entrance_date_angola_user"
-                    class="form-control d-block w-100"
-                    placeholder="Nome"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-9 px-2">
-                <div class="form-group">
-                  <label for="">Posto de frenteira a utilizar </label>
-                  <input
-                    type="text"
-                    id="border_post_be_used_user"
-                    name="border_post_be_used_user"
-                    class="form-control d-block w-100"
-                    placeholder="Posto de frenteira"
-                  />
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Data de saída em Angola</label>
-                  <input
-                    type="date"
-                    id="exit_date_angola_user"
-                    name="exit_date_angola_user"
-                    class="form-control d-block w-100"
-                    placeholder="Nome"
-                  />
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-12 col-lg-9 px-2">
-                <div class="form-group"></div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-12 col-lg-9 px-2">
-                <div class="form-group">
-                  <label for="">Assinatura do requerente</label>
-                  <input
-                    type="text"
-                    id="signature_user"
-                    name="signature_user"
-                    class="form-control d-block w-100"
-                    placeholder="Assinatura"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                <div class="form-group">
-                  <label for="">Data da assinatura</label>
-                  <input
-                    type="date"
-                    id="date_signature_user"
-                    name="date_signature_user"
-                    class="form-control d-block w-100"
-                    placeholder="Nome"
-                  />
-                </div>
-              </div>
-
-              <h4 class="fwSemiBold mb-4 ml-2">Informações complenenteres</h4>
-              <div class="col-12 px-2"></div>
-
-              <div class="col-12 col-sm-6 col-md-12 col-lg-4 px-2">
-                <div class="form-group">
-                  <label for="">Já realizou viagens para Angola?</label>
-                  <select name="" id="" class="form-control d-block w-100">
-                    <option value="Sim">Sim</option>
-                    <option value="Não">Não</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-4 px-2">
-                <div class="form-group">
-                  <label for="">Já obteve cartão de residencia?</label>
-                  <select name="" id="" class="form-control d-block w-100">
-                    <option value="Sim">Sim</option>
-                    <option value="Não">Não</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-4 px-2">
-                <div class="form-group">
-                  <label for="">Já obteve visto de trabalho?</label>
-                  <select name="" id="" class="form-control d-block w-100">
-                    <option value="Sim">Sim</option>
-                    <option value="Não">Não</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
-                <div class="form-group">
-                  <label for="">Já lhe foi recusado a entrada em Angola?</label>
-                  <select name="" id="" class="form-control d-block w-100">
-                    <option value="Sim">Sim</option>
-                    <option value="Não">Não</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
-                <div class="form-group">
-                  <label for="">Já foi expulso de Angola?</label>
-                  <select name="" id="" class="form-control d-block w-100">
-                    <option value="Sim">Sim</option>
-                    <option value="Não">Não</option>
-                  </select>
-                </div>
+                    <span class="d-block btnText">Enviar formulario</span>
+                  </button>
+                </form>
               </div>
             </div>
-          </form>
+          </div>
         </div>
       </div>
 

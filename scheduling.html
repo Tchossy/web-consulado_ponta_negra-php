@@ -57,6 +57,7 @@
 
     <!-- include the site stylesheet -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/table.css" />
 
     <!-- include theme color setting stylesheet -->
     <link rel="stylesheet" href="css/colors.css" />
@@ -302,7 +303,7 @@
           <div class="alignHolder d-flex w-100 align-items-center">
             <div class="align w-100 position-relative">
               <div class="container">
-                <h1 class="text-white mb-2">Formúlario para Agendamento</h1>
+                <h1 class="text-white mb-2">Agendamento</h1>
                 <nav aria-label="breadcrumb">
                   <ol
                     class="breadcrumb breadcrWhite rounded-0 border-0 p-0 fontAlter mb-0"
@@ -320,12 +321,62 @@
           </div>
         </header>
 
+        <div class="container mb-16">
+          <a
+            class="btn btnTheme font-weight-bold btnMinSm text-capitalize position-relative border-0 p-0 mt-6"
+            href="javascript:void(0);"
+            data-toggle="modal"
+            data-target="#vistoTurismoModal"
+            data-hover="Fazer Agendamento"
+            ><span class="d-block btnText">Fazer agendamento</span></a
+          >
+
+          <!-- TABLE -->
+          <div class="table-data">
+            <div class="order">
+              <div class="head">
+                <h3>Seus Agendamentos</h3>
+                <i class="bx bx-search"></i>
+                <i class="bx bx-filter"></i>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Sector</th>
+                    <th>Data</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p>Sector Notarial.</p>
+                    </td>
+                    <td>
+                      <p>11 Novembro, Segunda-feira</p>
+                    </td>
+                    <td>
+                      <button class="status completed">Feito</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
         <div
-          class="contactSectionWrap pt-7 pb-2 pt-md-10 pb-md-1 pt-lg-16 pb-lg-10 pt-xl-21 pb-xl-16"
+          class="modal fade bd-example-modal-lg"
+          id="vistoTurismoModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="vistoTurismoModal"
+          aria-hidden="true"
         >
-          <div class="container">
-            <div class="row">
-              <div class="widget bg-white shadow contactFormWidget w-100">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
                 <div class="pt-8 pb-10 px-4 px-md-6 px-xl-8">
                   <h2 class="fwSemiBold h3Medium mb-4">
                     Formulario para Agendamento
@@ -334,7 +385,10 @@
                     <div class="row mx-n2">
                       <div class="col-12 px-2">
                         <div class="form-group">
-                          <label for="">Nome completo</label>
+                          <label for=""
+                            >Nome completo
+                            <span class="text-danger fsSmall">*</span>
+                          </label>
                           <input
                             type="text"
                             class="form-control d-block w-100"
@@ -343,83 +397,12 @@
                         </div>
                       </div>
 
-                      <div class="col-12 col-sm-6 col-md-12 col-lg-2 px-2">
+                      <div class="col-12 px-2">
                         <div class="form-group">
-                          <label for="">Data de nascimento</label>
-                          <input
-                            type="date"
-                            class="form-control d-block w-100"
-                            placeholder="Nome"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                        <div class="form-group">
-                          <label for="">Genero</label>
-                          <select
-                            name=""
-                            id=""
-                            class="form-control d-block w-100"
+                          <label for=""
+                            >E-mail
+                            <span class="text-danger fsSmall">*</span></label
                           >
-                            <option value="">Masculino</option>
-                            <option value="">Fenenino</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-6 col-md-12 col-lg-2 px-2">
-                        <div class="form-group">
-                          <label for="">País</label>
-                          <input
-                            type="text"
-                            class="form-control d-block w-100"
-                            placeholder="País"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-6 col-md-12 col-lg-2 px-2">
-                        <div class="form-group">
-                          <label for="">Provincia</label>
-                          <input
-                            type="text"
-                            class="form-control d-block w-100"
-                            placeholder="Provincia"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                        <div class="form-group">
-                          <label for="">Residencia</label>
-                          <input
-                            type="text"
-                            class="form-control d-block w-100"
-                            placeholder="Residencia"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                        <div class="form-group">
-                          <label for="">Rua</label>
-                          <input
-                            type="text"
-                            class="form-control d-block w-100"
-                            placeholder="Rua"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                        <div class="form-group">
-                          <label for="">Casa nº</label>
-                          <input
-                            type="text"
-                            class="form-control d-block w-100"
-                            placeholder="Casa nº"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
-                        <div class="form-group">
-                          <label for="">E-mail</label>
                           <input
                             type="email"
                             class="form-control d-block w-100"
@@ -427,9 +410,12 @@
                           />
                         </div>
                       </div>
-                      <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="col-12 px-2">
                         <div class="form-group">
-                          <label for="">Telefone</label>
+                          <label for=""
+                            >Telefone
+                            <span class="text-danger fsSmall">*</span></label
+                          >
                           <input
                             type="number"
                             class="form-control d-block w-100"
@@ -438,10 +424,11 @@
                         </div>
                       </div>
 
-                      <div class="col-12 col-sm-6 col-md-12 col-lg-4 px-2">
+                      <div class="col-lg-6 px-2">
                         <div class="form-group">
                           <label for=""
-                            >Data de para entrega de documentos</label
+                            >Data de para entrega de documentos
+                            <span class="text-danger fsSmall">*</span></label
                           >
                           <input
                             type="date"
@@ -450,9 +437,12 @@
                           />
                         </div>
                       </div>
-                      <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
+                      <div class="col-lg-6 px-2">
                         <div class="form-group">
-                          <label for="">Sector</label>
+                          <label for=""
+                            >Sector
+                            <span class="text-danger fsSmall">*</span></label
+                          >
                           <select
                             name=""
                             id=""
@@ -471,9 +461,9 @@
                     <button
                       type="button"
                       class="btn btnTheme d-flex font-weight-bold text-capitalize position-relative border-0 p-0 mt-2 btnWidthSmall"
-                      data-hover="Send Message"
+                      data-hover="Enviar formulário"
                     >
-                      <span class="d-block btnText">Enviar mensagem</span>
+                      <span class="d-block btnText">Enviar formulário</span>
                     </button>
                   </form>
                 </div>

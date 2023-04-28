@@ -60,6 +60,7 @@
 
     <!-- include the site stylesheet -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/table.css" />
 
     <!-- include theme color setting stylesheet -->
     <link rel="stylesheet" href="css/colors.css" />
@@ -1466,7 +1467,45 @@
                     </div>
                   </div>
 
+                  <h3 class="fwSemiBold mb-4 mt-8">Determino</h3>
+                  <p>
+                    São fixados os montantes a taxar os vistos como abaixo
+                    descrito:
+                  </p>
+                  <!-- TABLE -->
+                  <div class="table-data">
+                    <div class="order">
+                      <table>
+                        <thead>
+                          <tr>
+                            <td><strong>Ord</strong></td>
+                            <td><strong>Descrição</strong></td>
+                            <td><strong>Montante FCFA</strong></td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Visto de Trânsito</td>
+                            <td>54.000 Akz</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Visto de Curta Duração</td>
+                            <td>65.000 Akz</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Visto de Turismo</td>
+                            <td>97.00 Akz</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
                   <!-- DOCS -->
+                  <!--             
                   <h3 class="fwSemiBold mb-5 mt-8">Baixar Documentos</h3>
                   <div class="row">
                     <div class="col-12 col-sm-6">
@@ -1521,6 +1560,7 @@
                       </div>
                     </div>
                   </div>
+                   -->
                   <hr class="mt-12 mb-7" />
                 </div>
               </div>
@@ -1553,235 +1593,237 @@
               </div>
 
               <!-- FAQ -->
-              <div
-                class="accordion faqAccordion mb-8 mb-md-12"
-                id="ctdepartsAccordion"
-              >
-                <div class="ctaccRow mb-4">
-                  <div
-                    class="collapse ctaccSlide"
-                    id="ctr1"
-                    data-parent="#ctdepartsAccordion"
-                  >
-                    <div class="overflow-hidden px-5 pb-1">
-                      <p>
-                        Uma das adições mais comuns que as pessoas fazem seus
-                        carros, a fim de manter o calor do lado de fora é um
-                        viseira do pára-brisa. Os carros ficam quentes no verão
-                        porque a luz solar direta entra através do janelas. É
-                        por isso que estacionamos na sombra sempre que pudermos.
-                        Desde o maior para-brisa.Na verdade, o vento está se
-                        tornando barato o suficiente em muitos lugares nos EUA e
-                        em todo o mundo para competir de forma eficaz com
-                        combustíveis fósseis.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="ctaccRow mb-4">
-                  <div class="ctaccOpener">
-                    <a
-                      class="fontAlter fwMedium"
-                      href="#ctr2"
-                      data-toggle="collapse"
-                      aria-expanded="true"
-                      aria-controls="ctr2"
-                      >Como posso entrar em contato com os inspetores de
-                      construção?</a
+              <!-- 
+                <div
+                  class="accordion faqAccordion mb-8 mb-md-12"
+                  id="ctdepartsAccordion"
+                >
+                  <div class="ctaccRow mb-4">
+                    <div
+                      class="collapse ctaccSlide"
+                      id="ctr1"
+                      data-parent="#ctdepartsAccordion"
                     >
-                  </div>
-                  <div
-                    class="collapse show ctaccSlide"
-                    id="ctr2"
-                    data-parent="#ctdepartsAccordion"
-                  >
-                    <div class="overflow-hidden px-5 pb-1">
-                      <p>
-                        Bolsa tote vibrante perfeita Ásia-Pacífico o melhor
-                        apartamento pintxos de soft power intrincados brancos
-                        sob medida conversa Marylebone bonito icônico suíço.
-                        Sofisticado premium soft power Gaggenau Marylebone.
-                        Escritórios de alegria Premium Helsinki. Boutique
-                        Ettinger aconchegante e artesanal da Lufthansa
-                        internacional Cingapura Marylebone Tsutaya Helsinque.
-                        Pintxos impecáveis icônicos inteligentes.
-                      </p>
-                      <p>
-                        Fast Lane Shinkansen premium artesanal global. Washlet
-                        sob medida boletim de conversa. Comme des Garçons
-                        Ásia-Pacífico vibrante, boutique perfeita guarda-roupa
-                        bonito.
-                      </p>
+                      <div class="overflow-hidden px-5 pb-1">
+                        <p>
+                          Uma das adições mais comuns que as pessoas fazem seus
+                          carros, a fim de manter o calor do lado de fora é um
+                          viseira do pára-brisa. Os carros ficam quentes no verão
+                          porque a luz solar direta entra através do janelas. É
+                          por isso que estacionamos na sombra sempre que pudermos.
+                          Desde o maior para-brisa.Na verdade, o vento está se
+                          tornando barato o suficiente em muitos lugares nos EUA e
+                          em todo o mundo para competir de forma eficaz com
+                          combustíveis fósseis.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="ctaccRow mb-4">
-                  <div class="ctaccOpener">
-                    <a
-                      class="fontAlter fwMedium"
-                      href="#ctr3"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                      aria-controls="ctr3"
-                      >Estou recebendo multas de estacionamento em meu nome. O
-                      que posso fazer?</a
+                  <div class="ctaccRow mb-4">
+                    <div class="ctaccOpener">
+                      <a
+                        class="fontAlter fwMedium"
+                        href="#ctr2"
+                        data-toggle="collapse"
+                        aria-expanded="true"
+                        aria-controls="ctr2"
+                        >Como posso entrar em contato com os inspetores de
+                        construção?</a
+                      >
+                    </div>
+                    <div
+                      class="collapse show ctaccSlide"
+                      id="ctr2"
+                      data-parent="#ctdepartsAccordion"
                     >
-                  </div>
-                  <div
-                    class="collapse ctaccSlide"
-                    id="ctr3"
-                    data-parent="#ctdepartsAccordion"
-                  >
-                    <div class="overflow-hidden px-5 pb-1">
-                      <p>
-                        Uma das adições mais comuns que as pessoas fazem seus
-                        carros, a fim de manter o calor do lado de fora é um
-                        viseira do pára-brisa. Os carros ficam quentes no verão
-                        porque a luz solar direta entra através do janelas. É
-                        por isso que estacionamos na sombra sempre que pudermos.
-                        Desde o maior para-brisa.Na verdade, o vento está se
-                        tornando barato o suficiente em muitos lugares nos EUA e
-                        em todo o mundo para competir de forma eficaz com
-                        combustíveis fósseis.
-                      </p>
+                      <div class="overflow-hidden px-5 pb-1">
+                        <p>
+                          Bolsa tote vibrante perfeita Ásia-Pacífico o melhor
+                          apartamento pintxos de soft power intrincados brancos
+                          sob medida conversa Marylebone bonito icônico suíço.
+                          Sofisticado premium soft power Gaggenau Marylebone.
+                          Escritórios de alegria Premium Helsinki. Boutique
+                          Ettinger aconchegante e artesanal da Lufthansa
+                          internacional Cingapura Marylebone Tsutaya Helsinque.
+                          Pintxos impecáveis icônicos inteligentes.
+                        </p>
+                        <p>
+                          Fast Lane Shinkansen premium artesanal global. Washlet
+                          sob medida boletim de conversa. Comme des Garçons
+                          Ásia-Pacífico vibrante, boutique perfeita guarda-roupa
+                          bonito.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="ctaccRow mb-4">
-                  <div class="ctaccOpener">
-                    <a
-                      class="fontAlter fwMedium"
-                      href="#ctr4"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                      aria-controls="ctr4"
-                      >Por que alguém pode culpar ou evitar indivíduos e
-                      grupos?</a
+                  <div class="ctaccRow mb-4">
+                    <div class="ctaccOpener">
+                      <a
+                        class="fontAlter fwMedium"
+                        href="#ctr3"
+                        data-toggle="collapse"
+                        aria-expanded="false"
+                        aria-controls="ctr3"
+                        >Estou recebendo multas de estacionamento em meu nome. O
+                        que posso fazer?</a
+                      >
+                    </div>
+                    <div
+                      class="collapse ctaccSlide"
+                      id="ctr3"
+                      data-parent="#ctdepartsAccordion"
                     >
-                  </div>
-                  <div
-                    class="collapse ctaccSlide"
-                    id="ctr4"
-                    data-parent="#ctdepartsAccordion"
-                  >
-                    <div class="overflow-hidden px-5 pb-1">
-                      <p>
-                        Uma das adições mais comuns que as pessoas fazem seus
-                        carros, a fim de manter o calor do lado de fora é um
-                        viseira do pára-brisa. Os carros ficam quentes no verão
-                        porque a luz solar direta entra através do janelas. É
-                        por isso que estacionamos na sombra sempre que pudermos.
-                        Desde o maior para-brisa.Na verdade, o vento está se
-                        tornando barato o suficiente em muitos lugares nos EUA e
-                        em todo o mundo para competir de forma eficaz com
-                        combustíveis fósseis.
-                      </p>
+                      <div class="overflow-hidden px-5 pb-1">
+                        <p>
+                          Uma das adições mais comuns que as pessoas fazem seus
+                          carros, a fim de manter o calor do lado de fora é um
+                          viseira do pára-brisa. Os carros ficam quentes no verão
+                          porque a luz solar direta entra através do janelas. É
+                          por isso que estacionamos na sombra sempre que pudermos.
+                          Desde o maior para-brisa.Na verdade, o vento está se
+                          tornando barato o suficiente em muitos lugares nos EUA e
+                          em todo o mundo para competir de forma eficaz com
+                          combustíveis fósseis.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="ctaccRow mb-4">
-                  <div class="ctaccOpener">
-                    <a
-                      class="fontAlter fwMedium"
-                      href="#ctr5"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                      aria-controls="ctr5"
-                      >Quanto tempo tenho para pagar uma multa de estacionamento
-                      antes que ela duplique?</a
+                  <div class="ctaccRow mb-4">
+                    <div class="ctaccOpener">
+                      <a
+                        class="fontAlter fwMedium"
+                        href="#ctr4"
+                        data-toggle="collapse"
+                        aria-expanded="false"
+                        aria-controls="ctr4"
+                        >Por que alguém pode culpar ou evitar indivíduos e
+                        grupos?</a
+                      >
+                    </div>
+                    <div
+                      class="collapse ctaccSlide"
+                      id="ctr4"
+                      data-parent="#ctdepartsAccordion"
                     >
-                  </div>
-                  <div
-                    class="collapse ctaccSlide"
-                    id="ctr5"
-                    data-parent="#ctdepartsAccordion"
-                  >
-                    <div class="overflow-hidden px-5 pb-1">
-                      <p>
-                        Uma das adições mais comuns que as pessoas fazem seus
-                        carros, a fim de manter o calor do lado de fora é um
-                        viseira do pára-brisa. Os carros ficam quentes no verão
-                        porque a luz solar direta entra através do janelas. É
-                        por isso que estacionamos na sombra sempre que pudermos.
-                        Desde o maior para-brisa.Na verdade, o vento está se
-                        tornando barato o suficiente em muitos lugares nos EUA e
-                        em todo o mundo para competir de forma eficaz com
-                        combustíveis fósseis.
-                      </p>
+                      <div class="overflow-hidden px-5 pb-1">
+                        <p>
+                          Uma das adições mais comuns que as pessoas fazem seus
+                          carros, a fim de manter o calor do lado de fora é um
+                          viseira do pára-brisa. Os carros ficam quentes no verão
+                          porque a luz solar direta entra através do janelas. É
+                          por isso que estacionamos na sombra sempre que pudermos.
+                          Desde o maior para-brisa.Na verdade, o vento está se
+                          tornando barato o suficiente em muitos lugares nos EUA e
+                          em todo o mundo para competir de forma eficaz com
+                          combustíveis fósseis.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="ctaccRow mb-4">
-                  <div class="ctaccOpener">
-                    <a
-                      class="fontAlter fwMedium"
-                      href="#ctr6"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                      aria-controls="ctr6"
-                      >Recebi um aviso de cobrança, mas paguei o boleto
-                      antecipadamente. Por que eu recebi?</a
+                  <div class="ctaccRow mb-4">
+                    <div class="ctaccOpener">
+                      <a
+                        class="fontAlter fwMedium"
+                        href="#ctr5"
+                        data-toggle="collapse"
+                        aria-expanded="false"
+                        aria-controls="ctr5"
+                        >Quanto tempo tenho para pagar uma multa de estacionamento
+                        antes que ela duplique?</a
+                      >
+                    </div>
+                    <div
+                      class="collapse ctaccSlide"
+                      id="ctr5"
+                      data-parent="#ctdepartsAccordion"
                     >
-                  </div>
-                  <div
-                    class="collapse ctaccSlide"
-                    id="ctr6"
-                    data-parent="#ctdepartsAccordion"
-                  >
-                    <div class="overflow-hidden px-5 pb-1">
-                      <p>
-                        Uma das adições mais comuns que as pessoas fazem seus
-                        carros, a fim de manter o calor do lado de fora é um
-                        viseira do pára-brisa. Os carros ficam quentes no verão
-                        porque a luz solar direta entra através do janelas. É
-                        por isso que estacionamos na sombra sempre que pudermos.
-                        Desde o maior para-brisa.Na verdade, o vento está se
-                        tornando barato o suficiente em muitos lugares nos EUA e
-                        em todo o mundo para competir de forma eficaz com
-                        combustíveis fósseis.
-                      </p>
+                      <div class="overflow-hidden px-5 pb-1">
+                        <p>
+                          Uma das adições mais comuns que as pessoas fazem seus
+                          carros, a fim de manter o calor do lado de fora é um
+                          viseira do pára-brisa. Os carros ficam quentes no verão
+                          porque a luz solar direta entra através do janelas. É
+                          por isso que estacionamos na sombra sempre que pudermos.
+                          Desde o maior para-brisa.Na verdade, o vento está se
+                          tornando barato o suficiente em muitos lugares nos EUA e
+                          em todo o mundo para competir de forma eficaz com
+                          combustíveis fósseis.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="ctaccRow mb-4">
-                  <div class="ctaccOpener">
-                    <a
-                      class="fontAlter fwMedium"
-                      href="#ctr7"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                      aria-controls="ctr7"
-                      >Meu carro ainda está no depósito de automóveis. Eu tenho
-                      que solicitar uma audiência?
-                    </a>
+                  <div class="ctaccRow mb-4">
+                    <div class="ctaccOpener">
+                      <a
+                        class="fontAlter fwMedium"
+                        href="#ctr6"
+                        data-toggle="collapse"
+                        aria-expanded="false"
+                        aria-controls="ctr6"
+                        >Recebi um aviso de cobrança, mas paguei o boleto
+                        antecipadamente. Por que eu recebi?</a
+                      >
+                    </div>
+                    <div
+                      class="collapse ctaccSlide"
+                      id="ctr6"
+                      data-parent="#ctdepartsAccordion"
+                    >
+                      <div class="overflow-hidden px-5 pb-1">
+                        <p>
+                          Uma das adições mais comuns que as pessoas fazem seus
+                          carros, a fim de manter o calor do lado de fora é um
+                          viseira do pára-brisa. Os carros ficam quentes no verão
+                          porque a luz solar direta entra através do janelas. É
+                          por isso que estacionamos na sombra sempre que pudermos.
+                          Desde o maior para-brisa.Na verdade, o vento está se
+                          tornando barato o suficiente em muitos lugares nos EUA e
+                          em todo o mundo para competir de forma eficaz com
+                          combustíveis fósseis.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div
-                    class="collapse ctaccSlide"
-                    id="ctr7"
-                    data-parent="#ctdepartsAccordion"
-                  >
-                    <div class="overflow-hidden px-5 pb-1">
-                      <p>
-                        Uma das adições mais comuns que as pessoas fazem seus
-                        carros, a fim de manter o calor do lado de fora é um
-                        viseira do pára-brisa. Os carros ficam quentes no verão
-                        porque a luz solar direta entra através do janelas. É
-                        por isso que estacionamos na sombra sempre que pudermos.
-                        Desde o maior para-brisa.Na verdade, o vento está se
-                        tornando barato o suficiente em muitos lugares nos EUA e
-                        em todo o mundo para competir de forma eficaz com
-                        combustíveis fósseis.
-                      </p>
+
+                  <div class="ctaccRow mb-4">
+                    <div class="ctaccOpener">
+                      <a
+                        class="fontAlter fwMedium"
+                        href="#ctr7"
+                        data-toggle="collapse"
+                        aria-expanded="false"
+                        aria-controls="ctr7"
+                        >Meu carro ainda está no depósito de automóveis. Eu tenho
+                        que solicitar uma audiência?
+                      </a>
+                    </div>
+                    <div
+                      class="collapse ctaccSlide"
+                      id="ctr7"
+                      data-parent="#ctdepartsAccordion"
+                    >
+                      <div class="overflow-hidden px-5 pb-1">
+                        <p>
+                          Uma das adições mais comuns que as pessoas fazem seus
+                          carros, a fim de manter o calor do lado de fora é um
+                          viseira do pára-brisa. Os carros ficam quentes no verão
+                          porque a luz solar direta entra através do janelas. É
+                          por isso que estacionamos na sombra sempre que pudermos.
+                          Desde o maior para-brisa.Na verdade, o vento está se
+                          tornando barato o suficiente em muitos lugares nos EUA e
+                          em todo o mundo para competir de forma eficaz com
+                          combustíveis fósseis.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+                -->
             </div>
           </div>
         </article>
