@@ -14,7 +14,7 @@ getPdf.addEventListener('click', async event => {
   const dataForm = new FormData(cardForm)
   dataForm.append('add', 1)
 
-  await fetch(origin_url + controllerURL + 'ficha_inscricao_consular.php', {
+  await fetch(origin_url + controllerURL + 'ficha_salvo_conduto.php', {
     method: 'POST',
     body: dataForm
   })
@@ -25,7 +25,7 @@ getPdf.addEventListener('click', async event => {
     .then(function (blob) {
       var link = document.createElement('a')
       link.href = window.URL.createObjectURL(blob)
-      link.download = 'ficha_inscricao_consular.pdf'
+      link.download = 'ficha_salvo_conduto.pdf'
       link.click()
     })
 })

@@ -55,6 +55,17 @@
                 <button class="status completed">Feito</button>
               </td>
             </tr>
+            <tr>
+              <td>
+                <p>Sector Notarial.</p>
+              </td>
+              <td>
+                <p>11 Maio, Segunda-feira</p>
+              </td>
+              <td>
+                <button style="background-color: orange;" class="status ">Pendente</button>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -71,14 +82,15 @@
             <h2 class="fwSemiBold h3Medium mb-4">
               Formulario para Agendamento
             </h2>
-            <form action="#" class="commentForm">
+            <form id="card-user-form" class="commentForm">
               <div class="row mx-n2">
                 <div class="col-12 px-2">
                   <div class="form-group">
                     <label for="">Nome completo
                       <span class="text-danger fsSmall">*</span>
                     </label>
-                    <input type="text" class="form-control d-block w-100" placeholder="Nome completo" />
+                    <input name="nome_completo_user" type="text" class="form-control d-block w-100"
+                      placeholder="Nome completo" />
                   </div>
                 </div>
 
@@ -86,14 +98,15 @@
                   <div class="form-group">
                     <label for="">E-mail
                       <span class="text-danger fsSmall">*</span></label>
-                    <input type="email" class="form-control d-block w-100" placeholder="E-mail" />
+                    <input name="email_user" type="email" class="form-control d-block w-100" placeholder="E-mail" />
                   </div>
                 </div>
                 <div class="col-12 px-2">
                   <div class="form-group">
                     <label for="">Telefone
                       <span class="text-danger fsSmall">*</span></label>
-                    <input type="number" class="form-control d-block w-100" placeholder="Telefone" />
+                    <input name="telefone_user" type="number" class="form-control d-block w-100"
+                      placeholder="Telefone" />
                   </div>
                 </div>
 
@@ -101,14 +114,14 @@
                   <div class="form-group">
                     <label for="">Data para entrega de documentos
                       <span class="text-danger fsSmall">*</span></label>
-                    <input type="date" class="form-control d-block w-100" placeholder="Nome" />
+                    <input name="data_entrega_user" type="date" class="form-control d-block w-100" placeholder="Nome" />
                   </div>
                 </div>
                 <div class="col-lg-6 px-2">
                   <div class="form-group">
                     <label for="">Sector
                       <span class="text-danger fsSmall">*</span></label>
-                    <select name="" id="" class="form-control d-block w-100">
+                    <select name="sector_user" id="" class="form-control d-block w-100">
                       <option value="">Sector Notarial</option>
                       <option value="">Sector Migratorio</option>
                       <option value="">Sector Identificação</option>
@@ -119,7 +132,7 @@
                   </div>
                 </div>
               </div>
-              <button type="button"
+              <button id="get-pdf-btn" type="button"
                 class="btn btnTheme d-flex font-weight-bold text-capitalize position-relative border-0 p-0 mt-2 btnWidthSmall"
                 data-hover="Enviar formulário">
                 <span class="d-block btnText">Enviar formulário</span>
@@ -131,3 +144,5 @@
     </div>
   </div>
 </main>
+
+<script src="<?= urlProject(FOLDER_BASE . BASE_JS . "/ficha_agendamento.js") ?>"></script>

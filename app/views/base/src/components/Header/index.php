@@ -16,7 +16,7 @@
                     <li>
                       <time datetime="2023-01-12">
                         <i class="icomoon-clock align-middle icn"><span class="sr-only">icon</span></i>
-                        Horário de funcionamento: Seg - Sex 8.00 am - 6.00 pm
+                        Horário de atendimento: Seg - Qui 09h30 - 13h30
                       </time>
                     </li>
                   </ul>

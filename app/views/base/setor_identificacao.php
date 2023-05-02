@@ -329,29 +329,29 @@
                     <tr>
                       <td>1</td>
                       <td>Bilhete de identidade pela primeira vez</td>
-                      <td>Ileso</td>
+                      <td>Isento</td>
                     </tr>
                     <tr>
                       <td>2</td>
                       <td>Bilhete de identidade renovação</td>
-                      <td>1.520 Akz</td>
+                      <td>1.520 </td>
                     </tr>
                     <tr>
                       <td>3</td>
                       <td>Bilhete de identidade segunda vez</td>
-                      <td>3.828 Akz</td>
+                      <td>3.828 </td>
                     </tr>
                     <tr>
                       <td>4</td>
                       <td>Averbamento</td>
-                      <td>1.520 Akz</td>
+                      <td>1.520 </td>
                     </tr>
                     <tr>
                       <td>5</td>
                       <td>
                         Averbamento requerido após 60 dias (estado civil)
                       </td>
-                      <td>15.520 Akz</td>
+                      <td>15.520 </td>
                     </tr>
                     <tr>
                       <td>6</td>
@@ -359,7 +359,7 @@
                         Pedido de certificado de registo criminal (fins
                         públicos)
                       </td>
-                      <td>1.550 Akz</td>
+                      <td>1.550 </td>
                     </tr>
                     <tr>
                       <td>7</td>
@@ -367,14 +367,14 @@
                         Pedido de certificado de registo criminal (fins
                         particulares)
                       </td>
-                      <td>5.720 Akz</td>
+                      <td>5.720 </td>
                     </tr>
                     <tr>
                       <td>8</td>
                       <td>
                         Certificado de registo criminal (fins públicos)
                       </td>
-                      <td>7.480 Akz</td>
+                      <td>7.480 </td>
                     </tr>
                     <tr>
                       <td>9</td>
@@ -382,7 +382,7 @@
                         Pedido de certificado de registo criminal (fins
                         particulares)
                       </td>
-                      <td>8.489 Akz</td>
+                      <td>8.489 </td>
                     </tr>
                   </tbody>
                 </table>

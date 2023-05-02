@@ -34,12 +34,12 @@
             <header class="fzMedium mb-6">
               <h2 class="fwSemiBold h2vii">Sector Comercial</h2>
             </header>
-            <p>
+            <!-- <p>
               O setor notarial é uma área do direito que se dedica à prática de
               atos e procedimentos relacionados a documentos legais. Os serviços
               notariais desempenham um papel importante na garantia da segurança
               jurídica e na proteção dos direitos dos cidadãos.
-            </p>
+            </p> -->
 
             <h3 class="fwSemiBold mb-4">Como solicitar os serviços</h3>
             <p>
@@ -89,6 +89,7 @@
               embaixada está sempre pronta para oferecer um atendimento de
               excelência e garantir a satisfação dos seus clientes
             </p>
+            <!--             
             <ul class="list-unstyled coDefaultList text-lDark">
               <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'"
                 onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#sectorNotoriaModal">
@@ -114,7 +115,7 @@
                 onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#sectorNotoriaModal">
                 Reconhecimento de assinaturas.
               </li>
-            </ul>
+            </ul> -->
 
             <div>
               <!-- Modal Registo de nascimento   -->

@@ -41,7 +41,7 @@
               dos direitos dos cidadãos.
             </p>
 
-            <h3 class="fwSemiBold mb-4">Como solicitar os serviços</h3>
+            <h3 class="fwSemiBold mb-4">Como Solicitar os Serviços</h3>
             <p>
               Para solicitar os serviços notariais oferecidos pelo
               Consulado, é necessário seguir os seguintes passos:
@@ -178,34 +178,34 @@
                       <td>
                         Transcrição de nascimento para maior de 18 anos
                       </td>
-                      <td>32.390 Akz</td>
+                      <td>32.390</td>
                     </tr>
                     <tr>
                       <td>4</td>
                       <td>Assento de óbito dos 0 aos 5 anos</td>
-                      <td>Ileso</td>
+                      <td>Isento</td>
                     </tr>
                     <tr>
                       <td>5</td>
                       <td>Transcrição de óbito dos 0 aos 5 anos</td>
-                      <td>Ileso</td>
+                      <td>Isento</td>
                     </tr>
                     <tr>
                       <td>6</td>
                       <td>Assento de óbito dos 6 anos em diante</td>
-                      <td>1.500 Akz</td>
+                      <td>1.500</td>
                     </tr>
                     <tr>
                       <td>7</td>
                       <td>Transcrição de óbito dos 6 anos em diante</td>
-                      <td>2.000 Akz</td>
+                      <td>2.000</td>
                     </tr>
                     <tr>
                       <td>8</td>
                       <td>
                         Assento de óbito fora do prazo (mais de 72 horas)
                       </td>
-                      <td>3.500 Akz</td>
+                      <td>3.500</td>
                     </tr>
                     <tr>
                       <td>9</td>
@@ -213,81 +213,81 @@
                         Transcrição de óbito fora do prazo (mais de 72
                         horas)
                       </td>
-                      <td>5.000 Akz</td>
+                      <td>5.000</td>
                     </tr>
                     <tr>
                       <td>10</td>
                       <td>Assento de óbito de quem deixou bens</td>
-                      <td>18.980 Akz</td>
+                      <td>18.980</td>
                     </tr>
                     <tr>
                       <td>11</td>
                       <td>Transcrição de óbito de quem deixou bens</td>
-                      <td>19.980 Akz</td>
+                      <td>19.980</td>
                     </tr>
                     <tr>
                       <td>12</td>
                       <td>Assento de óbito de quem não deixou bens</td>
-                      <td>20.000 Akz</td>
+                      <td>20.000</td>
                     </tr>
                     <tr>
                       <td>13</td>
                       <td>
                         Transcrição de óbito de quem não deixou bens
                       </td>
-                      <td>23.000 Akz</td>
+                      <td>23.000</td>
                     </tr>
                     <tr>
                       <td>14</td>
                       <td>Acto de casamento com duas testemunhas</td>
-                      <td>26.455 Akz</td>
+                      <td>26.455</td>
                     </tr>
                     <tr>
                       <td>15</td>
                       <td>Acto de casamento com quatro testemunhas</td>
-                      <td>28.480 Akz</td>
+                      <td>28.480</td>
                     </tr>
                     <tr>
                       <td>16</td>
                       <td>Acto de casamento urgente</td>
-                      <td>35.455 Akz</td>
+                      <td>35.455</td>
                     </tr>
                     <tr>
                       <td>17</td>
                       <td>Transcrição de assento de casamento</td>
-                      <td>19.531 Akz</td>
+                      <td>19.531</td>
                     </tr>
                     <tr>
                       <td>18</td>
                       <td>Filiação</td>
-                      <td>4.272 Akz</td>
+                      <td>4.272</td>
                     </tr>
                     <tr>
                       <td>19</td>
                       <td>Processo de alteração</td>
-                      <td>9.526 Akz</td>
+                      <td>9.526</td>
                     </tr>
                     <tr>
                       <td>20</td>
                       <td>Processo da Transcrição de batismo</td>
-                      <td>9.526 Akz</td>
+                      <td>9.526</td>
                     </tr>
                     <tr>
                       <td>21</td>
                       <td>2ª via de boletim</td>
-                      <td>582 Akz</td>
+                      <td>582</td>
                     </tr>
                     <tr>
                       <td>22</td>
                       <td>
                         Processo de reconstrução de assento de nascimento
                       </td>
-                      <td>Ileso</td>
+                      <td>Isento</td>
                     </tr>
                     <tr>
                       <td>23</td>
                       <td>Processo de capacidade matrimonial</td>
-                      <td>7.148 Akz</td>
+                      <td>7.148</td>
                     </tr>
                     <tr>
                       <td>24</td>
@@ -295,7 +295,7 @@
                         Emolumentos pessoais pelo casamento fora do
                         consulado de 2ª a 6ª feira
                       </td>
-                      <td>150.000 Akz</td>
+                      <td>150.000</td>
                     </tr>
 
                   </tbody>

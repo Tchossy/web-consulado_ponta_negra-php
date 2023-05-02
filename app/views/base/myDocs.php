@@ -1,7 +1,8 @@
 <?php $this->layout('_theme') ?>
 
 <main>
-  <header class="pageMainHead d-flex position-relative bgCover w-100 text-white" style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img189.jpg") ?>)">
+  <header class="pageMainHead d-flex position-relative bgCover w-100 text-white"
+    style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img189.jpg") ?>)">
     <div class="alignHolder d-flex w-100 align-items-center">
       <div class="align w-100 position-relative">
         <div class="container">
@@ -21,6 +22,14 @@
       </div>
     </div>
   </header>
+
+  <ul>
+    <li> <button class="status completed">Pronto</button> - O seu processo está pronto</li>
+    <li> <button class="status pending">Pendente</button> - Ouve algum erro com o seu processo, por favor contacte.nos
+    </li>
+    <li> <button class="status delete">Recusado</button> - O seu processo não foi aceite</li>
+    <li> <button class="status" style="background-color: #007ccf">Em tratamento</button> - Aguarde </li>
+  </ul>
   <div class="pt-2 pb-2 pt-md-10 pb-md-1 pt-lg-16 pb-lg-10 pt-xl-21 pb-xl-16">
     <div class="container">
       <div class="row">
@@ -113,6 +122,27 @@
 
                 <td>
                   <button class="status delete">Recusado</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>4</p>
+                </td>
+                <td>
+                  <p>Sector de Identificação</p>
+                </td>
+                <td>
+                  <p>Emissão de Bilhete de Identidade</p>
+                </td>
+                <td>
+                  <p>26 Dezembro, Quinta-feira</p>
+                </td>
+                <td>
+                  <p>-------------------------</p>
+                </td>
+
+                <td>
+                  <button class="status" style="background-color: #007ccf">Em tratamento</button>
                 </td>
               </tr>
             </tbody>

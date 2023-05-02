@@ -2,7 +2,7 @@
 
 <main>
   <header class="pageMainHead d-flex position-relative bgCover w-100 text-white"
-    style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img50.jpg") ?>)">
+    style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img50.jpg") ?>">
     <div class="alignHolder d-flex w-100 align-items-center">
       <div class="align w-100 position-relative">
         <div class="container">
@@ -50,7 +50,8 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="awbImgHolder text-md-right mt-5 mt-md-0">
-            <img src="images/img38.jpg" class="img-fluid" alt="image description" />
+            <img src="<?= urlProject(FOLDER_BASE . "/src/images/img38.jpg") ?>" class="img-fluid"
+              alt="image description" />
           </div>
         </div>
       </div>
@@ -196,7 +197,7 @@
     class="meetCouncilBlock noOverlay position-relative pt-7 pt-md-9 pt-lg-14 pt-xl-20 pb-3 pb-md-8 pb-lg-11 pb-xl-16">
     <div class="container">
       <header class="headingHead text-center cdTitle mb-7 mb-md-13">
-        <h2 class="fwSemiBold mb-4">Conheça a Consulado Geral</h2>
+        <h2 class="fwSemiBold mb-4">Conheça o Consulado Geral</h2>
         <p>
           O conselho da cidade tem superpoderes reais como administrador
           para liderar o país.
@@ -207,7 +208,8 @@
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
           <article class="mccColumn bg-white shadow mb-6 mx-auto mx-sm-0">
             <div class="imgHolder position-relative">
-              <img src="images/img19.jpg" class="img-fluid d-block w-100" alt="image description" />
+              <img src="<?= urlProject(FOLDER_BASE . "/src/images/img19.jpg") ?>" class="img-fluid d-block w-100"
+                alt="image description" />
               <div class="mcssHolder"></div>
             </div>
             <div class="mcCaptionWrap px-5 pt-5 pb-4 position-relative">
@@ -226,7 +228,8 @@
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
           <article class="mccColumn bg-white shadow mb-6 mx-auto mx-sm-0">
             <div class="imgHolder position-relative">
-              <img src="images/consul9.jpg" class="img-fluid d-block w-100" alt="image description" />
+              <img src="<?= urlProject(FOLDER_BASE . "/src/images/consul9.jpg") ?>" class="img-fluid d-block w-100"
+                alt="image description" />
               <div class="mcssHolder"></div>
             </div>
             <div class="mcCaptionWrap px-5 pt-5 pb-4 position-relative">
@@ -234,7 +237,7 @@
                 Maria Cezaltina Da Costa
               </h3>
               <h4 class="fwSemiBold fontBase text-secondary">
-                Vice Cônsul para o sector Migratório
+                Vice Cônsul para o Sector Migratório
               </h4>
               <hr class="mccSeprator mx-0 mt-4 mb-3" />
             </div>
@@ -245,13 +248,14 @@
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
           <article class="mccColumn bg-white shadow mb-6 mx-auto mx-sm-0">
             <div class="imgHolder position-relative">
-              <img src="images/img20.jpg" class="img-fluid d-block w-100" alt="image description" />
+              <img src="<?= urlProject(FOLDER_BASE . "/src/images/img20.jpg") ?>" class="img-fluid d-block w-100"
+                alt="image description" />
               <div class="mcssHolder"></div>
             </div>
             <div class="mcCaptionWrap px-5 pt-5 pb-4 position-relative">
               <h3 class="fwMedium h3Small mb-1">Paula Lemos</h3>
               <h4 class="fwSemiBold fontBase text-secondary">
-                Vice Cônsul para o setor Comercial
+                Vice Cônsul para o Sector Comercial
               </h4>
               <hr class="mccSeprator mx-0 mt-4 mb-3" />
             </div>
@@ -262,13 +266,14 @@
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
           <article class="mccColumn bg-white shadow mb-6 mx-auto mx-sm-0">
             <div class="imgHolder position-relative">
-              <img src="images/img21.jpg" class="img-fluid d-block w-100" alt="image description" />
+              <img src="<?= urlProject(FOLDER_BASE . "/src/images/img21.jpg") ?>" class="img-fluid d-block w-100"
+                alt="image description" />
               <div class="mcssHolder"></div>
             </div>
             <div class="mcCaptionWrap px-5 pt-5 pb-4 position-relative">
               <h3 class="fwMedium h3Small mb-1">Angelino Quissua</h3>
               <h4 class="fwSemiBold fontBase text-secondary">
-                Vice Cônsul para o setor de apoio às Comunidades
+                Vice Cônsul para o Sector de Apoio às Comunidades
               </h4>
               <hr class="mccSeprator mx-0 mt-4 mb-3" />
             </div>
@@ -279,7 +284,8 @@
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
           <article class="mccColumn bg-white shadow mb-6 mx-auto mx-sm-0">
             <div class="imgHolder position-relative">
-              <img src="images/img22.jpg" class="img-fluid d-block w-100" alt="image description" />
+              <img src="<?= urlProject(FOLDER_BASE . "/src/images/img22.jpg") ?>" class="img-fluid d-block w-100"
+                alt="image description" />
               <div class="mcssHolder"></div>
             </div>
             <div class="mcCaptionWrap px-5 pt-5 pb-4 position-relative">
@@ -296,13 +302,14 @@
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
           <article class="mccColumn bg-white shadow mb-6 mx-auto mx-sm-0">
             <div class="imgHolder position-relative">
-              <img src="images/consul5.jpg" class="img-fluid d-block w-100" alt="image description" />
+              <img src="<?= urlProject(FOLDER_BASE . "/src/images/consul5.jpg") ?>" class="img-fluid d-block w-100"
+                alt="image description" />
               <div class="mcssHolder"></div>
             </div>
             <div class="mcCaptionWrap px-5 pt-5 pb-4 position-relative">
               <h3 class="fwMedium h3Small mb-1">Fernando Luciano</h3>
               <h4 class="fwSemiBold fontBase text-secondary">
-                Agente Consular para o apoio às Comunidades
+                Agente Consular para o Apoio às Comunidades
               </h4>
               <hr class="mccSeprator mx-0 mt-4 mb-3" />
             </div>
@@ -313,7 +320,8 @@
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
           <article class="mccColumn bg-white shadow mb-6 mx-auto mx-sm-0">
             <div class="imgHolder position-relative">
-              <img src="images/consul6.jpg" class="img-fluid d-block w-100" alt="image description" />
+              <img src="<?= urlProject(FOLDER_BASE . "/src/images/consul6.jpg") ?>" class="img-fluid d-block w-100"
+                alt="image description" />
               <div class="mcssHolder"></div>
             </div>
             <div class="mcCaptionWrap px-5 pt-5 pb-4 position-relative">
@@ -330,7 +338,8 @@
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
           <article class="mccColumn bg-white shadow mb-6 mx-auto mx-sm-0">
             <div class="imgHolder position-relative">
-              <img src="images/consul7.jpg" class="img-fluid d-block w-100" alt="image description" />
+              <img src="<?= urlProject(FOLDER_BASE . "/src/images/consul7.jpg") ?>" class="img-fluid d-block w-100"
+                alt="image description" />
               <div class="mcssHolder"></div>
             </div>
             <div class="mcCaptionWrap px-5 pt-5 pb-4 position-relative">
@@ -347,7 +356,8 @@
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
           <article class="mccColumn bg-white shadow mb-6 mx-auto mx-sm-0">
             <div class="imgHolder position-relative">
-              <img src="images/consul8.jpg" class="img-fluid d-block w-100" alt="image description" />
+              <img src="<?= urlProject(FOLDER_BASE . "/src/images/consul8.jpg") ?>" class="img-fluid d-block w-100"
+                alt="image description" />
               <div class="mcssHolder"></div>
             </div>
             <div class="mcCaptionWrap px-5 pt-5 pb-4 position-relative">
@@ -393,7 +403,7 @@
                 <div class="col-12 col-sm-6">
                   <div class="siwImgHolder mb-6">
                     <img
-                      src="images/img43.jpg"
+                      src="<?= urlProject(FOLDER_BASE . "/src/images/img190.jpg") ?>/img43.jpg"
                       class="w-100 img-fluid"
                       alt="image description"
                     />
@@ -402,7 +412,7 @@
                 <div class="col-12 col-sm-6">
                   <div class="siwImgHolder mb-6">
                     <img
-                      src="images/img44.jpg"
+                      src="<?= urlProject(FOLDER_BASE . "/src/images/img190.jpg") ?>/img44.jpg"
                       class="w-100 img-fluid"
                       alt="image description"
                     />
@@ -432,7 +442,7 @@
                 <li>
                   <div class="imgHolder mt-2 mb-3 mb-sm-0">
                     <img
-                      src="images/img45.jpg"
+                      src="<?= urlProject(FOLDER_BASE . "/src/images/img190.jpg") ?>/img45.jpg"
                       class="img-fluid"
                       alt="image description"
                     />
@@ -458,7 +468,7 @@
                 <li>
                   <div class="imgHolder mt-2 mb-3 mb-sm-0">
                     <img
-                      src="images/img46.jpg"
+                      src="<?= urlProject(FOLDER_BASE . "/src/images/img190.jpg") ?>/img46.jpg"
                       class="img-fluid"
                       alt="image description"
                     />
@@ -484,7 +494,7 @@
                 <li>
                   <div class="imgHolder mt-2 mb-3 mb-sm-0">
                     <img
-                      src="images/img47.jpg"
+                      src="<?= urlProject(FOLDER_BASE . "/src/images/img190.jpg") ?>/img47.jpg"
                       class="img-fluid"
                       alt="image description"
                     />
@@ -510,7 +520,7 @@
                 <li>
                   <div class="imgHolder mt-2 mb-3 mb-sm-0">
                     <img
-                      src="images/img48.jpg"
+                      src="<?= urlProject(FOLDER_BASE . "/src/images/img190.jpg") ?>/img48.jpg"
                       class="img-fluid"
                       alt="image description"
                     />

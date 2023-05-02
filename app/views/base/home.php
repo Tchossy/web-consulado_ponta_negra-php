@@ -1651,10 +1651,10 @@
             <address class="mb-0">
               <span class="mb-1 h5">Consulado Geral:</span>
               <p class="mb-6">
-                <strong class="font-weight-normal">Rue de Bunda, Ponta Negra, República do Congo</strong>
+                <strong class="font-weight-normal">Rue de Mbounda, Ponta Negra, República do Congo</strong>
               </p>
               <span class="mb-1 h5">Horário de Atendimento:</span>
-              <time datetime="2011-01-12">09h30 - 13h30</time>
+              <time datetime="2011-01-12">09h30 - 13h30, Segunda a Quinta.</time>
             </address>
           </div>
         </div>
