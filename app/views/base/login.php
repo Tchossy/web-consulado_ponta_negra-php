@@ -1,3 +1,13 @@
+<?php
+require 'src/db/config.php';
+session_start();
+
+if ((isset($_SESSION['utente_email']))) {
+  header('Location: http://localhost/web-consulado_ponta_negra-php/');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -30,12 +40,14 @@
 
   <!-- Web Fonts
 ========================= -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
+    type="text/css" />
 
   <!-- Stylesheet
 ========================= -->
   <link rel="stylesheet" type="text/css" href="<?= urlProject(FOLDER_BASE . "/src/css/bootstrap.min.css") ?>" />
-  <link rel="stylesheet" type="text/css" href="<?= urlProject(FOLDER_BASE . "/src/vendor/font-awesome/css/all.min.css") ?>" />
+  <link rel="stylesheet" type="text/css"
+    href="<?= urlProject(FOLDER_BASE . "/src/vendor/font-awesome/css/all.min.css") ?>" />
   <link rel="stylesheet" type="text/css" href="<?= urlProject(FOLDER_BASE . "/src/css/login.css") ?>" />
 </head>
 
@@ -48,12 +60,14 @@
         <div class="col-md-6">
           <div class="hero-wrap d-flex align-items-center h-100">
             <div class="hero-mask opacity-8 bg-primary"></div>
-            <div class="hero-bg hero-bg-scroll" style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/login-bg.jpg") ?>)"></div>
+            <div class="hero-bg hero-bg-scroll"
+              style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/login-bg.jpg") ?>)"></div>
             <div class="hero-content w-100 min-vh-100 d-flex flex-column">
               <div class="row g-0">
                 <div class="col-10 col-lg-9 mx-auto">
                   <div class="logo mt-5 mb-5 mb-md-0">
-                    <a class="d-flex" href="<?= urlProject() ?>" title="Consulado"><img src="<?= urlProject(FOLDER_BASE . "/src/images/logoWhite.png") ?>" alt="Consulado" /></a>
+                    <a class="d-flex" href="<?= urlProject() ?>" title="Consulado"><img
+                        src="<?= urlProject(FOLDER_BASE . "/src/images/logoWhite.png") ?>" alt="Consulado" /></a>
                   </div>
                 </div>
               </div>
@@ -77,15 +91,22 @@
           <div class="container my-auto py-5">
             <div class="row g-0">
               <div class="col-10 col-lg-9 col-xl-8 mx-auto">
-                <h3 class="fw-600 mb-4">Conecte-se</h3>
-                <form id="loginForm" method="post">
+                <h3 class="fw-600 mb-4">Conecte-se </h3>
+
+                <div id="msgAlertaErroCad"></div>
+
+                <form id="registerForm" method="post">
+                  <input name="type_form" value="login_user" type="text" hidden>
+
                   <div class="mb-3">
                     <label for="emailAddress" class="form-label">Endereço de email</label>
-                    <input type="email" class="form-control" id="emailAddress" required placeholder="Digite seu e-mail" />
+                    <input type="email" name="email_address_user" class="form-control" id="emailAddress"
+                      placeholder="Digite seu e-mail" />
                   </div>
                   <div class="mb-3">
                     <label for="loginPassword" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="loginPassword" required placeholder="Digite a senha" />
+                    <input type="password" name="login_password_user" class="form-control" id="loginPassword" required
+                      placeholder="Digite a senha" />
                   </div>
 
                   <div class="d-grid my-4">
@@ -106,6 +127,9 @@
       </div>
     </div>
   </div>
+
+  <script src="<?= urlProject(FOLDER_BASE . BASE_JS . "/login_user.js") ?>"></script>
+
 </body>
 
 </html>

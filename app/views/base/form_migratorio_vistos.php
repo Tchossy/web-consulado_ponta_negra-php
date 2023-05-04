@@ -1,7 +1,10 @@
-<?php $this->layout('_theme') ?>
+<?php
+session_start();
+$this->layout('_theme');
+?>
 
-<header class="pageMainHead d-flex position-relative bgCover w-100 text-white"
-  style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img190.jpg") ?>)">
+
+<header class="pageMainHead d-flex position-relative bgCover w-100 text-white" style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img190.jpg") ?>)">
   <div class="alignHolder d-flex w-100 align-items-center">
     <div class="align w-100 position-relative">
       <div class="container">
@@ -86,8 +89,7 @@
                 <div class="form-group">
                   <label for="">Nome completo
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="name_user" name="nome_completo_user" class="form-control d-block w-100"
-                    placeholder="Nome completo" />
+                  <input type="text" id="name_user" name="nome_completo_user" class="form-control d-block w-100" placeholder="Nome completo" />
                 </div>
               </div>
 
@@ -115,16 +117,14 @@
                 <div class="form-group">
                   <label for="">Data de nascimento
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="date" id="date_birth_user" name="data_nascimento_user" class="form-control d-block w-100"
-                    placeholder="Nome" />
+                  <input type="date" id="date_birth_user" name="data_nascimento_user" class="form-control d-block w-100" placeholder="Nome" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
                 <div class="form-group">
                   <label for="">Local de nascimento
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="birthplace_user" name="local_nascimento_user"
-                    class="form-control d-block w-100" placeholder="Local de nascimento" />
+                  <input type="text" id="birthplace_user" name="local_nascimento_user" class="form-control d-block w-100" placeholder="Local de nascimento" />
                 </div>
               </div>
 
@@ -132,32 +132,28 @@
                 <div class="form-group">
                   <label for="">País de nascimento
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="country_birth_user" name="pais_ascimento_user"
-                    class="form-control d-block w-100" placeholder="País de nascimento" />
+                  <input type="text" id="country_birth_user" name="pais_ascimento_user" class="form-control d-block w-100" placeholder="País de nascimento" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
                 <div class="form-group">
                   <label for="">Nacionalidade de origem
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="nationality_origin_user" name="nacionalidade_origem_user"
-                    class="form-control d-block w-100" placeholder="Nacionalidade de origem" />
+                  <input type="text" id="nationality_origin_user" name="nacionalidade_origem_user" class="form-control d-block w-100" placeholder="Nacionalidade de origem" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
                 <div class="form-group">
                   <label for="">Nacionalidade actual
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="current_nationality_user" name="nacionalidade_actual_user"
-                    class="form-control d-block w-100" placeholder="Nacionalidade actual" />
+                  <input type="text" id="current_nationality_user" name="nacionalidade_actual_user" class="form-control d-block w-100" placeholder="Nacionalidade actual" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
                 <div class="form-group">
                   <label for="">Passaporte nº
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="passaport_user" name="passaporte_n_user" class="form-control d-block w-100"
-                    placeholder="Passaporte nº" />
+                  <input type="text" id="passaport_user" name="passaporte_n_user" class="form-control d-block w-100" placeholder="Passaporte nº" />
                 </div>
               </div>
 
@@ -165,24 +161,21 @@
                 <div class="form-group">
                   <label for="">Local de emissão
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="place_issue_user" name="local_emissao_user" class="form-control d-block w-100"
-                    placeholder="Local de emissão" />
+                  <input type="text" id="place_issue_user" name="local_emissao_user" class="form-control d-block w-100" placeholder="Local de emissão" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
                 <div class="form-group">
                   <label for="">Data de emissão
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="date" id="date_issue_user" name="data_emissao_user" class="form-control d-block w-100"
-                    placeholder="Nome" />
+                  <input type="date" id="date_issue_user" name="data_emissao_user" class="form-control d-block w-100" placeholder="Nome" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
                 <div class="form-group">
                   <label for="">Valido até
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="date" id="valid_until_user" name="valido_ate_user" class="form-control d-block w-100"
-                    placeholder="Valido até" />
+                  <input type="date" id="valid_until_user" name="valido_ate_user" class="form-control d-block w-100" placeholder="Valido até" />
                 </div>
               </div>
 
@@ -190,24 +183,21 @@
                 <div class="form-group">
                   <label for="">Profissão
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="profession_user" name="profissao_user" class="form-control d-block w-100"
-                    placeholder="Profissão" />
+                  <input type="text" id="profession_user" name="profissao_user" class="form-control d-block w-100" placeholder="Profissão" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
                 <div class="form-group">
                   <label for="">Cargo que ocupa
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="position_held_user" name="cargo_user" class="form-control d-block w-100"
-                    placeholder="Cargo que ocupa" />
+                  <input type="text" id="position_held_user" name="cargo_user" class="form-control d-block w-100" placeholder="Cargo que ocupa" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
                 <div class="form-group">
                   <label for="">Local de trabalho
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="workplace_user" name="local_trabalho_user" class="form-control d-block w-100"
-                    placeholder="Local de trabalho" />
+                  <input type="text" id="workplace_user" name="local_trabalho_user" class="form-control d-block w-100" placeholder="Local de trabalho" />
                 </div>
               </div>
 
@@ -215,54 +205,47 @@
                 <div class="form-group">
                   <label for="">Morada
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="household_user" name="morada_user" class="form-control d-block w-100"
-                    placeholder="Morada" />
+                  <input type="text" id="household_user" name="morada_user" class="form-control d-block w-100" placeholder="Morada" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
                 <div class="form-group">
                   <label for="">Cidade
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="city_user" name="cidade_user" class="form-control d-block w-100"
-                    placeholder="Cidade" />
+                  <input type="text" id="city_user" name="cidade_user" class="form-control d-block w-100" placeholder="Cidade" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
                 <div class="form-group">
                   <label for="">Rua <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="road_user" name="rua_user" class="form-control d-block w-100"
-                    placeholder="Rua" />
+                  <input type="text" id="road_user" name="rua_user" class="form-control d-block w-100" placeholder="Rua" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
                 <div class="form-group">
                   <label for="">Codigo postal </label>
-                  <input type="text" id="postal_Code_user" name="postal_code_user" class="form-control d-block w-100"
-                    placeholder="Codigo postal" />
+                  <input type="text" id="postal_Code_user" name="postal_code_user" class="form-control d-block w-100" placeholder="Codigo postal" />
                 </div>
               </div>
 
               <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
                 <div class="form-group">
                   <label for="">Teléfax</label>
-                  <input type="text" id="fax_user" name="fax_user" class="form-control d-block w-100"
-                    placeholder="Teléfax" />
+                  <input type="text" id="fax_user" name="fax_user" class="form-control d-block w-100" placeholder="Teléfax" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
                 <div class="form-group">
                   <label for="">E-mail
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="email_user" name="email_user" class="form-control d-block w-100"
-                    placeholder="E-mail" />
+                  <input type="text" id="email_user" name="email_user" class="form-control d-block w-100" placeholder="E-mail" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
                 <div class="form-group">
                   <label for="">Nº de telefone
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="phone_number_user" name="phone_number_user" class="form-control d-block w-100"
-                    placeholder="Nº de telefone" />
+                  <input type="text" id="phone_number_user" name="phone_number_user" class="form-control d-block w-100" placeholder="Nº de telefone" />
                 </div>
               </div>
 
@@ -270,16 +253,14 @@
                 <div class="form-group">
                   <label for="">Nome do pai:
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="email" id="father_name_user" name="father_name_user" class="form-control d-block w-100"
-                    placeholder="Nome do pai:" />
+                  <input type="email" id="father_name_user" name="father_name_user" class="form-control d-block w-100" placeholder="Nome do pai:" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
                 <div class="form-group">
                   <label for="">Nacionalidade do pai
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="email" id="father_nationality_user" name="father_nationality_user"
-                    class="form-control d-block w-100" placeholder="Nacionalidade do pai" />
+                  <input type="email" id="father_nationality_user" name="father_nationality_user" class="form-control d-block w-100" placeholder="Nacionalidade do pai" />
                 </div>
               </div>
 
@@ -287,16 +268,14 @@
                 <div class="form-group">
                   <label for="">Nome do mãe:
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="email" id="mother_name_user" name="mother_name_user" class="form-control d-block w-100"
-                    placeholder="Nome do mãe:" />
+                  <input type="email" id="mother_name_user" name="mother_name_user" class="form-control d-block w-100" placeholder="Nome do mãe:" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
                 <div class="form-group">
                   <label for="">Nacionalidade da mãe
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="email" id="mother_nationality_user" name="mother_nationality_user"
-                    class="form-control d-block w-100" placeholder="Nacionalidade da mãe" />
+                  <input type="email" id="mother_nationality_user" name="mother_nationality_user" class="form-control d-block w-100" placeholder="Nacionalidade da mãe" />
                 </div>
               </div>
 
@@ -304,8 +283,7 @@
                 <div class="form-group">
                   <label for="">Motivo de viagem
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="email" id="reason_travel_user" name="reason_travel_user"
-                    class="form-control d-block w-100" placeholder="Motivo de viagem" />
+                  <input type="email" id="reason_travel_user" name="reason_travel_user" class="form-control d-block w-100" placeholder="Motivo de viagem" />
                 </div>
               </div>
 
@@ -313,8 +291,7 @@
                 <div class="form-group">
                   <label for="">Local de hospedagem
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="email" id="hosting_place_user" name="hosting_place_user"
-                    class="form-control d-block w-100" placeholder="Local de hospedagem" />
+                  <input type="email" id="hosting_place_user" name="hosting_place_user" class="form-control d-block w-100" placeholder="Local de hospedagem" />
                 </div>
               </div>
 
@@ -322,23 +299,20 @@
                 <div class="form-group">
                   <label for="">Cidade de hospedagem
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="city_hosting_user" name="city_hosting_user" class="form-control d-block w-100"
-                    placeholder="Cidade" />
+                  <input type="text" id="city_hosting_user" name="city_hosting_user" class="form-control d-block w-100" placeholder="Cidade" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-5 px-2">
                 <div class="form-group">
                   <label for="">Rua de hospedagem
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="road_hosting_user" name="road_hosting_user" class="form-control d-block w-100"
-                    placeholder="Rua" />
+                  <input type="text" id="road_hosting_user" name="road_hosting_user" class="form-control d-block w-100" placeholder="Rua" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-2 px-2">
                 <div class="form-group">
                   <label for="">Casa nº </label>
-                  <input type="text" id="house_number_user" name="house_number_user" class="form-control d-block w-100"
-                    placeholder="Casa nº" />
+                  <input type="text" id="house_number_user" name="house_number_user" class="form-control d-block w-100" placeholder="Casa nº" />
                 </div>
               </div>
 
@@ -347,8 +321,7 @@
                   <label for="">Nome da pessoa ou organismo que responsabilizará pela
                     sua estadia
                     <span class="text-danger fsSmall">*</span></label>
-                  <textarea id="name_person_responsible_stay_user" name="name_person_responsible_stay_user"
-                    class="form-control w-100 d-block" placeholder="Escreva aqui&hellip;"></textarea>
+                  <textarea id="name_person_responsible_stay_user" name="name_person_responsible_stay_user" class="form-control w-100 d-block" placeholder="Escreva aqui&hellip;"></textarea>
                 </div>
               </div>
 
@@ -360,8 +333,7 @@
                 <div class="form-group">
                   <label for="">Nome de pessoa ou organismo a contactar em Angola
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="person_contact_angola_user" name="person_contact_angola_user"
-                    class="form-control d-block w-100" placeholder="Nome completo" />
+                  <input type="text" id="person_contact_angola_user" name="person_contact_angola_user" class="form-control d-block w-100" placeholder="Nome completo" />
                 </div>
               </div>
 
@@ -369,8 +341,7 @@
                 <div class="form-group">
                   <label for="">Endereço completo em Angola
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="full_addres_angola_user" name="full_addres_angola_user"
-                    class="form-control d-block w-100" placeholder="Endereço completo" />
+                  <input type="text" id="full_addres_angola_user" name="full_addres_angola_user" class="form-control d-block w-100" placeholder="Endereço completo" />
                 </div>
               </div>
 
@@ -378,16 +349,14 @@
                 <div class="form-group">
                   <label for="">Data de entrada em Angola
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="date" id="entrance_date_angola_user" name="entrance_date_angola_user"
-                    class="form-control d-block w-100" placeholder="Nome" />
+                  <input type="date" id="entrance_date_angola_user" name="entrance_date_angola_user" class="form-control d-block w-100" placeholder="Nome" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-9 px-2">
                 <div class="form-group">
                   <label for="">Posto de fronteira a utilizar
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="border_post_be_used_user" name="border_post_be_used_user"
-                    class="form-control d-block w-100" placeholder="Posto de fronteira" />
+                  <input type="text" id="border_post_be_used_user" name="border_post_be_used_user" class="form-control d-block w-100" placeholder="Posto de fronteira" />
                 </div>
               </div>
 
@@ -395,8 +364,7 @@
                 <div class="form-group">
                   <label for="">Data de saída em Angola
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="date" id="exit_date_angola_user" name="exit_date_angola_user"
-                    class="form-control d-block w-100" placeholder="Nome" />
+                  <input type="date" id="exit_date_angola_user" name="exit_date_angola_user" class="form-control d-block w-100" placeholder="Nome" />
                 </div>
               </div>
 
@@ -408,16 +376,14 @@
                 <div class="form-group">
                   <label for="">Assinatura do requerente
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="text" id="signature_user" name="signature_user" class="form-control d-block w-100"
-                    placeholder="Assinatura" />
+                  <input type="text" id="signature_user" name="signature_user" class="form-control d-block w-100" placeholder="Assinatura" />
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-12 col-lg-3 px-2">
                 <div class="form-group">
                   <label for="">Data da assinatura
                     <span class="text-danger fsSmall">*</span></label>
-                  <input type="date" id="date_signature_user" name="date_signature_user"
-                    class="form-control d-block w-100" placeholder="Nome" />
+                  <input type="date" id="date_signature_user" name="date_signature_user" class="form-control d-block w-100" placeholder="Nome" />
                 </div>
               </div>
 
@@ -479,9 +445,7 @@
               </div>
             </div>
 
-            <button type="button" id="get-pdf-btn"
-              class="btn btnTheme d-flex col-lg-3 mb-6 font-weight-bold text-capitalize position-relative border-0 p-0 mt-2 btnWidthSmall"
-              data-hover="Enviar formulario">
+            <button type="button" id="get-pdf-btn" class="btn btnTheme d-flex col-lg-3 mb-6 font-weight-bold text-capitalize position-relative border-0 p-0 mt-2 btnWidthSmall" data-hover="Enviar formulario">
               <span class="d-block btnText">Enviar formulário </span>
             </button>
           </form>

@@ -6,7 +6,7 @@ if ($mode == 'local') {
   $dbHost = "localhost";
   $dbUsername = "root";
   $dbPassword = "";
-  $dbName = "phpjs";
+  $dbName = "consulado_angola_ponta_negra";
 }
 if ($mode == 'producao') {
   $dbHost = "localhost";

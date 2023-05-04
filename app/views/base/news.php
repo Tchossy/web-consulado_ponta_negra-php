@@ -1,7 +1,12 @@
-<?php $this->layout('_theme') ?>
+<?php
+session_start();
+$this->layout('_theme');
+?>
+
 
 <main>
-  <header class="pageMainHead d-flex position-relative bgCover w-100 text-white" style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img50.jpg") ?>)">
+  <header class="pageMainHead d-flex position-relative bgCover w-100 text-white"
+    style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img50.jpg") ?>)">
     <div class="alignHolder d-flex w-100 align-items-center">
       <div class="align w-100 position-relative">
         <div class="container">
@@ -125,7 +130,8 @@
                   <div class="input-group">
                     <input type="search" class="form-control" placeholder="Procure aqui…" />
                     <div class="input-group-append">
-                      <button class="btn btnTheme btnNoOver d-flex align-items-center justify-content-center" type="button">
+                      <button class="btn btnTheme btnNoOver d-flex align-items-center justify-content-center"
+                        type="button">
                         <i class="icomoon-search"><span class="sr-only">procurar</span></i>
                       </button>
                     </div>

@@ -1,3 +1,13 @@
+<?php
+require 'src/db/config.php';
+session_start();
+
+if ((isset($_SESSION['utente_email']))) {
+  header('Location: http://localhost/web-consulado_ponta_negra-php/');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -30,14 +40,12 @@
 
   <!-- Web Fonts
 ========================= -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
-    type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" type="text/css" />
 
   <!-- Stylesheet
 ========================= -->
   <link rel="stylesheet" type="text/css" href="<?= urlProject(FOLDER_BASE . "/src/css/bootstrap.min.css") ?>" />
-  <link rel="stylesheet" type="text/css"
-    href="<?= urlProject(FOLDER_BASE . "/src/vendor/font-awesome/css/all.min.css") ?>" />
+  <link rel="stylesheet" type="text/css" href="<?= urlProject(FOLDER_BASE . "/src/vendor/font-awesome/css/all.min.css") ?>" />
   <link rel="stylesheet" type="text/css" href="<?= urlProject(FOLDER_BASE . "/src/css/login.css") ?>" />
 </head>
 
@@ -50,14 +58,12 @@
         <div class="col-md-6">
           <div class="hero-wrap d-flex align-items-center h-100">
             <div class="hero-mask opacity-8 bg-primary"></div>
-            <div class="hero-bg hero-bg-scroll"
-              style="background-image: url('<?= urlProject(FOLDER_BASE . "/src/images/login-bg.jpg") ?>')"></div>
+            <div class="hero-bg hero-bg-scroll" style="background-image: url('<?= urlProject(FOLDER_BASE . "/src/images/login-bg.jpg") ?>')"></div>
             <div class="hero-content w-100 min-vh-100 d-flex flex-column">
               <div class="row g-0">
                 <div class="col-10 col-lg-9 mx-auto">
                   <div class="logo mt-5 mb-5 mb-md-0">
-                    <a class="d-flex" href="<?= urlProject() ?>" title="Oxyy"><img
-                        src="<?= urlProject(FOLDER_BASE . "/src/images/logoWhite.png") ?>" alt="Consulado" /></a>
+                    <a class="d-flex" href="<?= urlProject() ?>" title="Oxyy"><img src="<?= urlProject(FOLDER_BASE . "/src/images/logoWhite.png") ?>" alt="Consulado" /></a>
                   </div>
                 </div>
               </div>
@@ -84,23 +90,34 @@
             <div class="row g-0">
               <div class="col-10 col-lg-9 col-xl-8 mx-auto">
                 <h3 class="fw-600 mb-4">Inscrever-se</h3>
+
+                <div id="msgAlertaErroCad"></div>
+
                 <form id="registerForm" method="post">
+                  <input name="type_form" value="create_author" type="text" hidden>
+
                   <div class="mb-3">
-                    <label for="fullName" class="form-label">Nome completo</label>
-                    <input type="text" class="form-control" id="fullName" required placeholder="Digite seu nome" />
+                    <label for="full_name_user" class="form-label">Nome completo</label>
+                    <input type="text" name="full_name_user" class="form-control" required placeholder="Digite seu nome" />
                   </div>
                   <div class="mb-3">
-                    <label for="emailAddress" class="form-label">Endereço de email</label>
-                    <input type="email" class="form-control" id="emailAddress" required
-                      placeholder="Digite seu e-mail" />
+                    <label for="email_address_user" class="form-label">Endereço de email</label>
+                    <input type="email" name="email_address_user" class="form-control" required placeholder="Digite seu e-mail" />
                   </div>
                   <div class="mb-3">
-                    <label for="loginPassword" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="loginPassword" required
-                      placeholder="Digite a senha" />
+                    <label for="number_phone_user" class="form-label">Nº de telefone</label>
+                    <input type="number" class="form-control" name="number_phone_user" required placeholder="Digite seu e-mail" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="login_password_user" class="form-label">Senha</label>
+                    <input type="password" name="login_password_user" class="form-control" required placeholder="Digite a senha" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="login_password_user" class="form-label">Confirme a senha</label>
+                    <input type="password" name="login_confirm_password_user" class="form-control" required placeholder="Digite a senha" />
                   </div>
                   <div class="d-grid my-4">
-                    <button class="btn btn-primary" type="submit">
+                    <button id="register-user-btn" class="btn btn-primary" type="submit">
                       Inscrever-se
                     </button>
                   </div>
@@ -117,12 +134,8 @@
     </div>
   </div>
 
-  <!-- Script -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Style Switcher -->
-  <script src="js/switcher.min.js"></script>
-  <script src="js/theme.js"></script>
+  <script src="<?= urlProject(FOLDER_BASE . BASE_JS . "/login_user.js") ?>"></script>
+
 </body>
 
 </html>

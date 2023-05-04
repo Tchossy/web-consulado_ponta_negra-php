@@ -1,8 +1,11 @@
-<?php $this->layout('_theme') ?>
+<?php
+session_start();
+$this->layout('_theme');
+?>
+
 
 <main>
-  <header class="pageMainHead d-flex position-relative bgCover w-100 text-white"
-    style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img50.jpg") ?>)">
+  <header class="pageMainHead d-flex position-relative bgCover w-100 text-white" style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img50.jpg") ?>)">
     <div class="alignHolder d-flex w-100 align-items-center">
       <div class="align w-100 position-relative">
         <div class="container">
@@ -110,44 +113,34 @@
               click para ver os documentos necessários para emissão dos mesmos:
             </p>
             <ul class="list-unstyled coDefaultList text-lDark">
-              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'"
-                onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#passaporteOrdinarioModal">
+              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'" onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#passaporteOrdinarioModal">
                 Emissão de passaporte Ordinário
               </li>
-              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'"
-                onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#salvoCondutoModal">
+              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'" onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#salvoCondutoModal">
                 Emissão de salvo conduto
               </li>
-              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'"
-                onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#vistoTurismoModal">
+              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'" onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#vistoTurismoModal">
                 Emissão de visto de turismo
               </li>
-              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'"
-                onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#vistoCurtaDuracaoModal">
+              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'" onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#vistoCurtaDuracaoModal">
                 Emissão de visto de Curta Duração
               </li>
-              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'"
-                onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#vistoTransitoModal">
+              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'" onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#vistoTransitoModal">
                 Emissão de visto de Trânsito
               </li>
-              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'"
-                onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#vistoTrabalhoModal">
+              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'" onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#vistoTrabalhoModal">
                 Emissão de visto de Trabalho.
               </li>
-              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'"
-                onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#vistoEstudoModal">
+              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'" onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#vistoEstudoModal">
                 Emissão de visto de Estudo.
               </li>
-              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'"
-                onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#vistoTemporarioModal">
+              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'" onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#vistoTemporarioModal">
                 Emissão de visto de Permanência temporária.
               </li>
-              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'"
-                onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#vistoResidenciaModal">
+              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'" onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#vistoResidenciaModal">
                 Emissão de visto de Fixação de Residência.
               </li>
-              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'"
-                onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#vistoTratamentoMedicoModal">
+              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'" onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#vistoTratamentoMedicoModal">
                 Emissão de visto de Tratamento Médio.
               </li>
             </ul>
@@ -155,8 +148,7 @@
             <!-- MODALS -->
             <div>
               <!-- Modal Visto de Turismo -->
-              <div class="modal fade bd-example-modal-lg" id="vistoTurismoModal" tabindex="-1" role="dialog"
-                aria-labelledby="vistoTurismoModal" aria-hidden="true">
+              <div class="modal fade bd-example-modal-lg" id="vistoTurismoModal" tabindex="-1" role="dialog" aria-labelledby="vistoTurismoModal" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -236,17 +228,13 @@
                           </li>
                         </ul>
 
-                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>"
-                          class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0"
-                          data-hover="Preencher formulario">
+                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>" class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0" data-hover="Preencher formulario">
                           <span class="d-block btnText">Preencher formulário</span>
                         </a>
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button
-                        class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4"
-                        data-hover="Entendido" data-dismiss="modal">
+                      <button class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4" data-hover="Entendido" data-dismiss="modal">
                         <span class="d-block btnText fwMedium">Entendido</span>
                       </button>
                     </div>
@@ -255,8 +243,7 @@
               </div>
 
               <!-- Modal Visto de Curta Duração -->
-              <div class="modal fade bd-example-modal-lg" id="vistoCurtaDuracaoModal" tabindex="-1" role="dialog"
-                aria-labelledby="vistoCurtaDuracaoModal" aria-hidden="true">
+              <div class="modal fade bd-example-modal-lg" id="vistoCurtaDuracaoModal" tabindex="-1" role="dialog" aria-labelledby="vistoCurtaDuracaoModal" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -330,17 +317,13 @@
                           </li>
                         </ul>
 
-                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>"
-                          class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0"
-                          data-hover="Preencher formulario">
+                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>" class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0" data-hover="Preencher formulario">
                           <span class="d-block btnText">Preencher formulário</span>
                         </a>
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button
-                        class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4"
-                        data-hover="Entendido" data-dismiss="modal">
+                      <button class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4" data-hover="Entendido" data-dismiss="modal">
                         <span class="d-block btnText fwMedium">Entendido</span>
                       </button>
                     </div>
@@ -349,8 +332,7 @@
               </div>
 
               <!-- Modal Visto de Trânsito -->
-              <div class="modal fade bd-example-modal-lg" id="vistoTransitoModal" tabindex="-1" role="dialog"
-                aria-labelledby="vistoTransitoModal" aria-hidden="true">
+              <div class="modal fade bd-example-modal-lg" id="vistoTransitoModal" tabindex="-1" role="dialog" aria-labelledby="vistoTransitoModal" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -430,17 +412,13 @@
                           </li>
                         </ul>
 
-                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>"
-                          class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0"
-                          data-hover="Preencher formulario">
+                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>" class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0" data-hover="Preencher formulario">
                           <span class="d-block btnText">Preencher formulário</span>
                         </a>
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button
-                        class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4"
-                        data-hover="Entendido" data-dismiss="modal">
+                      <button class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4" data-hover="Entendido" data-dismiss="modal">
                         <span class="d-block btnText fwMedium">Entendido</span>
                       </button>
                     </div>
@@ -449,8 +427,7 @@
               </div>
 
               <!-- Modal Visto de Trabalho -->
-              <div class="modal fade bd-example-modal-lg" id="vistoTrabalhoModal" tabindex="-1" role="dialog"
-                aria-labelledby="vistoTrabalhoModal" aria-hidden="true">
+              <div class="modal fade bd-example-modal-lg" id="vistoTrabalhoModal" tabindex="-1" role="dialog" aria-labelledby="vistoTrabalhoModal" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -549,17 +526,13 @@
                           </li>
                         </ul>
 
-                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>"
-                          class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0"
-                          data-hover="Preencher formulario">
+                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>" class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0" data-hover="Preencher formulario">
                           <span class="d-block btnText">Preencher formulário</span>
                         </a>
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button
-                        class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4"
-                        data-hover="Entendido" data-dismiss="modal">
+                      <button class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4" data-hover="Entendido" data-dismiss="modal">
                         <span class="d-block btnText fwMedium">Entendido</span>
                       </button>
                     </div>
@@ -568,8 +541,7 @@
               </div>
 
               <!-- Modal Visto de Estudo  -->
-              <div class="modal fade bd-example-modal-lg" id="vistoEstudoModal" tabindex="-1" role="dialog"
-                aria-labelledby="vistoEstudoModal" aria-hidden="true">
+              <div class="modal fade bd-example-modal-lg" id="vistoEstudoModal" tabindex="-1" role="dialog" aria-labelledby="vistoEstudoModal" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -670,17 +642,13 @@
                           </li>
                         </ul>
 
-                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>"
-                          class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0"
-                          data-hover="Preencher formulario">
+                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>" class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0" data-hover="Preencher formulario">
                           <span class="d-block btnText">Preencher formulário</span>
                         </a>
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button
-                        class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4"
-                        data-hover="Entendido" data-dismiss="modal">
+                      <button class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4" data-hover="Entendido" data-dismiss="modal">
                         <span class="d-block btnText fwMedium">Entendido</span>
                       </button>
                     </div>
@@ -689,8 +657,7 @@
               </div>
 
               <!-- Modal Visto de Permanência temporária -->
-              <div class="modal fade bd-example-modal-lg" id="vistoTemporarioModal" tabindex="-1" role="dialog"
-                aria-labelledby="vistoTemporarioModal" aria-hidden="true">
+              <div class="modal fade bd-example-modal-lg" id="vistoTemporarioModal" tabindex="-1" role="dialog" aria-labelledby="vistoTemporarioModal" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -774,17 +741,13 @@
                           </li>
                         </ul>
 
-                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>"
-                          class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0"
-                          data-hover="Preencher formulario">
+                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>" class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0" data-hover="Preencher formulario">
                           <span class="d-block btnText">Preencher formulário</span>
                         </a>
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button
-                        class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4"
-                        data-hover="Entendido" data-dismiss="modal">
+                      <button class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4" data-hover="Entendido" data-dismiss="modal">
                         <span class="d-block btnText fwMedium">Entendido</span>
                       </button>
                     </div>
@@ -793,8 +756,7 @@
               </div>
 
               <!-- Modal Visto de Fixação de Residência -->
-              <div class="modal fade bd-example-modal-lg" id="vistoResidenciaModal" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal fade bd-example-modal-lg" id="vistoResidenciaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -815,17 +777,13 @@
                           </li>
                         </ul>
 
-                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>"
-                          class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0"
-                          data-hover="Preencher formulario">
+                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>" class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0" data-hover="Preencher formulario">
                           <span class="d-block btnText">Preencher formulário</span>
                         </a>
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button
-                        class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4"
-                        data-hover="Entendido" data-dismiss="modal">
+                      <button class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4" data-hover="Entendido" data-dismiss="modal">
                         <span class="d-block btnText fwMedium">Entendido</span>
                       </button>
                     </div>
@@ -834,8 +792,7 @@
               </div>
 
               <!-- Modal Visto de Tratamento Médio  -->
-              <div class="modal fade bd-example-modal-lg" id="vistoTratamentoMedicoModal" tabindex="-1" role="dialog"
-                aria-labelledby="vistoTratamentoMedicoModal" aria-hidden="true">
+              <div class="modal fade bd-example-modal-lg" id="vistoTratamentoMedicoModal" tabindex="-1" role="dialog" aria-labelledby="vistoTratamentoMedicoModal" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -855,17 +812,13 @@
                           </li>
                         </ul>
 
-                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>"
-                          class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0"
-                          data-hover="Preencher formulario">
+                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>" class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0" data-hover="Preencher formulario">
                           <span class="d-block btnText">Preencher formulário</span>
                         </a>
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button
-                        class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4"
-                        data-hover="Entendido" data-dismiss="modal">
+                      <button class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4" data-hover="Entendido" data-dismiss="modal">
                         <span class="d-block btnText fwMedium">Entendido</span>
                       </button>
                     </div>
@@ -876,8 +829,7 @@
 
             <div>
               <!-- Modal Emissão do Passaporte Ordinário   -->
-              <div class="modal fade bd-example-modal-lg" id="passaporteOrdinarioModal" tabindex="-1" role="dialog"
-                aria-labelledby="passaporteOrdinarioModal" aria-hidden="true">
+              <div class="modal fade bd-example-modal-lg" id="passaporteOrdinarioModal" tabindex="-1" role="dialog" aria-labelledby="passaporteOrdinarioModal" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -919,9 +871,7 @@
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button
-                        class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4"
-                        data-hover="Entendido" data-dismiss="modal">
+                      <button class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4" data-hover="Entendido" data-dismiss="modal">
                         <span class="d-block btnText fwMedium">Entendido</span>
                       </button>
                     </div>
@@ -929,8 +879,7 @@
                 </div>
               </div>
               <!-- Modal Emissão de salvo conduto   -->
-              <div class="modal fade bd-example-modal-lg" id="salvoCondutoModal" tabindex="-1" role="dialog"
-                aria-labelledby="salvoCondutoModal" aria-hidden="true">
+              <div class="modal fade bd-example-modal-lg" id="salvoCondutoModal" tabindex="-1" role="dialog" aria-labelledby="salvoCondutoModal" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -957,17 +906,13 @@
                           </li>
                         </ul>
 
-                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_salvo_conduto") ?>"
-                          class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0"
-                          data-hover="Preencher formulario">
+                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_salvo_conduto") ?>" class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0" data-hover="Preencher formulario">
                           <span class="d-block btnText">Preencher formulário</span>
                         </a>
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button
-                        class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4"
-                        data-hover="Entendido" data-dismiss="modal">
+                      <button class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4" data-hover="Entendido" data-dismiss="modal">
                         <span class="d-block btnText fwMedium">Entendido</span>
                       </button>
                     </div>
@@ -975,8 +920,7 @@
                 </div>
               </div>
               <!-- Modal Registo de nascimento   -->
-              <div class="modal fade bd-example-modal-lg" id="sectorNotoriaModal" tabindex="-1" role="dialog"
-                aria-labelledby="sectorNotoriaModal" aria-hidden="true">
+              <div class="modal fade bd-example-modal-lg" id="sectorNotoriaModal" tabindex="-1" role="dialog" aria-labelledby="sectorNotoriaModal" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -1013,17 +957,13 @@
                           </li>
                         </ul>
 
-                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>"
-                          class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0"
-                          data-hover="Preencher formulario">
+                        <a href="<?= urlProject("setor/setor_migratorio/form/form_migratorio_vistos") ?>" class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0" data-hover="Preencher formulario">
                           <span class="d-block btnText">Preencher formulário</span>
                         </a>
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button
-                        class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4"
-                        data-hover="Entendido" data-dismiss="modal">
+                      <button class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4" data-hover="Entendido" data-dismiss="modal">
                         <span class="d-block btnText fwMedium">Entendido</span>
                       </button>
                     </div>
@@ -1135,9 +1075,7 @@
               <p>
                 Aqui você pode obter a resposta perfeita para o seu problema.
               </p>
-              <a href="contact-1.html"
-                class="btn btnTheme btn-sm font-weight-bold text-capitalize position-relative border-0 p-0"
-                data-hover="Contact now">
+              <a href="contact-1.html" class="btn btnTheme btn-sm font-weight-bold text-capitalize position-relative border-0 p-0" data-hover="Contact now">
                 <span class="d-block btnText">Contate agora</span>
               </a>
               <i class="whWatermarkIcn icomoon-helpc position-absolute"><span class="sr-only">icon</span></i>

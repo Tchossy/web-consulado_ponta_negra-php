@@ -1,4 +1,8 @@
-<?php $this->layout('_theme') ?>
+<?php
+session_start();
+$this->layout('_theme');
+?>
+
 
 <main>
   <header class="pageMainHead d-flex position-relative bgCover w-100 text-white"

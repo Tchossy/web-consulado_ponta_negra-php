@@ -1,4 +1,8 @@
-<?php $this->layout('_theme') ?>
+<?php
+session_start();
+$this->layout('_theme');
+?>
+
 
 <section class="py-8 py-md-15 py-xl-22 noFoundContentBlock">
   <div class="container">
@@ -10,7 +14,8 @@
         <h2>Ohh! Página não encontrada</h2>
         <p>Parece que nada foi encontrado neste local. Clique no botão abaixo para voltar a pagina principal.</p>
 
-        <a href="home.html" class="btn btn-dark fwSemiBold position-relative border-0 p-0 minWidthMedium" data-hover="Voltar para a pagina principal">
+        <a href="home.html" class="btn btn-dark fwSemiBold position-relative border-0 p-0 minWidthMedium"
+          data-hover="Voltar para a pagina principal">
           <span class="d-block btnText">Voltar para a pagina principal</span>
         </a>
       </div>

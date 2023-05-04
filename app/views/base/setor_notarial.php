@@ -1,7 +1,12 @@
-<?php $this->layout('_theme') ?>
+<?php
+session_start();
+$this->layout('_theme');
+?>
+
 
 <main>
-  <header class="pageMainHead d-flex position-relative bgCover w-100 text-white" style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img50.jpg") ?>)">
+  <header class="pageMainHead d-flex position-relative bgCover w-100 text-white"
+    style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img50.jpg") ?>)">
     <div class="alignHolder d-flex w-100 align-items-center">
       <div class="align w-100 position-relative">
         <div class="container">
@@ -92,29 +97,36 @@
               utentes.
             </p>
             <ul class="list-unstyled coDefaultList text-lDark">
-              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'" onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#sectorNotoriaModal">
+              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'"
+                onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#sectorNotoriaModal">
                 Registo de nascimento
               </li>
-              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'" onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#sectorNotoriaModal">
+              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'"
+                onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#sectorNotoriaModal">
                 Registo de casamento
               </li>
-              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'" onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#sectorNotoriaModal">
+              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'"
+                onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#sectorNotoriaModal">
                 Registo de óbito
               </li>
-              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'" onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#sectorNotoriaModal">
+              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'"
+                onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#sectorNotoriaModal">
                 Transcrição de assentos
               </li>
-              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'" onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#sectorNotoriaModal">
+              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'"
+                onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#sectorNotoriaModal">
                 Autenticação de documentos
               </li>
-              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'" onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#sectorNotoriaModal">
+              <li style="cursor: pointer; color: #0b0035" onMouseOver="this.style.color='#ff0000'"
+                onMouseOut="this.style.color='#0b0035'" data-toggle="modal" data-target="#sectorNotoriaModal">
                 Reconhecimento de assinaturas.
               </li>
             </ul>
 
             <div>
               <!-- Modal Registo de nascimento   -->
-              <div class="modal fade bd-example-modal-lg" id="sectorNotoriaModal" tabindex="-1" role="dialog" aria-labelledby="sectorNotoriaModal" aria-hidden="true">
+              <div class="modal fade bd-example-modal-lg" id="sectorNotoriaModal" tabindex="-1" role="dialog"
+                aria-labelledby="sectorNotoriaModal" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -134,13 +146,17 @@
                           </li>
                         </ul>
 
-                        <a href="<?= urlProject("setor/setor_notarial/form/form_notorio") ?>" class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0" data-hover="Preencher formulario">
+                        <a href="<?= urlProject("setor/setor_notarial/form/form_notorio") ?>"
+                          class="btn btnTheme btn-sm mt-4 font-weight-bold text-capitalize position-relative border-0 p-0"
+                          data-hover="Preencher formulario">
                           <span class="d-block btnText">Preencher formulário</span>
                         </a>
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4" data-hover="Entendido" data-dismiss="modal">
+                      <button
+                        class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4"
+                        data-hover="Entendido" data-dismiss="modal">
                         <span class="d-block btnText fwMedium">Entendido</span>
                       </button>
                     </div>
@@ -515,7 +531,9 @@
                 Aqui você pode obter a resposta perfeita para o seu
                 problema.
               </p>
-              <a href="contact-1.html" class="btn btnTheme btn-sm font-weight-bold text-capitalize position-relative border-0 p-0" data-hover="Contact now">
+              <a href="contact-1.html"
+                class="btn btnTheme btn-sm font-weight-bold text-capitalize position-relative border-0 p-0"
+                data-hover="Contact now">
                 <span class="d-block btnText">Contate agora</span>
               </a>
               <i class="whWatermarkIcn icomoon-helpc position-absolute"><span class="sr-only">icon</span></i>

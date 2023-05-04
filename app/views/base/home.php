@@ -1,4 +1,8 @@
-<?php $this->layout('_theme') ?>
+<?php
+session_start();
+$this->layout('_theme');
+?>
+
 
 <main>
   <!-- ====== SLIDE SHOW ====== -->

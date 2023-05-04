@@ -9,7 +9,7 @@
   --grey: #eee;
   --dark-grey: #aaaaaa;
   --dark: #342e37;
-  --blue: #0011fa;
+  --blue: #007ccf;
   --green: #0cfa03;
   --yellow: #ffce26;
   --light-yellow: #fff2c6;
@@ -110,6 +110,10 @@
 }
 .table-data .order table tr td .status.delete {
   background: var(--dark-red);
+  transition: 0.2s ease;
+}
+.table-data .order table tr td .status.treatment {
+  background: var(--blue);
   transition: 0.2s ease;
 }
 .table-data .order table tr td .status.edite {

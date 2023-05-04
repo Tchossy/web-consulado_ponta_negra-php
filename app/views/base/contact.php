@@ -1,8 +1,11 @@
-<?php $this->layout('_theme') ?>
+<?php
+session_start();
+$this->layout('_theme');
+?>
+
 
 <main>
-  <header class="pageMainHead d-flex position-relative bgCover w-100 text-white"
-    style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img190.jpg") ?>)">
+  <header class="pageMainHead d-flex position-relative bgCover w-100 text-white" style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img190.jpg") ?>)">
     <div class="alignHolder d-flex w-100 align-items-center">
       <div class="align w-100 position-relative">
         <div class="container">
@@ -61,33 +64,33 @@
           <div class="widget bg-white shadow contactFormWidget ml-xl-n5 mb-7 mb-md-5">
             <div class="pt-8 pb-10 px-4 px-md-6 px-xl-8">
               <h2 class="fwSemiBold h3Medium mb-4">Deixe a sua mensagem</h2>
-              <form action="#" class="commentForm">
+
+              <div id="msgAlertaErroCad"></div>
+
+              <form id="messageForm" class="commentForm" method="post">
                 <div class="row mx-n2">
                   <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
                     <div class="form-group">
-                      <input type="text" class="form-control d-block w-100" placeholder="Nome" />
+                      <input name="name_user" type="text" class="form-control d-block w-100" placeholder="Nome" />
                     </div>
                   </div>
                   <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-2">
                     <div class="form-group">
-                      <input type="email" class="form-control d-block w-100" placeholder="Email" />
+                      <input name="email_user" type="email" class="form-control d-block w-100" placeholder="Email" />
                     </div>
                   </div>
                   <div class="col-12 px-2">
                     <div class="form-group">
-                      <input type="text" class="form-control d-block w-100" placeholder="Assunto" />
+                      <input name="summary" type="text" class="form-control d-block w-100" placeholder="Assunto" />
                     </div>
                   </div>
                   <div class="col-12 px-2">
                     <div class="form-group">
-                      <textarea class="form-control w-100 d-block"
-                        placeholder="Escreva sua mensagem&hellip;"></textarea>
+                      <textarea name="message" class="form-control w-100 d-block" placeholder="Escreva sua mensagem&hellip;"></textarea>
                     </div>
                   </div>
                 </div>
-                <button type="button"
-                  class="btn btnTheme d-flex font-weight-bold text-capitalize position-relative border-0 p-0 mt-2 btnWidthSmall"
-                  data-hover="Send Message">
+                <button class="btn btnTheme d-flex font-weight-bold text-capitalize position-relative border-0 p-0 mt-2 btnWidthSmall" type="submit" data-hover="Enviar mensagem">
                   <span class="d-block btnText">Enviar mensagem</span>
                 </button>
               </form>
@@ -98,8 +101,10 @@
     </div>
   </div>
   <div class="ctMapWrap position-relative w-100">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d993.9670003342771!2d11.8506404284708!3d-4.792694675376167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a60a5facddcfc09%3A0xcb0c0057a58eed06!2sEasy%20business%20center!5e0!3m2!1spt-BR!2sao!4v1682783396876!5m2!1spt-BR!2sao"
-      width="100%" height="594" allowfullscreen="" loading="lazy"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d993.9670003342771!2d11.8506404284708!3d-4.792694675376167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a60a5facddcfc09%3A0xcb0c0057a58eed06!2sEasy%20business%20center!5e0!3m2!1spt-BR!2sao!4v1682783396876!5m2!1spt-BR!2sao" width="100%" height="594" allowfullscreen="" loading="lazy"></iframe>
   </div>
+
+
 </main>
+
+<script src="<?= urlProject(FOLDER_BASE . BASE_JS . "/contact-message.js") ?>"></script>

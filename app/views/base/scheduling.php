@@ -1,8 +1,11 @@
-<?php $this->layout('_theme') ?>
+<?php
+session_start();
+$this->layout('_theme');
+?>
+
 
 <main>
-  <header class="pageMainHead d-flex position-relative bgCover w-100 text-white"
-    style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img50.jpg") ?>)">
+  <header class="pageMainHead d-flex position-relative bgCover w-100 text-white" style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img50.jpg") ?>)">
     <div class="alignHolder d-flex w-100 align-items-center">
       <div class="align w-100 position-relative">
         <div class="container">
@@ -23,9 +26,7 @@
   </header>
 
   <div class="container mb-16">
-    <a class="btn btnTheme font-weight-bold btnMinSm text-capitalize position-relative border-0 p-0 mt-6"
-      href="javascript:void(0);" data-toggle="modal" data-target="#vistoTurismoModal"
-      data-hover="Fazer Agendamento"><span class="d-block btnText">Fazer agendamento</span></a>
+    <a class="btn btnTheme font-weight-bold btnMinSm text-capitalize position-relative border-0 p-0 mt-6" href="javascript:void(0);" data-toggle="modal" data-target="#vistoTurismoModal" data-hover="Fazer Agendamento"><span class="d-block btnText">Fazer agendamento</span></a>
 
     <!-- TABLE -->
     <div class="table-data">
@@ -43,54 +44,47 @@
               <th>Status</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>
-                <p>Sector Notarial.</p>
-              </td>
-              <td>
-                <p>11 Novembro, Segunda-feira</p>
-              </td>
-              <td>
-                <button class="status completed">Feito</button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Sector Notarial.</p>
-              </td>
-              <td>
-                <p>11 Maio, Segunda-feira</p>
-              </td>
-              <td>
-                <button style="background-color: orange;" class="status ">Pendente</button>
-              </td>
-            </tr>
-          </tbody>
+
+          <?php
+          if ((isset($_SESSION['utente_email']))) {
+            echo "
+                <tbody>
+                </tbody>
+              ";
+          } else {
+            echo "<div class='alert alert-danger' role='alert' id='msgAlerta'> Faça o login ou registre-se para fazer o agendamento </div>";
+          }
+          ?>
+
         </table>
       </div>
     </div>
   </div>
 
   <!-- Modal -->
-  <div class="modal fade bd-example-modal-lg" id="vistoTurismoModal" tabindex="-1" role="dialog"
-    aria-labelledby="vistoTurismoModal" aria-hidden="true">
+  <div class="modal fade bd-example-modal-lg" id="vistoTurismoModal" tabindex="-1" role="dialog" aria-labelledby="vistoTurismoModal" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-body">
           <div class="pt-8 pb-10 px-4 px-md-6 px-xl-8">
             <h2 class="fwSemiBold h3Medium mb-4">
-              Formulario para Agendamento
+              Formulário para Agendamento
             </h2>
-            <form id="card-user-form" class="commentForm">
+
+            <div id="msgAlertaErroCad"></div>
+
+            <form id="schedulingForm" class="commentForm">
+              <input name="real_email_user" style="display: none;" value="<?php if ((isset($_SESSION['utente_email']))) {
+                                                                            echo $_SESSION['utente_email'];
+                                                                          } ?>" type="email" />
+              <input name="scheduling_state" style="display: none;" value="Pendente" type="text" />
               <div class="row mx-n2">
                 <div class="col-12 px-2">
                   <div class="form-group">
                     <label for="">Nome completo
                       <span class="text-danger fsSmall">*</span>
                     </label>
-                    <input name="nome_completo_user" type="text" class="form-control d-block w-100"
-                      placeholder="Nome completo" />
+                    <input name="name_user" type="text" class="form-control d-block w-100" placeholder="Nome completo" />
                   </div>
                 </div>
 
@@ -105,8 +99,7 @@
                   <div class="form-group">
                     <label for="">Telefone
                       <span class="text-danger fsSmall">*</span></label>
-                    <input name="telefone_user" type="number" class="form-control d-block w-100"
-                      placeholder="Telefone" />
+                    <input name="phone_user" type="number" class="form-control d-block w-100" placeholder="Telefone" />
                   </div>
                 </div>
 
@@ -114,17 +107,17 @@
                   <div class="form-group">
                     <label for="">Data para entrega de documentos
                       <span class="text-danger fsSmall">*</span></label>
-                    <input name="data_entrega_user" type="date" class="form-control d-block w-100" placeholder="Nome" />
+                    <input name="data_scheduling" type="date" class="form-control d-block w-100" placeholder="Nome" />
                   </div>
                 </div>
                 <div class="col-lg-6 px-2">
                   <div class="form-group">
                     <label for="">Sector
                       <span class="text-danger fsSmall">*</span></label>
-                    <select name="sector_user" id="" class="form-control d-block w-100">
-                      <option value="">Sector Notarial</option>
-                      <option value="">Sector Migratorio</option>
-                      <option value="">Sector Identificação</option>
+                    <select name="secto_scheduling" id="" class="form-control d-block w-100">
+                      <option value="Sector Notarial">Sector Notarial</option>
+                      <option value="Sector Migratório">Sector Migratório</option>
+                      <option value="Sector Identificação">Sector Identificação</option>
                       <option value="">
                         Sector de Apoio à Comunidade
                       </option>
@@ -132,9 +125,7 @@
                   </div>
                 </div>
               </div>
-              <button id="get-pdf-btn" type="button"
-                class="btn btnTheme d-flex font-weight-bold text-capitalize position-relative border-0 p-0 mt-2 btnWidthSmall"
-                data-hover="Enviar formulário">
+              <button id="get-pdf-btn" type="submit" class="btn btnTheme d-flex font-weight-bold text-capitalize position-relative border-0 p-0 mt-2 btnWidthSmall" data-hover="Enviar formulário">
                 <span class="d-block btnText">Enviar formulário</span>
               </button>
             </form>
@@ -145,4 +136,4 @@
   </div>
 </main>
 
-<script src="<?= urlProject(FOLDER_BASE . BASE_JS . "/ficha_agendamento.js") ?>"></script>
+<script src="<?= urlProject(FOLDER_BASE . BASE_JS . "/scheduling_user.js") ?>"></script>

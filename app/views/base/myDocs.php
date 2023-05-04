@@ -1,4 +1,8 @@
-<?php $this->layout('_theme') ?>
+<?php
+session_start();
+$this->layout('_theme');
+?>
+
 
 <main>
   <header class="pageMainHead d-flex position-relative bgCover w-100 text-white"
@@ -23,14 +27,27 @@
     </div>
   </header>
 
-  <ul>
-    <li> <button class="status completed">Pronto</button> - O seu processo está pronto</li>
-    <li> <button class="status pending">Pendente</button> - Ouve algum erro com o seu processo, por favor contacte.nos
-    </li>
-    <li> <button class="status delete">Recusado</button> - O seu processo não foi aceite</li>
-    <li> <button class="status" style="background-color: #007ccf">Em tratamento</button> - Aguarde </li>
-  </ul>
-  <div class="pt-2 pb-2 pt-md-10 pb-md-1 pt-lg-16 pb-lg-10 pt-xl-21 pb-xl-16">
+  <div class="container table-data">
+    <div class="order" style="background: none;">
+      <table>
+        <tr>
+          <td> <button class="status completed">Pronto</button> - O seu processo está pronto</td>
+        </tr>
+        <tr>
+          <td> <button class="status pending">Pendente</button> - Ouve algum erro com o seu processo, por favor
+            contacte-nos </td>
+        </tr>
+        <tr>
+          <td> <button class="status delete">Recusado</button> - O seu processo não foi aceite</td>
+        </tr>
+        <tr>
+          <td> <button class="status" style="background-color: #007ccf">Em tratamento</button> - Aguarde </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="mb-20">
     <div class="container">
       <div class="row">
         <h2 class="mb-4 fwMedium">Status dos seus documentos</h2>
@@ -60,95 +77,21 @@
                 <th>Status</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <p>1</p>
-                </td>
-                <td>
-                  <p>Sector Notarial</p>
-                </td>
-                <td>
-                  <p>Reconhecimento de assinaturas.</p>
-                </td>
-                <td>
-                  <p>11 Novembro, Segunda-feira</p>
-                </td>
-                <td>
-                  <p>24 Novembro, Quinta-feira</p>
-                </td>
-
-                <td>
-                  <button class="status completed">Pronto</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>2</p>
-                </td>
-                <td>
-                  <p>Sector Migratorio</p>
-                </td>
-                <td>
-                  <p>Visto de Permanência temporária</p>
-                </td>
-                <td>
-                  <p>03 Dezembro, Quinta-feira</p>
-                </td>
-                <td>
-                  <p>-------------------------</p>
-                </td>
-
-                <td>
-                  <button class="status pending">Pendente</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>3</p>
-                </td>
-                <td>
-                  <p>Sector de Identificação</p>
-                </td>
-                <td>
-                  <p>Emissão de Bilhete de Identidade</p>
-                </td>
-                <td>
-                  <p>26 Dezembro, Quinta-feira</p>
-                </td>
-                <td>
-                  <p>-------------------------</p>
-                </td>
-
-                <td>
-                  <button class="status delete">Recusado</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>4</p>
-                </td>
-                <td>
-                  <p>Sector de Identificação</p>
-                </td>
-                <td>
-                  <p>Emissão de Bilhete de Identidade</p>
-                </td>
-                <td>
-                  <p>26 Dezembro, Quinta-feira</p>
-                </td>
-                <td>
-                  <p>-------------------------</p>
-                </td>
-
-                <td>
-                  <button class="status" style="background-color: #007ccf">Em tratamento</button>
-                </td>
-              </tr>
-            </tbody>
+            <?php
+            if ((isset($_SESSION['utente_email']))) {
+              echo "
+                <tbody id='tbody'>
+                </tbody>
+              ";
+            } else {
+              echo "<div class='alert alert-danger' role='alert' id='msgAlerta'> Faça o login ou registre-se para fazer o agendamento </div>";
+            }
+            ?>
           </table>
         </div>
       </div>
     </div>
   </div>
 </main>
+
+<script src="<?= urlProject(FOLDER_BASE . BASE_JS . "/myDocs_user.js") ?>"></script>

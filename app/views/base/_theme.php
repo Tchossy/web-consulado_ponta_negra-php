@@ -55,30 +55,31 @@
   <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . "/src/css/responsive.css") ?>" />
 
   <!-- Icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 
 <body>
-  <!-- pageWrapper -->
-  <div id="pageWrapper">
-    <?php
-    if ($this->section('removeHeader')) :
-      echo $this->section('removeHeader');
-    else :
-      require 'src/components/Header/index.php';
-    endif;
-    ?>
+  <?php
+  if ($this->section('removeHeader')) :
+    echo $this->section('removeHeader');
+  else :
+    require 'src/components/Header/index.php';
+  endif;
+  ?>
 
-    <?= $this->section('content') ?>
+  <?= $this->section('content') ?>
 
-    <?php
-    if ($this->section('removeFooter')) :
-      echo $this->section('removeFooter');
-    else :
-      require 'src/components/Footer/index.php';
-    endif;
-    ?>
+  <?php
+  if ($this->section('removeFooter')) :
+    echo $this->section('removeFooter');
+  else :
+    require 'src/components/Footer/index.php';
+  endif;
+  ?>
 
   </div>
 
@@ -91,10 +92,6 @@
   <script src="<?= urlProject(FOLDER_BASE . BASE_JS . "/plugins.js") ?>"></script>
   <!-- include fontAwesome -->
   <script src="https://kit.fontawesome.com/391f644c42.js"></script>
-
-  </script>
-
-
 
 </body>
 
