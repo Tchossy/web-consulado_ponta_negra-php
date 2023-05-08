@@ -30,6 +30,7 @@ cardForm.addEventListener('submit', async event => {
     msgAlerta.innerHTML = response['msg']
   } else {
     msgAlerta.innerHTML = response['msg']
+    localStorage.setItem('email_user', response['email_user'])
     window.location.replace(origin_url)
   }
 

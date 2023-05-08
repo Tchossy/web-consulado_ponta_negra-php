@@ -7,13 +7,14 @@
               <div class="col-12 col-sm-6 col-md-5 col-xl-3 mb-6">
                 <div class="ftLogo mt-md-1 mb-6">
                   <a href="<?= urlProject("/") ?>">
-                    <img src="<?= urlProject(FOLDER_BASE . "/src/images/logoWhite.png") ?>" class="img-fluid" alt="Consulado Ponta Negra" />
+                    <img src="<?= urlProject(FOLDER_BASE . "/src/images/logoWhite.png") ?>" class="img-fluid"
+                      alt="Consulado Ponta Negra" />
                   </a>
                 </div>
                 <address class="mb-0 ftPlace">
                   <p class="mb-2">
-                    <strong class="font-weight-normal">77 Rue Bouzala Croisement <br />
-                      Bouetambongo Ouenze</strong>
+                    <strong class="font-weight-normal">Rue de Mbounda, Ponta Negra, <br />
+                      República do Congo</strong>
                   </p>
                   <ul class="list-unstyled ftpScheduleList mb-0">
                     <li>
@@ -82,7 +83,9 @@
                     <div class="input-group mb-3">
                       <input type="text" class="form-control form-control-lg" placeholder="Digite seu e-mail" />
                       <div class="input-group-append">
-                        <button type="button" class="btn btnTheme d-flex font-weight-bold text-capitalize position-relative border-0 p-0" data-hover="Send">
+                        <button type="button"
+                          class="btn btnTheme d-flex font-weight-bold text-capitalize position-relative border-0 p-0"
+                          data-hover="Send">
                           <span class="d-block btnText">Se inscrever</span>
                         </button>
                       </div>
@@ -99,7 +102,8 @@
           <div class="container">
             <div class="row align-items-center">
               <div class="col-12 col-lg-8">
-                <div class="ctConnectWrap d-sm-flex justify-content-sm-center justify-content-lg-end align-items-sm-center">
+                <div
+                  class="ctConnectWrap d-sm-flex justify-content-sm-center justify-content-lg-end align-items-sm-center">
                   <strong class="title flex-shrink-0 mb-1 font-weight-normal mr-sm-3 d-block">Conecte-se
                     conosco</strong>
                 </div>

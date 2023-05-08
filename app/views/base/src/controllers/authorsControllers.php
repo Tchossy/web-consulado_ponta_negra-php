@@ -45,6 +45,8 @@ if ($type_form == 'create_author') {
   $number_phone_user_form = $dataForm['number_phone_user'];
   $login_password_user_form = $dataForm['login_password_user'];
   $login_confirm_password_user_form = $dataForm['login_confirm_password_user'];
+  $new_password = md5($login_password_user_form);
+
   $date_create_user_form = $completeDate;
 
   $result_utente = $pdo->prepare("SELECT * FROM utentes WHERE email_address_user = ? ORDER BY id ");
@@ -72,7 +74,7 @@ if ($type_form == 'create_author') {
         $full_name_user_form,
         $email_address_user_form,
         $number_phone_user_form,
-        $login_password_user_form,
+        $new_password,
         $date_create_user_form
       ))) {
         $return = ['error' => false, 'msg' =>  "<div class='alert alert-success' role='alert' id='msgAlerta'> Usuário cadastrado com sucesso </div>"];
@@ -90,10 +92,10 @@ if ($type_form == 'login_user') {
 
     $email_address_user_form = $dataForm['email_address_user'];
     $login_password_user_form = $dataForm['login_password_user'];
-    // $new_password = md5($user_password);
+    $new_password = md5($login_password_user_form);
 
     $result_utente = $pdo->prepare("SELECT * FROM utentes WHERE email_address_user=? and login_password_user=? ");
-    $result_utente->execute(array($email_address_user_form, $login_password_user_form));
+    $result_utente->execute(array($email_address_user_form, $new_password));
 
     if ($result_utente->rowCount() < 1) {
       unset($_SESSION['utente_name']);
@@ -110,7 +112,7 @@ if ($type_form == 'login_user') {
       $_SESSION['utente_name'] = $utente_name;
       $_SESSION['utente_email'] = $email_address_user_form;
 
-      $return = ['error' => false, 'msg' =>  "<div class='alert alert-success' role='alert' id='msgAlerta'>Utente '$utente_name' logado</div>"];
+      $return = ['error' => false, 'msg' =>  "<div class='alert alert-success' role='alert' id='msgAlerta'>Utente '$utente_name' logado</div>", 'email_user' => $email_address_user_form];
     }
   } else {
     $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Preencha todos os dados! </div>"];

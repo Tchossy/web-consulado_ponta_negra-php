@@ -1,3 +1,5 @@
+<?php $this->layout('_theme') ?>
+
 <!-- head-title -->
 <div class="head-title">
   <div class="left">

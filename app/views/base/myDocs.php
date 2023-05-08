@@ -34,8 +34,8 @@ $this->layout('_theme');
           <td> <button class="status completed">Pronto</button> - O seu processo está pronto</td>
         </tr>
         <tr>
-          <td> <button class="status pending">Pendente</button> - Ouve algum erro com o seu processo, por favor
-            contacte-nos </td>
+          <td> <button class="status pending">Pendente</button> - Ouve alguma irregularidade no o seu processo, por
+            favor contacta-nos </td>
         </tr>
         <tr>
           <td> <button class="status delete">Recusado</button> - O seu processo não foi aceite</td>

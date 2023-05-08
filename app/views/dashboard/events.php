@@ -1,3 +1,5 @@
+<?php $this->layout('_theme') ?>
+
 <!-- head-title -->
 <div class="head-title">
   <div class="left">
@@ -39,6 +41,7 @@
       <thead>
         <tr>
           <th>ID</th>
+          <th>Capa</th>
           <th>Tipo</th>
           <th>Descrição</th>
           <th>Data</th>
@@ -51,6 +54,9 @@
         <tr>
           <td>
             <p>1</p>
+          </td>
+          <td>
+            <img src="img/people.png" />
           </td>
           <td>
             <p>Conferência</p>
@@ -67,7 +73,7 @@
           <td>
             <p>Congo Central</p>
           </td>
-          <td>
+          <td style="display: flex; gap: 0.6rem;">
             <button class="status edite">Editar</button>
             <button class="status delete">Apagar</button>
           </td>
@@ -75,6 +81,9 @@
         <tr>
           <td>
             <p>2</p>
+          </td>
+          <td>
+            <img src="img/people.png" />
           </td>
           <td>
             <p>Reunião</p>
@@ -91,7 +100,7 @@
           <td>
             <p>Cassai Central</p>
           </td>
-          <td>
+          <td style="display: flex; gap: 0.6rem;">
             <button class="status edite">Editar</button>
             <button class="status delete">Apagar</button>
           </td>
@@ -99,6 +108,9 @@
         <tr>
           <td>
             <p>1</p>
+          </td>
+          <td>
+            <img src="img/people.png" />
           </td>
           <td>
             <p>Entretenimento</p>
@@ -115,7 +127,7 @@
           <td>
             <p>Congo Central</p>
           </td>
-          <td>
+          <td style="display: flex; gap: 0.6rem;">
             <button class="status edite">Editar</button>
             <button class="status delete">Apagar</button>
           </td>

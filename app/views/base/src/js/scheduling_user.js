@@ -10,6 +10,8 @@ const msgAlerta = document.getElementById('msgAlertaErroCad')
 
 const btnExit = document.getElementById('btn_exit')
 
+const email_true = localStorage.getItem('email_user')
+
 const listUsers = async real_email_user => {
   const dataUsers = await fetch(
     origin_url +
@@ -23,7 +25,7 @@ const listUsers = async real_email_user => {
   tbody.innerHTML = response
 }
 
-listUsers('rafaelpilartes.rpls@gmail.com')
+listUsers(email_true)
 
 cardForm.addEventListener('submit', async event => {
   event.preventDefault()
@@ -50,7 +52,7 @@ cardForm.addEventListener('submit', async event => {
     cardForm.reset()
   }
 
-  listUsers('rafaelpilartes.rpls@gmail.com')
+  listUsers(email_true)
 
   setTimeout(() => {
     msgAlerta.innerHTML = ''

@@ -5,7 +5,8 @@ $this->layout('_theme');
 
 
 <main>
-  <header class="pageMainHead d-flex position-relative bgCover w-100 text-white" style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img50.jpg") ?>)">
+  <header class="pageMainHead d-flex position-relative bgCover w-100 text-white"
+    style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img50.jpg") ?>)">
     <div class="alignHolder d-flex w-100 align-items-center">
       <div class="align w-100 position-relative">
         <div class="container">
@@ -26,7 +27,9 @@ $this->layout('_theme');
   </header>
 
   <div class="container mb-16">
-    <a class="btn btnTheme font-weight-bold btnMinSm text-capitalize position-relative border-0 p-0 mt-6" href="javascript:void(0);" data-toggle="modal" data-target="#vistoTurismoModal" data-hover="Fazer Agendamento"><span class="d-block btnText">Fazer agendamento</span></a>
+    <a class="btn btnTheme font-weight-bold btnMinSm text-capitalize position-relative border-0 p-0 mt-6"
+      href="javascript:void(0);" data-toggle="modal" data-target="#vistoTurismoModal"
+      data-hover="Fazer Agendamento"><span class="d-block btnText">Fazer agendamento</span></a>
 
     <!-- TABLE -->
     <div class="table-data">
@@ -62,7 +65,8 @@ $this->layout('_theme');
   </div>
 
   <!-- Modal -->
-  <div class="modal fade bd-example-modal-lg" id="vistoTurismoModal" tabindex="-1" role="dialog" aria-labelledby="vistoTurismoModal" aria-hidden="true">
+  <div class="modal fade bd-example-modal-lg" id="vistoTurismoModal" tabindex="-1" role="dialog"
+    aria-labelledby="vistoTurismoModal" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-body">
@@ -84,7 +88,8 @@ $this->layout('_theme');
                     <label for="">Nome completo
                       <span class="text-danger fsSmall">*</span>
                     </label>
-                    <input name="name_user" type="text" class="form-control d-block w-100" placeholder="Nome completo" />
+                    <input name="name_user" type="text" class="form-control d-block w-100"
+                      placeholder="Nome completo" />
                   </div>
                 </div>
 
@@ -118,14 +123,16 @@ $this->layout('_theme');
                       <option value="Sector Notarial">Sector Notarial</option>
                       <option value="Sector Migratório">Sector Migratório</option>
                       <option value="Sector Identificação">Sector Identificação</option>
-                      <option value="">
+                      <option value="Sector de Apoio à Comunidade">
                         Sector de Apoio à Comunidade
                       </option>
                     </select>
                   </div>
                 </div>
               </div>
-              <button id="get-pdf-btn" type="submit" class="btn btnTheme d-flex font-weight-bold text-capitalize position-relative border-0 p-0 mt-2 btnWidthSmall" data-hover="Enviar formulário">
+              <button id="get-pdf-btn" type="submit"
+                class="btn btnTheme d-flex font-weight-bold text-capitalize position-relative border-0 p-0 mt-2 btnWidthSmall"
+                data-hover="Enviar formulário">
                 <span class="d-block btnText">Enviar formulário</span>
               </button>
             </form>

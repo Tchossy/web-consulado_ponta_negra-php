@@ -48,41 +48,47 @@
   <!-- SIDEBAR -->
   <section id="sidebar">
     <a href="index.html" class="brand">
-      <img src="img/logo.png" class="logo" alt="" />
+      <img src="<?= urlProject(FOLDER_BASE . "/src/images/logo.png") ?>" class="logo" alt="" />
     </a>
     <ul class="side-menu top">
       <li>
-        <a href="index.html">
+        <a href="<?= urlProject("dashboard") ?>">
           <i class="bx bxs-dashboard"></i>
           <span class="text">Painel</span>
         </a>
       </li>
       <li>
-        <a href="users.html">
+        <a href="<?= urlProject("dashboard/utentes") ?>">
           <i class="bx bxs-group"></i>
-          <span class="text">Usuários</span>
+          <span class="text">Utentes</span>
         </a>
       </li>
       <li>
-        <a href="services.html">
+        <a href="<?= urlProject("dashboard/scheduling") ?>">
           <i class="bx bx-windows"></i>
-          <span class="text">Serviços</span>
+          <span class="text">Agendamento</span>
         </a>
       </li>
       <li>
-        <a href="questions.html">
-          <i class="bx bx-question-mark"></i>
-          <span class="text">Questões</span>
+        <a href="<?= urlProject("dashboard/stateDocuments") ?>">
+          <i class="bx bx-windows"></i>
+          <span class="text">Documentos</span>
         </a>
       </li>
       <li>
-        <a href="events.html">
+        <a href="<?= urlProject("dashboard/messages") ?>">
+          <i class="bx bx-windows"></i>
+          <span class="text">Mensagens</span>
+        </a>
+      </li>
+      <li>
+        <a href="<?= urlProject("dashboard/events") ?>">
           <i class="bx bx-calendar-event"></i>
           <span class="text">Eventos</span>
         </a>
       </li>
       <li>
-        <a href="blog.html">
+        <a href="<?= urlProject("dashboard/news") ?>">
           <i class="bx bx-news"></i>
           <span class="text">Blog</span>
         </a>
@@ -140,6 +146,7 @@
   <!-- Custom scripts for all pages-->
   <script src="<?= urlProject(FOLDER_DASHBOARD . "/src/js/script.js") ?> "></script>
   <script src="<?= urlProject(FOLDER_DASHBOARD . "/src/vendor/bootstrap/bootstrap.min.js") ?> "></script>
+  <script src="<?= urlProject(FOLDER_DASHBOARD . "/src/js/sweetalert.min.js") ?> "></script>
 
 </body>
 
