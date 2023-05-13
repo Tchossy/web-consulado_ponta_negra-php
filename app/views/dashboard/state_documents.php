@@ -1,4 +1,13 @@
 <?php $this->layout('_theme') ?>
+<?php
+require 'src/db/config.php';
+session_start();
+
+if ((!isset($_SESSION['adm_email']))) {
+  header('Location: http://localhost/web-consulado_ponta_negra-php/dashboard');
+}
+
+?>
 
 <!-- head-title -->
 <div class="head-title">
@@ -28,7 +37,8 @@
       <h2>Entrada de documento</h2>
     </div>
 
-    <form class="modalForm">
+    <form id="documentsForm" class="modalForm">
+      <span id="msgAlertaErroCad"></span>
       <div>
         <label for="">
           Nome do utente <span class="text-danger">*</span>
@@ -51,7 +61,7 @@
         <label for="">
           Sector responsável <span class="text-danger">*</span>
         </label>
-        <select name="secto_document" class="form-control" name="" id="">
+        <select name="sector_document" class="form-control">
           <option value="">--------------------</option>
           <option value="Sector Notarial">Sector Notarial</option>
           <option value="Sector Migratório">Sector Migratório</option>
@@ -64,25 +74,95 @@
         <label for="">
           Descrição do documento <span class="text-danger">*</span>
         </label>
-        <input class="form-control" type="text" placeholder="Descrição do documento">
+        <input name="description_document" class="form-control" type="text" placeholder="Descrição do documento">
       </div>
       <div>
         <label for="">
           Estado do documento <span class="text-danger">*</span>
         </label>
-        <select class="form-control" name="" id="">
-          <option value="Pronto">Pronto</option>
+        <select name="state_document" class="form-control">
+          <option value="Em tratamento">Em tratamento</option>
           <option value="Pendente">Pendente</option>
           <option value="Recusado">Recusado</option>
-          <option value="Em tratamento">Em tratamento</option>
+          <option value="Pronto">Pronto</option>
         </select>
       </div>
 
       <button class="base-btn" type="submit">
         Dar entrada
       </button>
-      <button class="cancel-btn" data-toggle="modal" data-target="#userModal">
-        Cancelar
+    </form>
+  </div>
+</div>
+
+<div id="documentEditeModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="container-modal">
+      <h2>Editar documento</h2>
+    </div>
+
+    <form id="documentsEditForm" class="modalForm">
+      <span id="msgAlertaErroEditCard"></span>
+
+      <input id="id_edit" name="id_document" hidden>
+      <div>
+        <label for="">
+          Nome do utente <span class="text-danger">*</span>
+        </label>
+        <input id="name_utente_edit" name="name_utente" class="form-control" type="text" placeholder="Nome do utente">
+      </div>
+      <div>
+        <label for="">
+          E-mail do utente <span class="text-danger">*</span>
+        </label>
+        <input id="email_utente_edit" name="email_utente" class="form-control" type="text" placeholder="E-mail do utente">
+      </div>
+      <div>
+        <label for="">
+          Nº de telefone do utente <span class="text-danger">*</span>
+        </label>
+        <input id="phone_utente_edit" name="phone_utente" class="form-control" type="text" placeholder="Nº de telefone">
+      </div>
+      <div>
+        <label for="">
+          Sector responsável <span class="text-danger">*</span>
+        </label>
+        <select id="sector_document_edit" name="sector_document" class="form-control">
+          <option value="">--------------------</option>
+          <option value="Sector Notarial">Sector Notarial</option>
+          <option value="Sector Migratório">Sector Migratório</option>
+          <option value="Sector Identificação">Sector Identificação</option>
+          <option value="Sector de Apoio à Comunidade">Sector de Apoio à Comunidade</option>
+          <option value="Sector Comercial">Sector Comercial</option>
+        </select>
+      </div>
+      <div>
+        <label for="">
+          Descrição do documento <span class="text-danger">*</span>
+        </label>
+        <input id="description_document_edit" name="description_document" value="" class="form-control" type="text" placeholder="Descrição do documento">
+      </div>
+      <div>
+        <label for="">
+          Estado do documento <span class="text-danger">*</span>
+        </label>
+        <select id="state_document_edit" name="state_document" class="form-control">
+          <option value="Em tratamento">Em tratamento</option>
+          <option value="Pendente">Pendente</option>
+          <option value="Recusado">Recusado</option>
+          <option value="Pronto">Pronto</option>
+        </select>
+      </div>
+      <div>
+        <label for="">
+          Data para entrega de documentos <span class="text-danger">*</span>
+        </label>
+        <input id="myDateInput" name="date_delivery_document" class="form-control" type="date">
+      </div>
+
+      <button class="base-btn" type="submit">
+        Dar entrada
       </button>
     </form>
   </div>
@@ -99,6 +179,7 @@
     <table>
       <thead>
         <tr>
+          <th>Id</th>
           <th>Nome</th>
           <th>E-mail</th>
           <th>Telemovel</th>
@@ -111,37 +192,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>
-            <p>Rafael Pilartes</p>
-          </td>
-          <td>
-            <p>rafaelpilartes@gmail.com</p>
-          </td>
-          <td>
-            <p>923414621</p>
-          </td>
-          <td>
-            <p>Sábado, 27 de agosto de 2022</p>
-          </td>
-          <td>
-            <p>Sábado, 27 de agosto de 2022</p>
-          </td>
-          <td>
-            <p>Sábado, 27 de agosto de 2022</p>
-          </td>
-          <td>
-            <p>Sábado, 27 de agosto de 2022</p>
-          </td>
-          <td>
-            <p>Sábado, 27 de agosto de 2022</p>
-          </td>
-          <td style="display: flex;  gap: 0.4rem;">
-            <button class="status edite">Editar</button>
-            <button class="status delete">Apagar</button>
-          </td>
-        </tr>
+
+
       </tbody>
     </table>
   </div>
 </div>
+
+<script src="<?= urlProject(FOLDER_DASHBOARD . BASE_JS . "/actions_documents.js") ?>"></script>

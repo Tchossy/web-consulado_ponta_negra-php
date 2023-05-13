@@ -41,8 +41,10 @@ function router()
 
   // ROTA DA DASHBOARD
   $router->group("/dashboard");
-  $router->get("/", "Dash:home");
+  $router->get("/", "Dash:login");
+  $router->get("/home", "Dash:home");
   $router->get("/login", "Dash:login");
+  $router->get("/usersAdm", "Dash:usersAdm");
   $router->get("/utentes", "Dash:utentes");
   $router->get("/scheduling", "Dash:scheduling");
   $router->get("/stateDocuments", "Dash:stateDocuments");

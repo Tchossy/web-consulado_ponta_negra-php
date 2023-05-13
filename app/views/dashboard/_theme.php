@@ -47,14 +47,20 @@
 
   <!-- SIDEBAR -->
   <section id="sidebar">
-    <a href="index.html" class="brand">
+    <a href="<?= urlProject("dashboard/home") ?>" class="brand">
       <img src="<?= urlProject(FOLDER_BASE . "/src/images/logo.png") ?>" class="logo" alt="" />
     </a>
     <ul class="side-menu top">
       <li>
-        <a href="<?= urlProject("dashboard") ?>">
+        <a href="<?= urlProject("dashboard/home") ?>">
           <i class="bx bxs-dashboard"></i>
           <span class="text">Painel</span>
+        </a>
+      </li>
+      <li>
+        <a href="<?= urlProject("dashboard/usersAdm") ?>">
+          <i class='bx bxs-user-check'></i>
+          <span class="text">Usuários</span>
         </a>
       </li>
       <li>
@@ -71,13 +77,13 @@
       </li>
       <li>
         <a href="<?= urlProject("dashboard/stateDocuments") ?>">
-          <i class="bx bx-windows"></i>
+          <i class='bx bxs-file-doc'></i>
           <span class="text">Documentos</span>
         </a>
       </li>
       <li>
         <a href="<?= urlProject("dashboard/messages") ?>">
-          <i class="bx bx-windows"></i>
+          <i class='bx bx-message-dots'></i>
           <span class="text">Mensagens</span>
         </a>
       </li>
@@ -90,7 +96,7 @@
       <li>
         <a href="<?= urlProject("dashboard/news") ?>">
           <i class="bx bx-news"></i>
-          <span class="text">Blog</span>
+          <span class="text">Noticias</span>
         </a>
       </li>
     </ul>
@@ -102,7 +108,7 @@
           </a>
         </li> -->
       <li>
-        <a href="#" class="logout">
+        <a id="logout" class="logout">
           <i class="bx bxs-log-out-circle"></i>
           <span class="text">Sair</span>
         </a>
@@ -117,8 +123,10 @@
     <nav>
       <i class="bx bx-menu"></i>
       <form action="#">
+      </form>
+
+      <form action="#" hidden>
         <div class="form-input">
-          <input type="search" placeholder="Procurar..." />
           <button type="submit" class="search-btn">
             <i class="bx bx-search"></i>
           </button>
@@ -127,9 +135,12 @@
       <input type="checkbox" id="switch-mode" hidden />
       <label for="switch-mode" class="switch-mode"></label>
 
-      <a href="#" class="profile">
-        <img src="img/people.png" />
-      </a>
+      <div class="row" style="display: flex;align-items: center;gap: 0.6rem;">
+        <div class="profile">
+          <img src="https://www.pngfind.com/pngs/m/470-4703547_icon-user-icon-hd-png-download.png" />
+        </div>
+        <p id="name_adm"></p>
+      </div>
     </nav>
     <!-- NAVBAR -->
 
@@ -144,6 +155,7 @@
   <!-- CONTENT -->
 
   <!-- Custom scripts for all pages-->
+  <script src="<?= urlProject(FOLDER_DASHBOARD . "/src/js/home_script.js") ?> "></script>
   <script src="<?= urlProject(FOLDER_DASHBOARD . "/src/js/script.js") ?> "></script>
   <script src="<?= urlProject(FOLDER_DASHBOARD . "/src/vendor/bootstrap/bootstrap.min.js") ?> "></script>
   <script src="<?= urlProject(FOLDER_DASHBOARD . "/src/js/sweetalert.min.js") ?> "></script>

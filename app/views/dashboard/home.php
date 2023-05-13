@@ -1,4 +1,13 @@
 <?php $this->layout('_theme') ?>
+<?php
+require 'src/db/config.php';
+session_start();
+
+if ((!isset($_SESSION['adm_email']))) {
+  header('Location: http://localhost/web-consulado_ponta_negra-php/dashboard');
+}
+
+?>
 
 <div>
   <div class="head-title">
@@ -43,8 +52,6 @@
     <div class="order">
       <div class="head">
         <h3>Utentes recentes</h3>
-        <i class="bx bx-search"></i>
-        <i class="bx bx-filter"></i>
       </div>
       <table>
         <thead>
@@ -61,8 +68,6 @@
     <div class="todo">
       <div class="head">
         <h3>Mensagens recentes</h3>
-        <i class="bx bx-plus"></i>
-        <i class="bx bx-filter"></i>
       </div>
       <ul id="todo-list" class="todo-list">
         <li class="completed">

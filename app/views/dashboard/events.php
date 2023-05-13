@@ -1,4 +1,13 @@
 <?php $this->layout('_theme') ?>
+<?php
+require 'src/db/config.php';
+session_start();
+
+if ((!isset($_SESSION['adm_email']))) {
+  header('Location: http://localhost/web-consulado_ponta_negra-php/dashboard');
+}
+
+?>
 
 <!-- head-title -->
 <div class="head-title">
