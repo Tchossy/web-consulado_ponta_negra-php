@@ -83,4 +83,4 @@ if ((!isset($_SESSION['adm_email']))) {
   </div>
 </div>
 
-<script src="<?= urlProject(FOLDER_DASHBOARD . BASE_JS . "/actions_panel.js") ?>"></script>
+<script src="<?= urlProject(FOLDER_DASHBOARD . BASE_JS . "/actions_home.js") ?>"></script>

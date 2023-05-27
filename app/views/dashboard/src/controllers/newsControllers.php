@@ -86,85 +86,98 @@ if ($type_form == 'create_news') {
 
   $completeDate =  $semana["$data"] . ", {$dia} de " . $mes_extenso["$mes"] . " de {$ano}";
 
+  $data_form = $dataForm['date_news'];
+  setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'portuguese');
+  $timestamp = strtotime($data_form);
+  $dayOfWeek = date('l', $timestamp);
+  $day = date('d', $timestamp);
+  $month = date('F', $timestamp);
+  $year = date('Y', $timestamp);
+  $ptWeek = getWeek($dayOfWeek);
+  $ptMonth = getMonth($month);
+  $data_complete = "$ptWeek, $day de $ptMonth de $year  ";
+
   $author_news_form = $dataForm['author_news'];
-  $images_array_news_form = [];
   $images_news_form = $_FILES['images_news'];
+  $images_array_news_form = [];
   $category_news_form = $dataForm['category_news'];
   $title_news_form = $dataForm['title_news'];
   $description_news_form = $dataForm['description_news'];
   $epigraph_news_form = $dataForm['epigraph_news'];
   $author_epigraph_news_form = $dataForm['author_epigraph_news'];
-  $date_news_form = $dataForm['date_news'];
+  $date_news_form = $data_complete;
   $date_create_form = $completeDate;
 
-  // $uploadDir = '../../../../_imagesDb/news/';
-  // $size_max = 2097152; //2MB
-  // $accept  = array("jpg", "png", "jpeg");
-  // $extension  = pathinfo($_FILES['images_news']['name'], PATHINFO_EXTENSION);
+  if (empty($images_news_form)) {
+    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: Nenhuma imagem foi selecionada </div>"];
+  } elseif (empty($category_news_form)) {
+    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo categoria está vazio </div>"];
+  } elseif (empty($title_news_form)) {
+    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo titulo está vazio </div>"];
+  } elseif (empty($description_news_form)) {
+    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo descrição está vazio </div>"];
+  } elseif (empty($epigraph_news_form)) {
+    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo epígrafe está vazio </div>"];
+  } elseif (empty($author_epigraph_news_form)) {
+    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo autor da epígrafe do news está vazio </div>"];
+  } elseif (empty($date_news_form)) {
+    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo estado data da noticia está vazio</div>"];
+  } else {
 
-  // if (!is_dir($uploadDir)) {
-  //   mkdir($uploadDir, 0777, true);
-  // }
+    foreach ($images_news_form['name'] as $key => $name) {
+      $size_max = 2097152; //2MB
+      $accept  = array("jpg", "png", "jpeg");
+      $extension  = pathinfo($images_news_form['name'][$key], PATHINFO_EXTENSION);
 
-  // foreach ($images_news_form['name'] as $key => $name) {
-  //   $tempFile = $images_news_form['tmp_name'][$key];
-  //   $targetFile = $uploadDir . basename($name);
-  //   move_uploaded_file($tempFile, $targetFile);
-  // }
-
-  // if (empty($images_news_form)) {
-  //   $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: Nenhuma imagem foi selecionada </div>"];
-  // } elseif (empty($category_news_form)) {
-  //   $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo categoria está vazio </div>"];
-  // } elseif (empty($title_news_form)) {
-  //   $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo titulo está vazio </div>"];
-  // } elseif (empty($description_news_form)) {
-  //   $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo descrição está vazio </div>"];
-  // } elseif (empty($epigraph_news_form)) {
-  //   $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo epígrafe está vazio </div>"];
-  // } elseif (empty($author_epigraph_news_form)) {
-  //   $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo autor da epígrafe do news está vazio </div>"];
-  // } elseif (empty($date_news_form)) {
-  //   $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo estado data da noticia está vazio</div>"];
-  // } else {
-
-  foreach ($images_news_form['name'] as $key => $name) {
-    $size_max = 2097152; //2MB
-    $accept  = array("jpg", "png", "jpeg");
-    $extension  = pathinfo($images_news_form['name'][$key], PATHINFO_EXTENSION);
-
-    if ($images_news_form['size'][$key] >= $size_max) {
-      $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: A imagem excedeu o tamanho máximo de 2MB! </div>"];
-    } else {
-      if (in_array($extension, $accept)) {
-        // echo "Permitido";
-        $folder = '../../../../_imagesDb/news/';
-
-        if (!is_dir($folder)) {
-          mkdir($folder, 755, true);
-        }
-
-        // Nome temporário do arquivo
-        $tmp = $images_news_form['tmp_name'][$key];
-        // Novo nome do arquivo
-        $newName = "img_news-" . date('d-m-Y') . '-' . date('H') . 'h-' . uniqid() . ".$extension";
-
-        if (move_uploaded_file($tmp, $folder . $newName)) {
-          $images_news = 'https://consuladoangolapontanegra.org/app/_imagesDb/' . $newName;
-          array_push($images_array_news_form, $images_news);
-          // echo "Upload realizado com sucesso!";
-        } else {
-          $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: ao realizar Upload... </div>"];
-        }
+      if ($images_news_form['size'][$key] >= $size_max) {
+        $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: A imagem excedeu o tamanho máximo de 2MB! </div>"];
       } else {
-        $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: Extensão ($extension) não permitido! </div>"];
+        if (in_array($extension, $accept)) {
+          // echo "Permitido";
+          $folder = '../../../../_imagesDb/news/';
+
+          if (!is_dir($folder)) {
+            mkdir($folder, 755, true);
+          }
+
+          // Nome temporário do arquivo
+          $tmp = $images_news_form['tmp_name'][$key];
+          // Novo nome do arquivo
+          $newName = "img_news-" . date('d-m-Y') . '-' . date('H') . 'h-' . uniqid() . ".$extension";
+
+          if (move_uploaded_file($tmp, $folder . $newName)) {
+            $image_news = 'https://consuladoangolapontanegra.org/app/_imagesDb/news/' . $newName;
+            array_push($images_array_news_form, $image_news);
+            // echo "Upload realizado com sucesso!";
+          } else {
+            $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: ao realizar Upload... </div>"];
+          }
+        } else {
+          $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: Extensão ($extension) não permitido! </div>"];
+        }
       }
     }
-  }
 
-  $return = ['error' => false, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Publicação de
-      a noticia mal sucedida $images_array_news_form </div>"];
-  // }
+    $encode_images_array_news = json_encode($images_array_news_form);
+
+    $sql = $pdo->prepare("INSERT INTO news values(null,?,?,?,?,?,?,?,?,?)");
+
+    if ($sql->execute(array(
+      $author_news_form,
+      $encode_images_array_news,
+      $category_news_form,
+      $title_news_form,
+      $description_news_form,
+      $epigraph_news_form,
+      $author_epigraph_news_form,
+      $date_news_form,
+      $date_create_form
+    ))) {
+      $return = ['error' => false, 'msg' =>  "<div class='alert alert-success' role='alert' id='msgAlerta'> A noticia foi publicada com sucesso </div>"];
+    } else {
+      $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Ouve um erro ao publicar a noticia </div>"];
+    };
+  }
 
   echo json_encode($return);
 }
@@ -183,23 +196,14 @@ if ($type_form == 'get_all_news') {
 
       extract($row_news);
 
-      $state_is = '';
-      $date_delivery_news_is = '';
+      $decode_images_news = json_decode($images_news);
 
-      if (empty($date_delivery_news)) {
-        $date_delivery_news_is = '-------------------------';
+      $url_image = "";
+
+      if ($decode_images_news) {
+        $url_image = $decode_images_news[0];
       } else {
-        $date_delivery_news_is = $date_delivery_news;
-      }
-
-      if ($news == 'Pronto') {
-        $state_is = 'completed';
-      } elseif ($news == 'Pendente') {
-        $state_is = 'pending';
-      } elseif ($news == 'Recusado') {
-        $state_is = 'delete';
-      } elseif ($news == 'Em tratamento') {
-        $state_is = 'process';
+        $url_image = "https://img.freepik.com/free-vector/realistic-news-studio-background_23-2149985606.jpg";
       }
 
       $return .= "
@@ -208,32 +212,29 @@ if ($type_form == 'get_all_news') {
                     <p>$id</p>
                   </td>
                   <td>
-                    <p>$name_utente</p>
+                    <img src='$url_image' />
                   </td>
                   <td>
-                    <p>$email_utente</p>
+                    <p>$category_news</p>
                   </td>
                   <td>
-                    <p>$phone_utente</p>
-                  </td>
-                  <td>
-                    <p>$sector_news</p>
+                    <p>$title_news</p>
                   </td>
                   <td>
                     <p>$description_news</p>
                   </td>
                   <td>
-                    <div class='status $state_is' style='text-align: center;'>$state_news</div>
+                    <p>$epigraph_news</p>
                   </td>
                   <td>
-                    <p>$date_entry_news</p>
+                    <p>$author_epigraph_news</p>
                   </td>
                   <td>
-                    <p>$date_delivery_news_is</p>
+                    <p>$date_news</p>
                   </td>
                   <td class='row'>
-                    <button onclick='editeDocument($id)' class='status edite'>Editar</button>
-                    <button onclick='deleteDocument($id)' class='status delete'>Apagar</button>
+                    <button onclick='editeNews($id)' class='status edite'>Editar</button>
+                    <button onclick='deleteNews($id)' class='status delete'>Apagar</button>
                   </td>
                 </tr>
                 ";
@@ -244,19 +245,19 @@ if ($type_form == 'get_all_news') {
 }
 
 if ($type_form == 'delete_news') {
-  $id_news = $_GET['idDocument'];
+  $id_news = $_GET['idNews'];
 
   $result_news = $pdo->prepare("DELETE FROM news WHERE id=?");
 
   if ($result_news->execute(array($id_news))) {
-    $return = ['error' => false, 'msg' => "Ouve algum erro ao excluir o news"];
+    $return = ['error' => false, 'msg' => "Ouve algum erro ao excluir a noticia"];
   } else {
-    $return = ['error' => true, 'msg' =>  "O news não foi excluído :)"];
+    $return = ['error' => true, 'msg' =>  "A noticia não foi excluído :)"];
   }
 }
 
 if ($type_form == 'get_news') {
-  $id_news = $_GET['idDocument'];
+  $id_news = $_GET['idNews'];
 
   $result_news = $pdo->prepare("SELECT * FROM news WHERE id = ? ORDER BY id LIMIT 1");
   $result_news->execute(array($id_news));
@@ -276,7 +277,7 @@ if ($type_form == 'get_news') {
 }
 
 if ($type_form == 'edit_news') {
-  $data_form = $dataForm['date_delivery_news'];
+  $data_form = $dataForm['date_news'];
   setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'portuguese');
   $timestamp = strtotime($data_form);
   $dayOfWeek = date('l', $timestamp);
@@ -288,45 +289,101 @@ if ($type_form == 'edit_news') {
   $data_complete = "$ptWeek, $day de $ptMonth de $year  ";
 
   $id_news = $dataForm['id_news'];
-  $name_utente_form = $dataForm['name_utente'];
-  $email_utente_form = $dataForm['email_utente'];
-  $phone_utente_form = $dataForm['phone_utente'];
-  $sector_news_form = $dataForm['sector_news'];
+  $images_news_form = $_FILES['images_news'];
+  $images_array_news_form = [];
+  $category_news_form = $dataForm['category_news'];
+  $title_news_form = $dataForm['title_news'];
   $description_news_form = $dataForm['description_news'];
-  $state_news_form = $dataForm['state_news'];
-  $date_delivery_news_form = $data_complete;
+  $epigraph_news_form = $dataForm['epigraph_news'];
+  $author_epigraph_news_form = $dataForm['author_epigraph_news'];
+  $date_news_form = $data_complete;
 
-  $return = "";
-
-  if (empty($name_utente_form)) {
-    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> O campo nome está vazio </div>"];
-  } elseif (empty($email_utente_form)) {
-    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo email está vazio </div>"];
-  } elseif (empty($phone_utente_form)) {
-    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo nº de telefone está vazio </div>"];
-  } elseif (empty($sector_news_form)) {
-    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo sector está vazio </div>"];
+  if (empty($images_news_form)) {
+    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: Nenhuma imagem foi selecionada </div>"];
+  } elseif (empty($category_news_form)) {
+    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo categoria está vazio </div>"];
+  } elseif (empty($title_news_form)) {
+    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo titulo está vazio </div>"];
   } elseif (empty($description_news_form)) {
-    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo descrição está vazio  </div>"];
-  } elseif (empty($state_news_form)) {
-    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O estado do agendamento não foi selecionado </div>"];
+    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo descrição está vazio </div>"];
+  } elseif (empty($epigraph_news_form)) {
+    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo epígrafe está vazio </div>"];
+  } elseif (empty($author_epigraph_news_form)) {
+    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo autor da epígrafe do news está vazio </div>"];
+  } elseif (empty($date_news_form)) {
+    $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O campo estado data da noticia está vazio</div>"];
   } else {
-    $sql = $pdo->prepare("UPDATE news SET name_utente=?, email_utente=?, phone_utente=?, sector_news=?, description_news=?, state_news=?, date_delivery_news=? WHERE id=? ");
 
-    if ($sql->execute(array(
-      $name_utente_form,
-      $email_utente_form,
-      $phone_utente_form,
-      $sector_news_form,
-      $description_news_form,
-      $state_news_form,
-      $date_delivery_news_form,
-      $id_news
-    ))) {
-      $return = ['error' => false, 'msg' =>  "<div class='alert alert-success' role='alert' id='msgAlerta'> O news foi actualizado com sucesso </div>"];
+    foreach ($images_news_form['name'] as $key => $name) {
+      $size_max = 2097152; //2MB
+      $accept  = array("jpg", "png", "jpeg");
+      $extension  = pathinfo($images_news_form['name'][$key], PATHINFO_EXTENSION);
+
+      if ($images_news_form['size'][$key] >= $size_max) {
+        $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: A imagem excedeu o tamanho máximo de 2MB! </div>"];
+      } else {
+        if (in_array($extension, $accept)) {
+          // echo "Permitido";
+          $folder = '../../../../_imagesDb/news/';
+
+          if (!is_dir($folder)) {
+            mkdir($folder, 755, true);
+          }
+
+          // Nome temporário do arquivo
+          $tmp = $images_news_form['tmp_name'][$key];
+          // Novo nome do arquivo
+          $newName = "img_news-" . date('d-m-Y') . '-' . date('H') . 'h-' . uniqid() . ".$extension";
+
+          if (move_uploaded_file($tmp, $folder . $newName)) {
+            $image_news = 'https://consuladoangolapontanegra.org/app/_imagesDb/news/' . $newName;
+            array_push($images_array_news_form, $image_news);
+            // echo "Upload realizado com sucesso!";
+          } else {
+            $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: ao realizar Upload... </div>"];
+          }
+        } else {
+          $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: Extensão ($extension) não permitido! </div>"];
+        }
+      }
+    }
+
+    $encode_images_array_news = json_encode($images_array_news_form);
+
+    if ($images_array_news_form == []) {
+      $sql = $pdo->prepare("UPDATE news SET category_news=?, title_news=?, description_news=?, epigraph_news=?, author_epigraph_news=?, date_news=? WHERE id=? ");
+
+      if ($sql->execute(array(
+        $category_news_form,
+        $title_news_form,
+        $description_news_form,
+        $epigraph_news_form,
+        $author_epigraph_news_form,
+        $date_news_form,
+        $id_news
+      ))) {
+        $return = ['error' => false, 'msg' =>  "<div class='alert alert-success' role='alert' id='msgAlerta'> A noticia foi actualizada com sucesso </div>"];
+      } else {
+        $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Ouve um erro ao actualizar a noticia </div>"];
+      };
     } else {
-      $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Ouve um erro ao actualizar o news </div>"];
-    };
+      $sql = $pdo->prepare("UPDATE news SET images_news=?, category_news=?, title_news=?, description_news=?, epigraph_news=?, author_epigraph_news=?, date_news=? WHERE id=? ");
+
+      if ($sql->execute(array(
+        $encode_images_array_news,
+        $category_news_form,
+        $title_news_form,
+        $description_news_form,
+        $epigraph_news_form,
+        $author_epigraph_news_form,
+        $date_news_form,
+        $id_news
+      ))) {
+        $return = ['error' => false, 'msg' =>  "<div class='alert alert-success' role='alert' id='msgAlerta'> A noticia foi actualizada com sucesso </div>"];
+      } else {
+        $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Ouve um erro ao actualizar a noticia </div>"];
+      };
+    }
   }
   echo json_encode($return);
 }

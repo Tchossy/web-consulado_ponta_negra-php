@@ -146,11 +146,17 @@ if ($type_form == 'get_all_documents') {
 
       $state_is = '';
       $date_delivery_document_is = '';
+      $reason_document_is = '';
 
       if (empty($date_delivery_document)) {
         $date_delivery_document_is = '-------------------------';
       } else {
         $date_delivery_document_is = $date_delivery_document;
+      }
+      if (empty($reason_document)) {
+        $reason_document_is = '-------------------------';
+      } else {
+        $reason_document_is = $reason_document;
       }
 
       if ($state_document == 'Pronto') {
@@ -191,6 +197,9 @@ if ($type_form == 'get_all_documents') {
                   </td>
                   <td>
                     <p>$date_delivery_document_is</p>
+                  </td>
+                  <td>
+                    <p>$reason_document_is</p>
                   </td>
                   <td class='row'>
                     <button onclick='editeDocument($id)' class='status edite'>Editar</button>
@@ -252,6 +261,7 @@ if ($type_form == 'edit_document') {
   $name_utente_form = $dataForm['name_utente'];
   $email_utente_form = $dataForm['email_utente'];
   $phone_utente_form = $dataForm['phone_utente'];
+  $reason_document_form = $dataForm['reason_document'];
   $sector_document_form = $dataForm['sector_document'];
   $description_document_form = $dataForm['description_document'];
   $state_document_form = $dataForm['state_document'];
@@ -272,7 +282,7 @@ if ($type_form == 'edit_document') {
   } elseif (empty($state_document_form)) {
     $return = ['error' => true, 'msg' => "<div class='alert alert-danger' role='alert' id='msgAlerta'> Erro: O estado do agendamento não foi selecionado </div>"];
   } else {
-    $sql = $pdo->prepare("UPDATE state_document SET name_utente=?, email_utente=?, phone_utente=?, sector_document=?, description_document=?, state_document=?, date_delivery_document=? WHERE id=? ");
+    $sql = $pdo->prepare("UPDATE state_document SET name_utente=?, email_utente=?, phone_utente=?, sector_document=?, description_document=?, state_document=?, date_delivery_document=?, reason_document=? WHERE id=? ");
 
     if ($sql->execute(array(
       $name_utente_form,
@@ -282,6 +292,7 @@ if ($type_form == 'edit_document') {
       $description_document_form,
       $state_document_form,
       $date_delivery_document_form,
+      $reason_document_form,
       $id_document
     ))) {
       $return = ['error' => false, 'msg' =>  "<div class='alert alert-success' role='alert' id='msgAlerta'> O documento foi actualizado com sucesso </div>"];

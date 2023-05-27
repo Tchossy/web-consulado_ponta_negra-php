@@ -60,7 +60,7 @@ if ((!isset($_SESSION['adm_email']))) {
         <label for="">
           Descrição da noticia <span class="text-danger">*</span>
         </label>
-        <input name="description_news" class="form-control" type="text" placeholder="Descrição da noticia">
+        <textarea name="description_news" class="form-control" type="text" placeholder="Descrição da noticia" style="min-height: 10rem;"></textarea>
       </div>
       <div>
         <label for="">
@@ -96,40 +96,48 @@ if ((!isset($_SESSION['adm_email']))) {
     </div>
 
     <form id="newsEditForm" class="modalForm">
-      <span id="msgAlertaErroCad"></span>
+      <span id="msgAlertaErroEditCard"></span>
 
-      <input class="form-control" type="file" id="inputEditeImagens" multiple>
-      <div id="containerImagens"></div>
+      <input id="id_edit" name="id_news" hidden>
+
+      <input name="images_news[]" class="form-control" type="file" id="inputImagensEdit" multiple>
+      <div id="containerImagensEdit"></div>
 
       <div>
         <label for="">
           Categoria da noticia <span class="text-danger">*</span>
         </label>
-        <input name="category_news" class="form-control" type="text" placeholder="Categoria da noticia">
+        <input name="category_news" id="category_news_edit" class="form-control" type="text" placeholder="Categoria da noticia">
       </div>
       <div>
         <label for="">
           Titulo da noticia <span class="text-danger">*</span>
         </label>
-        <input name="title_news" class="form-control" type="text" placeholder="Titulo da noticia">
+        <input name="title_news" id="title_news_edit" class="form-control" type="text" placeholder="Titulo da noticia">
       </div>
       <div>
         <label for="">
           Descrição da noticia <span class="text-danger">*</span>
         </label>
-        <input name="description_news" class="form-control" type="text" placeholder="Descrição da noticia">
+        <textarea name="description_news" id="description_news_edit" class="form-control" type="text" placeholder="Descrição da noticia" style="min-height: 10rem;"></textarea>
       </div>
       <div>
         <label for="">
           Epígrafe da noticia <span class="text-danger">*</span>
         </label>
-        <input name="epigraph_news" class="form-control" type="text" placeholder="Epígrafe da noticia">
+        <input name="epigraph_news" id="epigraph_news_edit" class="form-control" type="text" placeholder="Epígrafe da noticia">
       </div>
       <div>
         <label for="">
           Autor da epígrafe <span class="text-danger">*</span>
         </label>
-        <input name="author_epigraph_news" class="form-control" type="text" placeholder="Autor da epígrafe">
+        <input name="author_epigraph_news" id="author_epigraph_news_edit" class="form-control" type="text" placeholder="Autor da epígrafe">
+      </div>
+      <div>
+        <label for="">
+          Data da noticia <span class="text-danger">*</span>
+        </label>
+        <input name="date_news" id="date_news_edit" class="form-control" type="date">
       </div>
 
       <button class="base-btn" type="submit">
@@ -162,87 +170,7 @@ if ((!isset($_SESSION['adm_email']))) {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>
-            <p>1</p>
-          </td>
-          <td>
-            <img src="img/people.png" />
-          </td>
-          <td>
-            <p>Conferência</p>
-          </td>
-          <td>
-            <p>Novo Ministro</p>
-          </td>
-          <td>
-            <p>Organização do Concurso de Fotografia da Cidade-2023</p>
-          </td>
-          <td>
-            <p>01 Outubro, Quarta-feira</p>
-          </td>
-          <td>
-            <p>Congo Central</p>
-          </td>
-          <td style="display: flex; gap: 0.6rem;">
-            <button class="status edite">Editar</button>
-            <button class="status delete">Apagar</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>2</p>
-          </td>
-          <td>
-            <img src="img/people.png" />
-          </td>
-          <td>
-            <p>Reunião</p>
-          </td>
-          <td>
-            <p>Novo Ministro</p>
-          </td>
-          <td>
-            <p>Reunião do Comitê Municipal de Inovação e Tecnologia</p>
-          </td>
-          <td>
-            <p>03 Dezembro, Quinta-feira</p>
-          </td>
-          <td>
-            <p>Cassai Central</p>
-          </td>
-          <td style="display: flex; gap: 0.6rem;">
-            <button class="status edite">Editar</button>
-            <button class="status delete">Apagar</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>1</p>
-          </td>
-          <td>
-            <img src="img/people.png" />
-          </td>
-          <td>
-            <p>Entretenimento</p>
-          </td>
-          <td>
-            <p>Novo Ministro</p>
-          </td>
-          <td>
-            <p>Organização do Concurso de Fotografia da Cidade-2023</p>
-          </td>
-          <td>
-            <p>01 Outubro, Quarta-feira</p>
-          </td>
-          <td>
-            <p>Congo Central</p>
-          </td>
-          <td style="display: flex; gap: 0.6rem;">
-            <button class="status edite">Editar</button>
-            <button class="status delete">Apagar</button>
-          </td>
-        </tr>
+
       </tbody>
     </table>
   </div>

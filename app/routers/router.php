@@ -16,13 +16,18 @@ function router()
   $router->get("/", "Base:home");
   $router->get("/about", "Base:about");
   $router->get("/eventsList", "Base:eventsList");
-  $router->get("/news", "Base:news");
   $router->get("/scheduling", "Base:scheduling");
   $router->get("/myDocs", "Base:myDocs");
   $router->get("/login", "Base:login");
   $router->get("/register", "Base:register");
   $router->get("/contact", "Base:contact");
   $router->get("/contacts", "Base:contacts");
+
+  // ROTA DE NEWS
+  $router->group("/news");
+  $router->get("/", "Base:news");
+  $router->get("/detailsNews/{news_id}", "Base:detailsNews");
+  $router->get("/categories/{category_id}", "Base:categoryNews");
 
   // ROTA DA SECTOR
   $router->group("/setor");

@@ -5,8 +5,7 @@ $this->layout('_theme');
 
 
 <main>
-  <header class="pageMainHead d-flex position-relative bgCover w-100 text-white"
-    style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img50.jpg") ?>)">
+  <header class="pageMainHead d-flex position-relative bgCover w-100 text-white" style="background-image: url(<?= urlProject(FOLDER_BASE . "/src/images/img50.jpg") ?>)">
     <div class="alignHolder d-flex w-100 align-items-center">
       <div class="align w-100 position-relative">
         <div class="container">
@@ -31,7 +30,7 @@ $this->layout('_theme');
       <div class="row">
         <div class="col-12 col-lg-9 mb-6">
           <div class="pr-lg-5 pr-xl-15">
-            <div class="row">
+            <div class="row" id="containerNews">
               <!-- SEM NOTICIAS -->
               <div class="col-12 col-md-12">
                 <article class="ueEveColumn position-relative shadow bg-white mb-6">
@@ -58,52 +57,53 @@ $this->layout('_theme');
 
               <!-- NOTICIAS -->
               <!-- 
-                    <div class="col-12 col-md-6">
-                      <article class="npbColumn shadow bg-white mb-6 mb-xl-12">
-                        <div class="imgHolder position-relative">
-                          <a href="newsSingle.html">
-                            <img
-                              src="images/img11.jpg"
-                              class="img-fluid w-100 d-block"
-                              alt="image description"
-                            />
-                          </a>
-                          <time
-                            datetime="2011-01-12"
-                            class="npbTimeTag font-weight-bold fontAlter position-absolute text-white px-2 py-1"
-                            >15 Out 2023</time
-                          >
-                        </div>
-                        <div class="npbDescriptionWrap px-5 pt-8 pb-5">
-                          <strong
-                            class="d-block npbcmWrap font-weight-normal mb-1"
-                          >
-                            <span class="mr-5">Governo</span>
-                            <i class="icomoon-chat"
-                              ><span class="sr-only">icon</span></i
-                            >
-                            0
-                          </strong>
-                          <h3 class="fwSemiBold mb-5">
-                            <a href="newsSingle.html"
-                              >List of City Weekend Celebrations</a
-                            >
-                          </h3>
-                          <a
-                            href="newsSingle.html"
-                            class="btnCr d-inline-block align-top fontAlter"
-                            >Continuar lendo
-                            <i
-                              class="icomoon-arrowRight bcIcn ml-2 align-middle"
-                              ><span class="sr-only">icon</span></i
-                            ></a
-                          >
-                        </div>
-                      </article>
+                <div class="col-12 col-md-6">
+                  <article class="npbColumn shadow bg-white mb-6 mb-xl-12">
+                    <div class="imgHolder position-relative">
+                      <a href="newsSingle.html">
+                        <img
+                          src="images/img11.jpg"
+                          class="img-fluid w-100 d-block"
+                          alt="image description"
+                        />
+                      </a>
+                      <time
+                        datetime="2011-01-12"
+                        class="npbTimeTag font-weight-bold fontAlter position-absolute text-white px-2 py-1"
+                        >15 Out 2023</time
+                      >
                     </div>
-                     -->
+                    <div class="npbDescriptionWrap px-5 pt-8 pb-5">
+                      <strong
+                        class="d-block npbcmWrap font-weight-normal mb-1"
+                      >
+                        <span class="mr-5">Governo</span>
+                        <i class="icomoon-chat"
+                          ><span class="sr-only">icon</span></i
+                        >
+                        0
+                      </strong>
+                      <h3 class="fwSemiBold mb-5">
+                        <a href="newsSingle.html"
+                          >List of City Weekend Celebrations</a
+                        >
+                      </h3>
+                      <a
+                        href="newsSingle.html"
+                        class="btnCr d-inline-block align-top fontAlter"
+                        >Continuar lendo
+                        <i
+                          class="icomoon-arrowRight bcIcn ml-2 align-middle"
+                          ><span class="sr-only">icon</span></i
+                        ></a
+                      >
+                    </div>
+                  </article>
+                </div>
+              -->
             </div>
-            <nav aria-label="Page navigation">
+
+            <!-- <nav aria-label="Page navigation">
               <ul class="pagination justify-content-center pt-2">
                 <li class="page-item disabled">
                   <a class="page-link" href="javascript:void(0);">Anterior</a>
@@ -119,7 +119,8 @@ $this->layout('_theme');
                     <i class="fas fa-chevron-right icn"><span class="sr-only">icon</span></i></a>
                 </li>
               </ul>
-            </nav>
+            </nav> -->
+
           </div>
         </div>
         <div class="col-12 col-lg-3 mb-6">
@@ -130,9 +131,8 @@ $this->layout('_theme');
                   <div class="input-group">
                     <input type="search" class="form-control" placeholder="Procure aqui…" />
                     <div class="input-group-append">
-                      <button class="btn btnTheme btnNoOver d-flex align-items-center justify-content-center"
-                        type="button">
-                        <i class="icomoon-search"><span class="sr-only">procurar</span></i>
+                      <button class="btn btnTheme btnNoOver d-flex align-items-center justify-content-center" type="button">
+                        <i class="icomoon-search"><span class="sr-only">Procurar</span></i>
                       </button>
                     </div>
                   </div>
@@ -140,6 +140,7 @@ $this->layout('_theme');
               </section>
               <nav class="widget widgetArchiveList mb-6 mb-lg-10">
                 <h3 class="fwMedium mb-5">Categorias</h3>
+                <!-- 
                 <ul class="list-unstyled pl-0">
                   <li>
                     <a href="javascript:void(0);">Conferência</a>
@@ -157,6 +158,7 @@ $this->layout('_theme');
                     <a href="javascript:void(0);">Oficina</a>
                   </li>
                 </ul>
+              -->
               </nav>
               <nav class="widget widgetUpcoming mb-6 mb-lg-10">
                 <h3 class="fwMedium mb-5">Notícias recentes</h3>
@@ -188,6 +190,7 @@ $this->layout('_theme');
               </nav>
               <section class="widget widgetTags mb-6 mb-lg-10">
                 <h3 class="fwMedium mb-5">Tags</h3>
+                <!-- 
                 <ul class="list-unstyled pl-0 d-flex flex-wrap fontAlter">
                   <li>
                     <a href="javascript:void(0);">Cidade</a>
@@ -214,6 +217,7 @@ $this->layout('_theme');
                     <a href="javascript:void(0);">Reunião</a>
                   </li>
                 </ul>
+                -->
               </section>
             </aside>
           </div>
@@ -222,3 +226,5 @@ $this->layout('_theme');
     </div>
   </section>
 </main>
+
+<script src="<?= urlProject(FOLDER_BASE . BASE_JS . "/actions_news.js") ?>"></script>

@@ -36,42 +36,52 @@ class Base
     echo $this->templates->render($page_name, []);
   }
 
-  // news US
+  // news
   public function news(): void
   {
     $page_name = "news";
     echo $this->templates->render($page_name, []);
   }
+  public function detailsNews(): void
+  {
+    $page_name = "newsSingle";
+    echo $this->templates->render($page_name, []);
+  }
+  public function categoryNews(): void
+  {
+    $page_name = "page";
+    echo $this->templates->render($page_name, []);
+  }
 
-  // scheduling US
+  // scheduling
   public function scheduling(): void
   {
     $page_name = "scheduling";
     echo $this->templates->render($page_name, []);
   }
 
-  // myDocs US
+  // myDocs
   public function myDocs(): void
   {
     $page_name = "myDocs";
     echo $this->templates->render($page_name, []);
   }
 
-  // login US
+  // login
   public function login(): void
   {
     $page_name = "login";
     echo $this->templates->render($page_name, []);
   }
 
-  // register US
+  // register
   public function register(): void
   {
     $page_name = "register";
     echo $this->templates->render($page_name, []);
   }
 
-  // contact US
+  // contact
   public function contact(): void
   {
     $page_name = "contact";
@@ -131,17 +141,6 @@ class Base
   public function formApoioComunidadeRegistroConsular(): void
   {
     $page_name = "form_apoio_comunidade_registro_consular";
-    echo $this->templates->render($page_name, []);
-  }
-
-  public function details(): void
-  {
-    $page_name = "page";
-    echo $this->templates->render($page_name, []);
-  }
-  public function category(): void
-  {
-    $page_name = "page";
     echo $this->templates->render($page_name, []);
   }
 

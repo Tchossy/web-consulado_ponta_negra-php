@@ -139,6 +139,12 @@ if ((!isset($_SESSION['adm_email']))) {
       </div>
       <div>
         <label for="">
+          Motivo <span class="text-danger">*</span>
+        </label>
+        <input id="reason_document_edit" name="reason_document" value="" class="form-control" type="text" placeholder="Motivo">
+      </div>
+      <div>
+        <label for="">
           Descrição do documento <span class="text-danger">*</span>
         </label>
         <input id="description_document_edit" name="description_document" value="" class="form-control" type="text" placeholder="Descrição do documento">
@@ -188,6 +194,7 @@ if ((!isset($_SESSION['adm_email']))) {
           <th>Estado</th>
           <th>Data de entrada</th>
           <th>Data de entrega</th>
+          <th>Motivo</th>
           <th>Acção</th>
         </tr>
       </thead>

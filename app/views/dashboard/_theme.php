@@ -110,7 +110,7 @@
       <li>
         <a id="logout" class="logout">
           <i class="bx bxs-log-out-circle"></i>
-          <span class="text">Sair</span>
+          <span class="text">Sair do painel</span>
         </a>
       </li>
     </ul>

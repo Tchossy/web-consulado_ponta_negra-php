@@ -1,5 +1,5 @@
-const baseURL = '/web-consulado_ponta_negra-php/app/views/base/src/controllers/'
-const controllerURL = '/web-consulado_ponta_negra-php/app/controllers/'
+const baseURL = '/app/views/base/src/controllers/'
+const controllerURL = '/app/controllers/'
 
 const origin_url = window.location.origin
 

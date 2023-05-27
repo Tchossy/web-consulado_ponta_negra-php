@@ -8,7 +8,7 @@ const tbody = document.querySelector('tbody')
 const todoList = document.getElementById('todo-list')
 const num_utentes = document.getElementById('num_utentes')
 const num_scheduling = document.getElementById('num_scheduling')
-const num_state_document = document.getElementById('num_state_document')
+const num_documents_state = document.getElementById('num_documents_state')
 
 const numUtentes = async () => {
   const dataUtentes = await fetch(
@@ -36,7 +36,7 @@ const numStateDocument = async () => {
   )
   const response = await dataStateDocument.text()
 
-  num_state_document.innerText = response
+  num_documents_state.innerText = response
 }
 numStateDocument()
 

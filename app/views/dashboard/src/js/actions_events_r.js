@@ -6,20 +6,20 @@ const origin_url = window.location.origin
 
 const tbody = document.querySelector('tbody')
 
-const nameAdmNewsStorage = localStorage.getItem('adm_name')
+const nameAdmEventsStorage = localStorage.getItem('adm_name')
 
 const inputImagens = document.getElementById('inputImagens')
 const containerImagens = document.getElementById('containerImagens')
 const inputImagensEdit = document.getElementById('inputImagensEdit')
 const containerImagensEdit = document.getElementById('containerImagensEdit')
 
-const authorNews = document.getElementById('author_news')
-const cardNewsForm = document.getElementById('formNews')
-const cardEditNewsForm = document.getElementById('newsEditForm')
+const authorEvents = document.getElementById('author_events')
+const cardEventsForm = document.getElementById('formEvent')
+const cardEditEventsForm = document.getElementById('eventEditForm')
 const msgAlerta = document.getElementById('msgAlertaErroCad')
 const msgEditAlerta = document.getElementById('msgAlertaErroEditCard')
 
-authorNews.value = nameAdmNewsStorage
+authorEvents.value = nameAdmEventsStorage
 
 inputImagens.addEventListener('change', function () {
   containerImagens.innerHTML = ''
@@ -60,43 +60,45 @@ inputImagensEdit.addEventListener('change', function () {
   }
 })
 
-const listNews = async () => {
-  const dataNews = await fetch(
-    origin_url + baseURL + 'newsControllers.php?typeForm=get_all_news'
+const listEvents = async () => {
+  const dataEvents = await fetch(
+    origin_url + baseURL + 'eventsControllers.php?typeForm=get_all_events'
   )
 
-  const response = await dataNews.text()
+  const response = await dataEvents.text()
 
   tbody.innerHTML = response
 }
 
-listNews()
+listEvents()
 
-cardNewsForm.addEventListener('submit', async event => {
+cardEventsForm.addEventListener('submit', async event => {
   event.preventDefault()
 
-  const dataForm = new FormData(cardNewsForm)
+  const dataForm = new FormData(cardEventsForm)
 
   // for (var dados of dataForm.entries()) {
   //   console.log(dados[0] + ' ' + dados[1])
   // }
 
-  const dataNew = await fetch(
-    origin_url + baseURL + 'newsControllers.php?typeForm=create_news',
+  const dataEvent = await fetch(
+    origin_url + baseURL + 'eventsControllers.php?typeForm=create_event',
     {
       method: 'POST',
       body: dataForm
     }
   )
 
-  const response = await dataNew.json()
+  const response = await dataEvent.json()
+
+  console.log(response['msg'])
 
   if (response['error']) {
     msgAlerta.innerHTML = response['msg']
   } else {
     msgAlerta.innerHTML = response['msg']
-    cardNewsForm.reset()
-    listNews()
+    cardEventsForm.reset()
+    listEvents()
     containerImagens.innerHTML = ''
   }
 
@@ -104,20 +106,20 @@ cardNewsForm.addEventListener('submit', async event => {
     msgAlerta.innerHTML = ''
   }, 5000)
 
-  listNews()
+  listEvents()
 })
 
-async function confirmDelete(idNews) {
+async function confirmDelete(idEvent) {
   await fetch(
     origin_url +
       baseURL +
-      'newsControllers.php?typeForm=delete_news&idNews=' +
-      idNews
+      'eventsControllers.php?typeForm=delete_event&idEvent=' +
+      idEvent
   )
-  listNews()
+  listEvents()
 }
 
-function deleteNews(idNews) {
+function deleteEvent(idEvent) {
   const swalWithBootstrapButtons = Swal.mixin({
     customClass: {
       confirmButton: 'btn btn-success',
@@ -128,7 +130,7 @@ function deleteNews(idNews) {
 
   swalWithBootstrapButtons
     .fire({
-      title: 'Tem certeza que pretende eliminar esta noticia?',
+      title: 'Tem certeza que pretende eliminar este evento?',
       text: 'Você não será capaz de reverter está acção!',
       icon: 'warning',
       confirmButtonColor: '#3085d6',
@@ -140,13 +142,13 @@ function deleteNews(idNews) {
     })
     .then(result => {
       if (result.isConfirmed) {
-        confirmDelete(idNews)
+        confirmDelete(idEvent)
         swalWithBootstrapButtons.fire(
           'Excluído!',
-          'A noticia foi excluído.',
+          'O evento foi excluído.',
           'success'
         )
-        listNews()
+        listEvents()
       } else if (
         /* Read more about handling dismissals below */
         result.dismiss === swalWithBootstrapButtons.DismissReason.cancel
@@ -160,46 +162,46 @@ function deleteNews(idNews) {
     })
 }
 
-async function editeNews(idNews) {
-  const dataNews = await fetch(
+async function editeEvent(idEvent) {
+  const dataEvents = await fetch(
     origin_url +
       baseURL +
-      'newsControllers.php?typeForm=get_news&idNews=' +
-      idNews
+      'eventsControllers.php?typeForm=get_event&idEvent=' +
+      idEvent
   )
 
-  const response = await dataNews.json()
+  const response = await dataEvents.json()
   if (response['error']) {
     alert(response['msg'])
   } else {
-    const newsData = response['dados']
+    const eventsData = response['dados']
 
-    const decodeImage = JSON.parse(newsData.images_news)
-    const cadModal = document.getElementById('newsEditeModal')
+    const decodeImage = JSON.parse(eventsData.images_event)
+    const imageEvent = decodeImage[0]
 
-    containerImagensEdit.innerHTML = `<img src="${decodeImage[0]}" />`
+    const cadModal = document.getElementById('eventEditModal')
+
+    containerImagensEdit.innerHTML = `<img src="${imageEvent}" />`
 
     cadModal.style.visibility = 'visible'
     cadModal.classList.add('show')
 
-    document.getElementById('description_news_edit').value =
-      newsData.description_news
-    console.log(document.getElementById('description_news_edit').value)
-
-    document.getElementById('id_edit').value = newsData.id
-    document.getElementById('category_news_edit').value = newsData.category_news
-    document.getElementById('title_news_edit').value = newsData.title_news
-    document.getElementById('description_news_edit').value =
-      newsData.description_news
-    document.getElementById('epigraph_news_edit').value = newsData.epigraph_news
-    document.getElementById('author_epigraph_news_edit').value =
-      newsData.author_epigraph_news
+    document.getElementById('id_edit').value = eventsData.id
+    document.getElementById('type_event_edit').value = eventsData.type_event
+    document.getElementById('description_event_edit').value =
+      eventsData.description_event
+    document.getElementById('date_events_edit').value = eventsData.date_events
+    document.getElementById('hours_start_event_edit').value =
+      eventsData.hours_start_event
+    document.getElementById('hours_end_event_edit').value =
+      eventsData.hours_end_event
+    document.getElementById('local_event_edit').value = eventsData.local_event
   }
 }
 
-cardEditNewsForm.addEventListener('submit', async event => {
+cardEditEventsForm.addEventListener('submit', async event => {
   event.preventDefault()
-  const dataEditForm = new FormData(cardEditNewsForm)
+  const dataEditForm = new FormData(cardEditEventsForm)
 
   // for (var dados of dataEditForm.entries()) {
   //   console.log(dados[0] + ' ' + dados[1] + ' ' + dados[2])
@@ -207,27 +209,28 @@ cardEditNewsForm.addEventListener('submit', async event => {
 
   dataEditForm.append('add', 1)
 
-  const dataNew = await fetch(
-    origin_url + baseURL + 'newsControllers.php?typeForm=edit_news',
+  console.log(
+    origin_url + baseURL + 'eventsControllers.php?typeForm=edit_event'
+  )
+  const dataEvent = await fetch(
+    origin_url + baseURL + 'eventsControllers.php?typeForm=edit_event',
     {
       method: 'POST',
       body: dataEditForm
     }
   )
 
-  console.log(origin_url + baseURL + 'newsControllers.php?typeForm=edit_news')
-
-  const response = await dataNew.json()
+  const response = await dataEvent.json()
 
   if (response['error']) {
     msgEditAlerta.innerHTML = response['msg']
   } else {
     msgEditAlerta.innerHTML = response['msg']
 
-    listNews()
+    listEvents()
   }
 
-  listNews()
+  listEvents()
 
   setTimeout(() => {
     msgEditAlerta.innerHTML = ''

@@ -6,35 +6,144 @@ session_start();
 if ((!isset($_SESSION['adm_email']))) {
   header('Location: http://localhost/web-consulado_ponta_negra-php/dashboard');
 }
-
 ?>
 
-<!-- head-title -->
 <div class="head-title">
   <div class="left">
-    <h1>Eventos</h1>
+    <h1>Evento</h1>
     <ul class="breadcrumb">
       <li>
         <a href="#">Painel</a>
       </li>
       <li><i class="bx bx-chevron-right"></i></li>
       <li>
-        <a class="active" href="#"> Eventos</a>
+        <a class="active" href="#">Evento</a>
       </li>
     </ul>
   </div>
-  <button class="btn-download" data-toggle="modal" data-target="#userModal">
+  <button class="btn-download" data-toggle="modal" data-target="#newsModal">
     <i class="bx bxs-file-plus"></i>
     <span class="text">Novo evento</span>
   </button>
 </div>
 
 <!-- MODAL -->
-<div id="userModal" class="modal">
+<div id="newsModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <h2>Título do modal</h2>
-    <p>Conteúdo do modal</p>
+    <div class="container-modal">
+      <h2>Criar novo evento</h2>
+    </div>
+
+    <form id="formEvent" class="modalForm">
+      <span id="msgAlertaErroCad"></span>
+
+      <input name="author_events" id="author_events" type="text" hidden>
+
+      <input name="images_event[]" class="form-control" type="file" id="inputImagens" multiple>
+      <div id="containerImagens"></div>
+
+      <div>
+        <label for="">
+          Tipo de evento <span class="text-danger">*</span>
+        </label>
+        <input name="type_event" class="form-control" type="text" placeholder="Tipo de evento">
+      </div>
+      <div>
+        <label for="">
+          Descrição do evento <span class="text-danger">*</span>
+        </label>
+        <input name="description_event" class="form-control" type="text" placeholder="Descrição do evento">
+      </div>
+      <div>
+        <label for="">
+          Data do evento <span class="text-danger">*</span>
+        </label>
+        <input name="date_events" class="form-control" type="date">
+      </div>
+      <div>
+        <label for="">
+          Inicio do evento <span class="text-danger">*</span>
+        </label>
+        <input name="hours_start_event" class="form-control" type="time">
+      </div>
+      <div>
+        <label for="">
+          Encerramento do evento <span class="text-danger">*</span>
+        </label>
+        <input name="hours_end_event" class="form-control" type="time">
+      </div>
+      <div>
+        <label for="">
+          Local do evento <span class="text-danger">*</span>
+        </label>
+        <input name="local_event" class="form-control" type="text" placeholder="Local do evento">
+      </div>
+
+      <button class="base-btn" type="submit">
+        Salvar
+      </button>
+    </form>
+  </div>
+</div>
+
+<div id="eventEditModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="container-modal">
+      <h2>Editar evento</h2>
+    </div>
+
+    <form id="eventEditForm" class="modalForm">
+      <span id="msgAlertaErroEditCard"></span>
+
+      <input id="id_edit" name="id_event" hidden>
+
+      <input name="images_event[]" class="form-control" type="file" id="inputImagensEdit" multiple>
+      <div id="containerImagensEdit"></div>
+
+      <div>
+        <label for="">
+          Tipo de evento <span class="text-danger">*</span>
+        </label>
+        <input name="type_event" id="type_event_edit" class="form-control" type="text" placeholder="Tipo de evento">
+      </div>
+      <div>
+        <label for="">
+          Descrição do evento <span class="text-danger">*</span>
+        </label>
+        <input name="description_event" id="description_event_edit" class="form-control" type="text"
+          placeholder="Descrição do evento">
+      </div>
+      <div>
+        <label for="">
+          Data do evento <span class="text-danger">*</span>
+        </label>
+        <input name="date_events" id="date_events_edit" class="form-control" type="date">
+      </div>
+      <div>
+        <label for="">
+          Inicio do evento <span class="text-danger">*</span>
+        </label>
+        <input name="hours_start_event" id="hours_start_event_edit" class="form-control" type="time">
+      </div>
+      <div>
+        <label for="">
+          Encerramento do evento <span class="text-danger">*</span>
+        </label>
+        <input name="hours_end_event" id="hours_end_event_edit" class="form-control" type="time">
+      </div>
+      <div>
+        <label for="">
+          Local do evento <span class="text-danger">*</span>
+        </label>
+        <input name="local_event" id="local_event_edit" class="form-control" type="text" placeholder="Local do evento">
+      </div>
+
+      <button class="base-btn" type="submit">
+        Salvar
+      </button>
+    </form>
   </div>
 </div>
 
@@ -60,88 +169,9 @@ if ((!isset($_SESSION['adm_email']))) {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>
-            <p>1</p>
-          </td>
-          <td>
-            <img src="img/people.png" />
-          </td>
-          <td>
-            <p>Conferência</p>
-          </td>
-          <td>
-            <p>Organização do Concurso de Fotografia da Cidade-2023</p>
-          </td>
-          <td>
-            <p>01 Outubro, Quarta-feira</p>
-          </td>
-          <td>
-            <p>9:30am - 1:00pm</p>
-          </td>
-          <td>
-            <p>Congo Central</p>
-          </td>
-          <td style="display: flex; gap: 0.6rem;">
-            <button class="status edite">Editar</button>
-            <button class="status delete">Apagar</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>2</p>
-          </td>
-          <td>
-            <img src="img/people.png" />
-          </td>
-          <td>
-            <p>Reunião</p>
-          </td>
-          <td>
-            <p>Reunião do Comitê Municipal de Inovação e Tecnologia</p>
-          </td>
-          <td>
-            <p>03 Dezembro, Quinta-feira</p>
-          </td>
-          <td>
-            <p>3:00pm - 7:00pm</p>
-          </td>
-          <td>
-            <p>Cassai Central</p>
-          </td>
-          <td style="display: flex; gap: 0.6rem;">
-            <button class="status edite">Editar</button>
-            <button class="status delete">Apagar</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>1</p>
-          </td>
-          <td>
-            <img src="img/people.png" />
-          </td>
-          <td>
-            <p>Entretenimento</p>
-          </td>
-          <td>
-            <p>Organização do Concurso de Fotografia da Cidade-2023</p>
-          </td>
-          <td>
-            <p>01 Outubro, Quarta-feira</p>
-          </td>
-          <td>
-            <p>9:30am - 1:00pm</p>
-          </td>
-          <td>
-            <p>Congo Central</p>
-          </td>
-          <td style="display: flex; gap: 0.6rem;">
-            <button class="status edite">Editar</button>
-            <button class="status delete">Apagar</button>
-          </td>
-        </tr>
       </tbody>
     </table>
   </div>
 </div>
+
+<script src="<?= urlProject(FOLDER_DASHBOARD . BASE_JS . "/actions_events_r.js") ?>"></script>
