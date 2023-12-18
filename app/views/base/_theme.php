@@ -16,7 +16,7 @@
   <meta property=" og:site_name" content="Consulado Geral de Angola em Ponta Negra" />
   <meta property="og:title" content="Consulado Geral de Angola em Ponta Negra" />
   <meta property="og:image" content="<?= urlProject(FOLDER_BASE . "/src/images/apresentation.png") ?>" />
-  <meta property=" og:description" content="Consulado Geral de Angola Ponta Negra" />
+  <meta property="og:description" content="Consulado Geral de Angola Ponta Negra" />
   <meta property="og:type" content="article" />
   <meta property="article:tag" content="Consulado Ponta Negra" />
   <meta property="article:tag" content="Ponta Negra" />
@@ -32,14 +32,10 @@
 
   <!-- inlcude google nunito sans font cdn link -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet" />
 
   <!-- inlcude google cabin font cdn link -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
 
   <!-- include the site bootstrap 4.1 stylesheet -->
   <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . "/src/css/bootstrap.css") ?>" />
@@ -55,9 +51,7 @@
   <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . "/src/css/responsive.css") ?>" />
 
   <!-- Icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 

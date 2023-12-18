@@ -57,10 +57,11 @@ if ($type_form == 'get_all_news') {
       $return .= "
         <div class='col-12 col-md-6'>
           <article class='npbColumn shadow bg-white mb-6 mb-xl-12'>
-            <div class='imgHolder position-relative'>
-              <a href='$hrefNews'>
+            <div class='imgHolder position-relative' style='height: 20rem; position: relative'>
+              <a href='$hrefNews' style='height: 20rem; position: relative'>
                 <img
                   src='$url_image'
+                  style='top: 0; left: 0; height: 100%'
                   class='img-fluid w-100 d-block'
                   alt='image description'
                 />

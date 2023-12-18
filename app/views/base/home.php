@@ -1345,7 +1345,7 @@ $this->layout('_theme');
         </div>
 
         <div class="col-12 col-lg-9">
-          <div class="row">
+          <div class="row" id="containerNews">
             <!-- SEM NOTICIAS -->
             <div class="col-12 col-md-7">
               <article class="ueEveColumn position-relative shadow bg-white mb-6">
@@ -1408,7 +1408,7 @@ $this->layout('_theme');
                       </div>
                     </article>
                   </div>
-                   -->
+            -->
           </div>
         </div>
       </div>
@@ -1671,3 +1671,5 @@ $this->layout('_theme');
     </div>
   </div>
 </main>
+
+<script src="<?= urlProject(FOLDER_BASE . BASE_JS . "/actions_news.js") ?>"></script>
